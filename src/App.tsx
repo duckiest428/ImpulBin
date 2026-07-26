@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home/Home';
@@ -10,7 +10,7 @@ import SquadBuilder from './pages/SquadBuilder/SquadBuilder';
 
 export default function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <div className="min-h-screen flex flex-col">
                 <Navbar />
                 <main className="flex-1">
@@ -24,6 +24,6 @@ export default function App() {
                 </main>
                 <Footer />
             </div>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
