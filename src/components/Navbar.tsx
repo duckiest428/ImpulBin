@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isAccountOpen, setIsAccountOpen] = useState(false);
 
     return (
         <>
@@ -34,27 +35,22 @@ export default function Navbar() {
                     Squad Builder
                     <div className="dropdown-menu">
                         <Link to="/squad-builder" >Squad Builder</Link>
-                        <Link to="/">Community Squads</Link>
-                        <Link to="/">Tactics</Link>
-                        <Link to="/">Community Tactics</Link>
-                        <Link to="/">EA FIFA 25 Squad Builder</Link>
-                        <Link to="/">EA FIFA 25 Tactics</Link>
+                        <Link to="/community-squads">Community Squads</Link>
                     </div>
                 </li>
                 <li className="has-dropdown">
                     SBCs
                     <div className="dropdown-menu">
-                        <Link to="/">Active SBCs</Link>
-                        <Link to="/">Cheapest Player By Rating</Link>
-                        <Link to="/">Community SBC Solutions</Link>
-                        <Link to="/">SBC Rating Combinations</Link>
-                        <Link to="/">Best value SBCs</Link>
+                        <Link to="/active-sbcs">Active SBCs</Link>
+                        <Link to="/cheapest-players">Cheapest Player By Rating</Link>
+                        <Link to="/sbc-rating-combinations">SBC Rating Combinations</Link>
+                        <Link to="/best-value-sbcs">Best value SBCs</Link>
                     </div>
                 </li>
                 <li className="has-dropdown">
                     Squads
                     <div className="dropdown-menu">
-                        <Link to="/">All Promo Squads</Link>
+                        <Link to="/promo-squads">All Promo Squads</Link>
                         <Link to="/">Futties Icon and Heroes 1</Link>
                         <Link to="/">Futties Team 1</Link>
                         <Link to="/">Summer Stars Winners</Link>
@@ -68,7 +64,7 @@ export default function Navbar() {
                         <Link to="/">Price Range Updates</Link>
                         <Link to="/">Manager Prices</Link>
                         <Link to="/">Consumable Prices</Link>
-                        <Link to="/">Index 100</Link>
+                        <Link to="/index-100">Index 100</Link>
                         <Link to="/">Index 81-86</Link>
                     </div>
                 </li>
@@ -95,10 +91,21 @@ export default function Navbar() {
         </div>
 
         <div className="nav-right">
-            <button className="loaded-btn">LOADED. 🛒</button>
-            <button className="icon-btn">⊞</button>
-            <button className="icon-btn">🔔</button>
-            <div className="profile-avatar"></div>
+            
+            
+            <div className="account-dropdown-container" style={{position: 'relative'}}>
+                <div className="profile-avatar" onClick={() => setIsAccountOpen(!isAccountOpen)} style={{cursor: 'pointer'}}></div>
+                {isAccountOpen && (
+                    <div className="dropdown-menu" style={{display: 'block', right: 0, left: 'auto', padding: '15px', minWidth: '200px', marginTop: '10px'}}>
+                        <h4 style={{marginBottom: '10px', color: 'white', fontWeight: 'bold'}}>Account Login</h4>
+                        <input type="text" placeholder="Username" style={{width: '100%', marginBottom: '10px', padding: '8px', background: '#222', border: '1px solid #444', color: 'white', borderRadius: '4px', outline: 'none'}} />
+                        <input type="password" placeholder="Password" style={{width: '100%', marginBottom: '10px', padding: '8px', background: '#222', border: '1px solid #444', color: 'white', borderRadius: '4px', outline: 'none'}} />
+                        <button style={{width: '100%', padding: '8px', background: '#10b981', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold'}} onClick={() => setIsAccountOpen(false)}>Login</button>
+                    </div>
+                )}
+            </div>
+
+
         </div>
     </nav>
 
@@ -123,7 +130,7 @@ export default function Navbar() {
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
                                 Squads
                             </h3>
-                            <Link to="/" className="mega-link">All Promo Squads</Link>
+                            <Link to="/promo-squads" className="mega-link">All Promo Squads</Link>
                             <Link to="/" className="mega-link">Futties Icon and Heroes 1</Link>
                             <Link to="/" className="mega-link">Futties Team 1</Link>
                             <Link to="/" className="mega-link">Summer Stars Winners</Link>
@@ -139,22 +146,17 @@ export default function Navbar() {
                                 Squad Builder
                             </h3>
                             <Link to="/squad-builder" className="mega-link" >Squad Builder</Link>
-                            <Link to="/" className="mega-link">Community Squads</Link>
-                            <Link to="/" className="mega-link">Tactics</Link>
-                            <Link to="/" className="mega-link">Community Tactics</Link>
-                            <Link to="/" className="mega-link">EA FIFA 25 Squad Builder</Link>
-                            <Link to="/" className="mega-link">EA FIFA 25 Tactics</Link>
+                            <Link to="/community-squads" className="mega-link">Community Squads</Link>
                         </div>
                         <div className="mega-category">
                             <h3 className="mega-heading">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 11H19V7c0-1.1-.9-2-2-2h-4V3.5C13 2.12 11.88 1 10.5 1S8 2.12 8 3.5V5H4c-1.1 0-1.99.9-1.99 2v3.8H3.5c1.49 0 2.7 1.21 2.7 2.7s-1.21 2.7-2.7 2.7H2V20c0 1.1.9 2 2 2h3.8v-1.5c0-1.49 1.21-2.7 2.7-2.7 1.49 0 2.7 1.21 2.7 2.7V22H17c1.1 0 2-.9 2-2v-4h1.5c1.38 0 2.5-1.12 2.5-2.5S21.88 11 20.5 11z"/></svg>
                                 SBCs
                             </h3>
-                            <Link to="/" className="mega-link">Active SBCs</Link>
-                            <Link to="/" className="mega-link">Cheapest Player By Rating</Link>
-                            <Link to="/" className="mega-link">Community SBC Solutions</Link>
-                            <Link to="/" className="mega-link">SBC Rating Combinations</Link>
-                            <Link to="/" className="mega-link">Best value SBCs</Link>
+                            <Link to="/active-sbcs" className="mega-link">Active SBCs</Link>
+                            <Link to="/cheapest-players" className="mega-link">Cheapest Player By Rating</Link>
+                            <Link to="/sbc-rating-combinations" className="mega-link">SBC Rating Combinations</Link>
+                            <Link to="/best-value-sbcs" className="mega-link">Best value SBCs</Link>
                         </div>
                     </div>
 
@@ -179,7 +181,7 @@ export default function Navbar() {
                             <Link to="/" className="mega-link">Price Range Updates</Link>
                             <Link to="/" className="mega-link">Manager Prices</Link>
                             <Link to="/" className="mega-link">Consumable Prices</Link>
-                            <Link to="/" className="mega-link">Index 100</Link>
+                            <Link to="/index-100" className="mega-link">Index 100</Link>
                             <Link to="/" className="mega-link">Index 81-86</Link>
                         </div>
                     </div>
