@@ -95,9 +95,6 @@ export default function Navbar() {
         </div>
 
         <div className="nav-right">
-            <button className="loaded-btn">LOADED. 🛒</button>
-            <button className="icon-btn">⊞</button>
-            <button className="icon-btn">🔔</button>
             <div className="profile-avatar"></div>
         </div>
     </nav>

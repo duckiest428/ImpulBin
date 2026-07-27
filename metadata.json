@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "FIFA Squad Builder",
+  "description": "FIFA player database and squad builder application",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
