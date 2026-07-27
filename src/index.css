@@ -710,4 +710,126 @@
             text-decoration: underline;
         }
 
+        /* --- MOBILE & RESPONSIVE REARRANGEMENT --- */
+        html, body, #root {
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        @media (max-width: 1024px) {
+            .navbar {
+                padding: 0 12px;
+            }
+
+            .nav-links {
+                display: none !important;
+            }
+
+            .nav-center {
+                margin-left: 8px;
+                gap: 8px;
+            }
+
+            .nav-search-compact {
+                max-width: 220px;
+                width: 100%;
+                padding: 4px 8px;
+            }
+
+            .nav-search-compact input {
+                font-size: 12px;
+                min-width: 0;
+            }
+
+            .nav-search-compact select {
+                font-size: 11px;
+                padding-left: 4px;
+            }
+
+            .mega-main {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 24px 20px;
+                gap: 24px;
+            }
+
+            .mega-content {
+                flex-direction: column;
+            }
+
+            .mega-sidebar {
+                width: 100%;
+                border-left: none;
+                border-top: 1px solid #2a2a2a;
+                padding: 24px 20px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 24px;
+                padding: 20px 0;
+            }
+
+            .squad-builder-pitch {
+                width: 100%;
+                height: auto;
+                min-height: 480px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .navbar {
+                padding: 0 8px;
+            }
+
+            .nav-left {
+                gap: 8px;
+            }
+
+            .nav-search-compact {
+                max-width: 160px;
+            }
+
+            .mega-main {
+                grid-template-columns: repeat(1, 1fr);
+                padding: 16px;
+                gap: 20px;
+            }
+
+            .brand-logo {
+                font-size: 3.5rem;
+                letter-spacing: -2px;
+                margin-bottom: 20px;
+            }
+
+            .main-search-wrapper {
+                padding: 8px 16px;
+            }
+
+            .pills-container {
+                gap: 8px;
+                margin: 20px 0;
+                padding: 0 4px;
+            }
+
+            .pill {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .grid-container {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .card {
+                transform: none !important;
+            }
+
+            .cards-grid {
+                gap: 10px;
+                padding: 10px;
+            }
+        }
+
     

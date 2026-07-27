@@ -73,7 +73,11 @@ export default function Navbar() {
     </nav>
 
     {/* MEGA MENU OVERLAY */}
-    <div className={`mega-menu-overlay ${isOpen ? "open" : ""}`} id="megaMenu">
+    <div className={`mega-menu-overlay ${isOpen ? "open" : ""}`} id="megaMenu" onClick={(e) => {
+        if ((e.target as HTMLElement).closest('a')) {
+            setIsOpen(false);
+        }
+    }}>
         <div className="mega-container">
             <div className="mega-content">
                 <div className="mega-main">
