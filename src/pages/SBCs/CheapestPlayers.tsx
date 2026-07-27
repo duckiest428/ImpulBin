@@ -5,40 +5,40 @@ const ratings = [81, 82, 83, 84, 85, 86, 87, 88];
 
 const mockPlayers = {
     81: [
-        { name: 'Džeko', pos: 'ST', price: 350 },
-        { name: 'Trapp', pos: 'GK', price: 400 },
-        { name: 'Gerard Moreno', pos: 'ST', price: 400 },
-        { name: 'Carrasco', pos: 'LW', price: 400 },
-        { name: 'de Roon', pos: 'CM', price: 400 },
-        { name: 'Politano', pos: 'RW', price: 400 },
-        { name: 'David Soria', pos: 'GK', price: 400 },
+        { name: 'Player Name', pos: 'ST', price: 0 },
+        { name: 'Player Name', pos: 'GK', price: 0 },
+        { name: 'Player Name', pos: 'ST', price: 0 },
+        { name: 'Player Name', pos: 'LW', price: 0 },
+        { name: 'Player Name', pos: 'CM', price: 0 },
+        { name: 'Player Name', pos: 'RW', price: 0 },
+        { name: 'Player Name', pos: 'GK', price: 0 },
     ],
     82: [
-        { name: 'Wood', pos: 'ST', price: 400 },
-        { name: 'Ginter', pos: 'CB', price: 400 },
-        { name: 'Romagnoli', pos: 'CB', price: 400 },
-        { name: 'Berardi', pos: 'RW', price: 400 },
-        { name: 'Zapata', pos: 'ST', price: 400 },
-        { name: 'Naeher', pos: 'GK', price: 400 },
-        { name: 'Kumagai', pos: 'CB', price: 400 },
+        { name: 'Player Name', pos: 'ST', price: 0 },
+        { name: 'Player Name', pos: 'CB', price: 0 },
+        { name: 'Player Name', pos: 'CB', price: 0 },
+        { name: 'Player Name', pos: 'RW', price: 0 },
+        { name: 'Player Name', pos: 'ST', price: 0 },
+        { name: 'Player Name', pos: 'GK', price: 0 },
+        { name: 'Player Name', pos: 'CB', price: 0 },
     ],
     83: [
-        { name: 'Iago Aspas', pos: 'RW', price: 750 },
-        { name: 'Mkhitaryan', pos: 'CM', price: 750 },
-        { name: 'Baumann', pos: 'GK', price: 750 },
-        { name: 'Sels', pos: 'GK', price: 750 },
-        { name: 'Kovačić', pos: 'CM', price: 750 },
-        { name: 'Trossard', pos: 'LW', price: 750 },
-        { name: 'Mané', pos: 'LM', price: 750 },
+        { name: 'Player Name', pos: 'RW', price: 0 },
+        { name: 'Player Name', pos: 'CM', price: 0 },
+        { name: 'Player Name', pos: 'GK', price: 0 },
+        { name: 'Player Name', pos: 'GK', price: 0 },
+        { name: 'Player Name', pos: 'CM', price: 0 },
+        { name: 'Player Name', pos: 'LW', price: 0 },
+        { name: 'Player Name', pos: 'LM', price: 0 },
     ],
     84: [
-        { name: 'Orban', pos: 'CB', price: 750 },
-        { name: 'João Cancelo', pos: 'RB', price: 750 },
-        { name: 'Sørloth', pos: 'ST', price: 750 },
-        { name: 'Maddison', pos: 'CM', price: 750 },
-        { name: 'Rúben Neves', pos: 'CDM', price: 750 },
-        { name: 'Palacios', pos: 'CM', price: 750 },
-        { name: 'Esther', pos: 'ST', price: 750 },
+        { name: 'Player Name', pos: 'CB', price: 0 },
+        { name: 'Player Name', pos: 'RB', price: 0 },
+        { name: 'Player Name', pos: 'ST', price: 0 },
+        { name: 'Player Name', pos: 'CM', price: 0 },
+        { name: 'Player Name', pos: 'CDM', price: 0 },
+        { name: 'Player Name', pos: 'CM', price: 0 },
+        { name: 'Player Name', pos: 'ST', price: 0 },
     ],
 };
 
@@ -52,7 +52,7 @@ export default function CheapestPlayers() {
                     <div className="text-sm text-gray-400 mb-1 flex items-center gap-2">
                         Home <span>›</span> Cheapest Players
                     </div>
-                    <h1 className="text-2xl font-bold text-white mb-1">EA FIFA 17 Cheapest Players</h1>
+                    <h1 className="text-2xl font-bold text-white mb-1">FIFA 17 Cheapest Players</h1>
                     <div className="text-gray-400 text-sm mb-4">Cheapest players for SBCs</div>
                     <button className="bg-[#2a2a2a] hover:bg-[#333] border border-[#333] text-sm py-1.5 px-3 rounded flex items-center gap-2 transition-colors w-max">
                         <span className="text-xs">↺</span> FIFA 17

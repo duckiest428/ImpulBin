@@ -1,17 +1,17 @@
 import React from 'react';
 
 const mockGainers = [
-    { name: 'Wolte...', rating: '80', pos: 'RWB', change: '+700.00%', price: '110,000' },
-    { name: 'Livaković', rating: '80', pos: 'GK', change: '+669.23%', price: '10,000' },
-    { name: 'Fowler', rating: '87', pos: 'ST', change: '+600.00%', price: '77,000' },
-    { name: 'Karcha...', rating: '88', pos: 'LW', change: '+574.16%', price: '75,000' },
+    { name: 'Wolte...', rating: '80', pos: 'RWB', change: '+700.00%', price: '--' },
+    { name: 'Livaković', rating: '80', pos: 'GK', change: '+669.23%', price: '--' },
+    { name: 'Fowler', rating: '87', pos: 'ST', change: '+600.00%', price: '--' },
+    { name: 'Karcha...', rating: '88', pos: 'LW', change: '+574.16%', price: '--' },
 ];
 
 const mockLosers = [
-    { name: 'Javi Ga...', rating: '80', pos: 'LB', change: '-94.00%', price: '450' },
-    { name: 'Fortou...', rating: '80', pos: 'CAM', change: '-91.01%', price: '400' },
-    { name: 'Savinho', rating: '82', pos: 'RW', change: '-87.67%', price: '400' },
-    { name: 'Marad...', rating: '95', pos: 'CAM', change: '-80.90%', price: '971,000' },
+    { name: 'Javi Ga...', rating: '80', pos: 'LB', change: '-94.00%', price: '--' },
+    { name: 'Fortou...', rating: '80', pos: 'CAM', change: '-91.01%', price: '--' },
+    { name: 'Savinho', rating: '82', pos: 'RW', change: '-87.67%', price: '--' },
+    { name: 'Marad...', rating: '95', pos: 'CAM', change: '-80.90%', price: '--' },
 ];
 
 export default function Index100() {

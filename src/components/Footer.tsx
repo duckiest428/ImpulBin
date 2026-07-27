@@ -20,12 +20,12 @@ export default function Footer() {
                     <ul>
                         <li><Link to="/squad-builder">Squad Builder</Link></li>
                         <li><Link to="/">SBC</Link></li>
-                        <li><Link to="/players">EA FIFA 17 Players</Link></li>
+                        <li><Link to="/players">FIFA 17 Players</Link></li>
                     </ul>
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>This site was created under license from Electronic Arts Inc. Trademarks are property of their respective owners. Game materials copyright Electronic Arts Inc. and/or its licensors. Electronic Arts Inc. and its licensors have not endorsed and are not responsible for the operations of or content on this site.</p>
+                <p>This site was created under license from Placeholder Inc. Trademarks are property of their respective owners. Game materials copyright Placeholder Inc. and/or its licensors. Placeholder Inc. and its licensors have not endorsed and are not responsible for the operations of or content on this site.</p>
                 <div className="footer-bottom-links">
                     <Link to="/">TOS</Link>
                     <Link to="/">Privacy Policy</Link>

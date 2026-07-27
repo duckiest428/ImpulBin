@@ -1,15 +1,15 @@
 import React from 'react';
 
 const promoSquads = [
-    { title: 'Futties Icon and Heroes 1', date: '24.07.2026', color: 'bg-red-900/40 border-red-500', players: 10 },
-    { title: 'Futties Team 1', date: '24.07.2026', color: 'bg-pink-900/40 border-pink-500', players: 40 },
-    { title: 'Summer Stars Winners', date: '21.07.2026', color: 'bg-blue-900/40 border-blue-500', players: 16 },
-    { title: 'Summer Stars', date: '17.07.2026', color: 'bg-indigo-900/40 border-indigo-500', players: 32 },
-    { title: 'Phenoms', date: '10.07.2026', color: 'bg-purple-900/40 border-purple-500', players: 40 },
-    { title: 'Glory Hunters 2', date: '03.07.2026', color: 'bg-emerald-900/40 border-emerald-500', players: 32 },
-    { title: 'Glory Hunters', date: '26.06.2026', color: 'bg-teal-900/40 border-teal-500', players: 32 },
-    { title: 'Greats of the Game', date: '19.06.2026', color: 'bg-cyan-900/40 border-cyan-500', players: 40 },
-    { title: 'Star Performers', date: '18.06.2026', color: 'bg-sky-900/40 border-sky-500', players: 40 },
+    { title: 'Promo Team Name', date: '--', color: 'bg-red-900/40 border-red-500', players: 10 },
+    { title: 'Promo Team Name', date: '--', color: 'bg-pink-900/40 border-pink-500', players: 40 },
+    { title: 'Promo Team Name', date: '--', color: 'bg-blue-900/40 border-blue-500', players: 16 },
+    { title: 'Promo Team Name', date: '--', color: 'bg-indigo-900/40 border-indigo-500', players: 32 },
+    { title: 'Promo Team Name', date: '--', color: 'bg-purple-900/40 border-purple-500', players: 40 },
+    { title: 'Promo Team Name', date: '--', color: 'bg-emerald-900/40 border-emerald-500', players: 32 },
+    { title: 'Promo Team Name', date: '--', color: 'bg-teal-900/40 border-teal-500', players: 32 },
+    { title: 'Promo Team Name', date: '--', color: 'bg-cyan-900/40 border-cyan-500', players: 40 },
+    { title: 'Promo Team Name', date: '--', color: 'bg-sky-900/40 border-sky-500', players: 40 },
 ];
 
 export default function PromoSquads() {
@@ -31,7 +31,7 @@ export default function PromoSquads() {
                         Home <span>›</span> TOTW Squads
                     </div>
                     <h1 className="text-2xl font-bold text-white mb-1">FFUT 17 TOTWs, TOTY, TOTS</h1>
-                    <div className="text-gray-400 text-sm mb-4">EA FIFA 17 Promo Squads</div>
+                    <div className="text-gray-400 text-sm mb-4">FIFA 17 Promo Squads</div>
                     <button className="bg-[#2a2a2a] hover:bg-[#333] border border-[#333] text-sm py-1.5 px-3 rounded flex items-center gap-2 transition-colors w-max">
                         <span className="text-xs">↺</span> FIFA 17
                     </button>

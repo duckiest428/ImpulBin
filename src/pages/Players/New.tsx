@@ -25,7 +25,7 @@ export default function New() {
                         <span>›</span>
                         <span className="text-gray-200">New</span>
                     </div>
-                    <h1 className="text-3xl font-bold mb-1">EA FIFA 17 New Players</h1>
+                    <h1 className="text-3xl font-bold mb-1">FIFA 17 New Players</h1>
                     <p className="text-gray-400 text-sm">Latest FUT 17 Players added</p>
                 </div>
 
@@ -43,10 +43,8 @@ export default function New() {
                                 <th className="p-4">Name</th>
                                 <th className="p-4 text-center">Rating</th>
                                 <th className="p-4 text-center">Position</th>
-                                <th className="p-4 text-center">Cross Price</th>
-                                <th className="p-4 text-center">Cross Range</th>
-                                <th className="p-4 text-center">PC Price</th>
-                                <th className="p-4 text-center">PC Range</th>
+                                <th className="p-4 text-center">Price</th>
+                                <th className="p-4 text-center">Range</th>
                                 <th className="p-4 text-center">Added On</th>
                             </tr>
                         </thead>
@@ -75,16 +73,10 @@ export default function New() {
                                         {player.position}
                                     </td>
                                     <td className="p-4 text-center">
-                                        <span className="text-blue-400 font-medium">{player.crossPrice}</span>
+                                        <span className="text-[#00e575] font-medium">{player.crossPrice}</span>
                                     </td>
                                     <td className="p-4 text-center">
-                                        <span className="text-blue-400 font-medium">0 ➔ 0</span>
-                                    </td>
-                                    <td className="p-4 text-center">
-                                        <span className="text-orange-500 font-medium">{player.pcPrice}</span>
-                                    </td>
-                                    <td className="p-4 text-center">
-                                        <span className="text-orange-500 font-medium">0 ➔ 0</span>
+                                        <span className="text-[#00e575] font-medium">0 ➔ 0</span>
                                     </td>
                                     <td className="p-4 text-center text-gray-400">
                                         {player.addedOn}

@@ -1,14 +1,14 @@
 import React from 'react';
 
 const mockConsumables = [
-    { name: 'Anchor', icon: '⚓', price: '4.9K', min: '150', max: '5K', boosts: { pac: 2, sho: 0, pas: 0, dri: 0, def: 2, phy: 2 }, pos: 'DEF' },
-    { name: 'Architect', icon: 'A', price: '200', min: '150', max: '5K', boosts: { pac: 0, sho: 0, pas: 3, dri: 0, def: 0, phy: 3 }, pos: 'MID' },
-    { name: 'Artist', icon: '🎨', price: '200', min: '150', max: '5K', boosts: { pac: 0, sho: 0, pas: 3, dri: 3, def: 0, phy: 0 }, pos: 'ATT' },
-    { name: 'Backbone', icon: '🏛️', price: '200', min: '150', max: '5K', boosts: { pac: 0, sho: 0, pas: 2, dri: 0, def: 2, phy: 2 }, pos: 'DEF' },
-    { name: 'Basic', icon: '👟', price: '400', min: '150', max: '5K', boosts: { pac: 1, sho: 1, pas: 1, dri: 1, def: 1, phy: 1 }, pos: 'DEF, MID, ATT' },
-    { name: 'Cat', icon: '🐱', price: '200', min: '150', max: '5K', boosts: { div: 0, han: 0, kic: 0, ref: 2, spd: 2, pos: 2 }, pos: 'GK', isGk: true },
-    { name: 'Catalyst', icon: '⚡', price: '900', min: '150', max: '5K', boosts: { pac: 3, sho: 0, pas: 3, dri: 0, def: 0, phy: 0 }, pos: 'ATT' },
-    { name: 'Deadeye', icon: '🎯', price: '200', min: '150', max: '5K', boosts: { pac: 0, sho: 3, pas: 3, dri: 0, def: 0, phy: 0 }, pos: 'ATT' },
+    { name: 'Anchor', icon: '⚓', price: '--', min: '--', max: '--', boosts: { pac: 2, sho: 0, pas: 0, dri: 0, def: 2, phy: 2 }, pos: 'DEF' },
+    { name: 'Architect', icon: 'A', price: '--', min: '--', max: '--', boosts: { pac: 0, sho: 0, pas: 3, dri: 0, def: 0, phy: 3 }, pos: 'MID' },
+    { name: 'Artist', icon: '🎨', price: '--', min: '--', max: '--', boosts: { pac: 0, sho: 0, pas: 3, dri: 3, def: 0, phy: 0 }, pos: 'ATT' },
+    { name: 'Backbone', icon: '🏛️', price: '--', min: '--', max: '--', boosts: { pac: 0, sho: 0, pas: 2, dri: 0, def: 2, phy: 2 }, pos: 'DEF' },
+    { name: 'Basic', icon: '👟', price: '--', min: '--', max: '--', boosts: { pac: 1, sho: 1, pas: 1, dri: 1, def: 1, phy: 1 }, pos: 'DEF, MID, ATT' },
+    { name: 'Cat', icon: '🐱', price: '--', min: '--', max: '--', boosts: { div: 0, han: 0, kic: 0, ref: 2, spd: 2, pos: 2 }, pos: 'GK', isGk: true },
+    { name: 'Catalyst', icon: '⚡', price: '--', min: '--', max: '--', boosts: { pac: 3, sho: 0, pas: 3, dri: 0, def: 0, phy: 0 }, pos: 'ATT' },
+    { name: 'Deadeye', icon: '🎯', price: '--', min: '--', max: '--', boosts: { pac: 0, sho: 3, pas: 3, dri: 0, def: 0, phy: 0 }, pos: 'ATT' },
 ];
 
 export default function ConsumablesPrices() {
@@ -27,7 +27,7 @@ export default function ConsumablesPrices() {
                     <div className="text-sm text-gray-400 mb-1 flex items-center gap-2">
                         Home <span>›</span> Consumables <span>›</span> Chemistry Styles
                     </div>
-                    <h1 className="text-2xl font-bold text-white mb-6">EA FIFA 17 Chemistry Styles</h1>
+                    <h1 className="text-2xl font-bold text-white mb-6">FIFA 17 Chemistry Styles</h1>
                 </div>
 
                 {/* Tabs */}

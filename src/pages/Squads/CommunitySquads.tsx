@@ -1,14 +1,14 @@
 import React from 'react';
 
 const mockSquads = [
-    { id: 1, user: 'loick9811', date: '25.12.2025', name: 'Milan', formation: '4-1-2-1-2(2)', rating: 82, chemistry: '33/33', price: '1.03M', platform: 'PC' },
-    { id: 2, user: 'ILOVELIONS', date: '20.12.2025', name: 'best bayern XI', formation: '4-3-3', rating: 91, chemistry: '1/33', price: '1.15M', platform: 'PC' },
-    { id: 3, user: 'Drymask17', date: '26.09.2025', name: 'XI FC BARCELONA', formation: '4-2-3-1(2)', rating: 97, chemistry: '30/33', price: '21.78M', platform: 'PC' },
-    { id: 4, user: 'tinyliny', date: '10.09.2025', name: '(f) city', formation: '4-3-3(4)', rating: 93, chemistry: '33/33', price: '4.66M', platform: 'PC' },
-    { id: 5, user: 'thatguypessi', date: '18.04.2026', name: 'Serie A', formation: '4-3-3', rating: 97, chemistry: '15/33', price: '44.84M', platform: 'PC' },
-    { id: 6, user: 'ColeThe10', date: '10.09.2025', name: 'Real Madrid', formation: '4-2-4', rating: 96, chemistry: '33/33', price: '6.44M', platform: 'PC' },
-    { id: 7, user: 'thatguypessi', date: '18.04.2026', name: 'Haaland and...', formation: '4-3-3', rating: 96, chemistry: '5/33', price: '22.32M', platform: 'PC' },
-    { id: 8, user: 'abdo1415', date: '10.10.2025', name: 'PSG', formation: '4-3-3', rating: 87, chemistry: '33/33', price: '2.35M', platform: 'PC' },
+    { id: 1, user: 'User Name', date: '--', name: 'Squad Name', formation: '4-1-2-1-2(2)', rating: 99, chemistry: '--/33', price: '--', platform: 'PC' },
+    { id: 2, user: 'User Name', date: '--', name: 'Squad Name', formation: '4-3-3', rating: 99, chemistry: '--/33', price: '--', platform: 'PC' },
+    { id: 3, user: 'User Name', date: '--', name: 'Squad Name', formation: '4-2-3-1(2)', rating: 99, chemistry: '--/33', price: '--', platform: 'PC' },
+    { id: 4, user: 'User Name', date: '--', name: 'Squad Name', formation: '4-3-3(4)', rating: 99, chemistry: '--/33', price: '--', platform: 'PC' },
+    { id: 5, user: 'User Name', date: '--', name: 'Squad Name', formation: '4-3-3', rating: 99, chemistry: '--/33', price: '--', platform: 'PC' },
+    { id: 6, user: 'User Name', date: '--', name: 'Squad Name', formation: '4-2-4', rating: 99, chemistry: '--/33', price: '--', platform: 'PC' },
+    { id: 7, user: 'User Name', date: '--', name: 'Squad Name', formation: '4-3-3', rating: 99, chemistry: '--/33', price: '--', platform: 'PC' },
+    { id: 8, user: 'User Name', date: '--', name: 'Squad Name', formation: '4-3-3', rating: 99, chemistry: '--/33', price: '--', platform: 'PC' },
 ];
 
 export default function CommunitySquads() {
@@ -22,7 +22,7 @@ export default function CommunitySquads() {
                         Home <span>›</span> Builder Squads
                     </div>
                     <h1 className="text-2xl font-bold text-white mb-1">FFUT 17 Community Squads</h1>
-                    <div className="text-gray-400 text-sm mb-4">EA FIFA 17 Squads</div>
+                    <div className="text-gray-400 text-sm mb-4">FIFA 17 Squads</div>
                     <button className="bg-[#2a2a2a] hover:bg-[#333] border border-[#333] text-sm py-1.5 px-3 rounded flex items-center gap-2 transition-colors">
                         <span className="text-xs">↺</span> FIFA 17
                     </button>
@@ -48,12 +48,6 @@ export default function CommunitySquads() {
                     </button>
                     <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-white text-sm py-1.5 px-4 rounded transition-colors">
                         Chemistry
-                    </button>
-                    <button className="bg-[#111] border border-[#00e575] text-[#00e575] text-sm py-1.5 px-4 rounded flex items-center gap-2 ml-4">
-                        <span>🎮</span> Console
-                    </button>
-                    <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-white text-sm py-1.5 px-4 rounded flex items-center gap-2">
-                        <span>💻</span> PC
                     </button>
                 </div>
 

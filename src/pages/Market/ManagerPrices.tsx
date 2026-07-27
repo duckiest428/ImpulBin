@@ -1,14 +1,32 @@
 import React from 'react';
 
 const mockManagers = [
-    { country: 'Argentina', flag: '🇦🇷', bronze: '-', silver: '650', gold: '450' },
-    { country: 'Belgium', flag: '🇧🇪', bronze: '-', silver: '200', gold: '1.7K' },
-    { country: 'Brazil', flag: '🇧🇷', bronze: '3.5K', silver: '1.7K', gold: '900' },
-    { country: 'England', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', bronze: '3.8K', silver: '1.5K', gold: '5K' },
-    { country: 'France', flag: '🇫🇷', bronze: '250', silver: '300', gold: '2.3K' },
-    { country: 'Germany', flag: '🇩🇪', bronze: '200', silver: '200', gold: '400' },
-    { country: 'Italy', flag: '🇮🇹', bronze: '-', silver: '200', gold: '400' },
-    { country: 'Netherlands', flag: '🇳🇱', bronze: '-', silver: '700', gold: '500' },
+    { country: 'Portugal', flag: '🇵🇹', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Spain', flag: '🇪🇸', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Albania', flag: '🇦🇱', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Algeria', flag: '🇩🇿', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Australia', flag: '🇦🇺', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Austria', flag: '🇦🇹', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Azerbaijan', flag: '🇦🇿', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Bolivia', flag: '🇧🇴', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Bosnia and Herzegovina', flag: '🇧🇦', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Bulgaria', flag: '🇧🇬', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Burkina Faso', flag: '🇧🇫', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Cameroon', flag: '🇨🇲', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Canada', flag: '🇨🇦', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Cape Verde Islands', flag: '🇨🇻', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Chile', flag: '🇨🇱', bronze: '--', silver: '--', gold: '--' },
+    { country: 'China PR', flag: '🇨🇳', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Colombia', flag: '🇨🇴', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Congo DR', flag: '🇨🇩', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Costa Rica', flag: '🇨🇷', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Croatia', flag: '🇭🇷', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Cyprus', flag: '🇨🇾', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Czechia', flag: '🇨🇿', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Côte d\'Ivoire', flag: '🇨🇮', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Denmark', flag: '🇩🇰', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Ecuador', flag: '🇪🇨', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Egypt', flag: '🇪🇬', bronze: '--', silver: '--', gold: '--' }
 ];
 
 export default function ManagerPrices() {
@@ -29,7 +47,7 @@ export default function ManagerPrices() {
                         <div className="text-sm text-gray-400 mb-1 flex items-center gap-2">
                             Home <span>›</span> Managers
                         </div>
-                        <h1 className="text-2xl font-bold text-white mb-1">EA FIFA 17 Manager Prices</h1>
+                        <h1 className="text-2xl font-bold text-white mb-1">FIFA 17 Manager Prices</h1>
                         <div className="text-gray-400 text-sm mb-6">FUT 17 Manager Prices from each country</div>
                     </div>
 

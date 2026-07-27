@@ -26,7 +26,7 @@ export default function Popular() {
                         <span>›</span>
                         <span className="text-gray-200">Popular</span>
                     </div>
-                    <h1 className="text-3xl font-bold mb-1">EA FIFA 17 Popular Players</h1>
+                    <h1 className="text-3xl font-bold mb-1">FIFA 17 Popular Players</h1>
                     <p className="text-gray-400 text-sm">Hottest FUT 17 Players</p>
                 </div>
 

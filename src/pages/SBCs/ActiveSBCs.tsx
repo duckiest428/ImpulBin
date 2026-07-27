@@ -2,15 +2,15 @@ import React from 'react';
 import SBCNav from '../../components/SBCNav';
 
 const activeSBCs = [
-    { id: 1, title: '93+ Prime Heroes or FOF G...', rewardTitle: '93+ Prime Heroes or FOF GOTG Player...', image: '93+', type: 'NEW', expires: '1 Weeks', repeatable: 'Unlimited', completed: '0 / 2', price: '45.65K', up: '12%', down: '88%', votes: 369 },
-    { id: 2, title: 'Aura Farming EVO', rewardTitle: 'Aura Farming', image: 'EVO', type: 'NEW', expires: '6 days', repeatable: '0', completed: '0 / 3', price: '62.3K', up: '83%', down: '17%', votes: 357 },
-    { id: 3, title: 'FUTTIES Challenge 2', rewardTitle: 'Mega Pack (Untradeable)', image: 'PUZZLE', type: 'NEW', expires: '2 days', repeatable: '0', completed: '0 / 1', price: '11.05K', up: '28%', down: '72%', votes: 180 },
-    { id: 4, title: 'Caroline Seger', rewardTitle: 'Seger', image: '97', type: 'NEW', expires: '6 days', repeatable: '0', completed: '0 / 4', price: '123.15K', up: '30%', down: '70%', votes: 318 },
-    { id: 5, title: 'Ferland Mendy', rewardTitle: 'Mendy', image: '97', expires: '1 Weeks', repeatable: '0', completed: '0 / 5', price: '172.4K', up: '82%', down: '18%', votes: 581 },
-    { id: 6, title: 'Renato Sanches', rewardTitle: 'Renato Sanches', image: '96', expires: '5 days', repeatable: '0', completed: '0 / 4', price: '126.65K', up: '83%', down: '17%', votes: 452 },
-    { id: 7, title: '10x 85+ Upgrade', rewardTitle: '10x 85+ Rare Gold Players Pack...', image: '85+', expires: '1 Weeks', repeatable: 'Unlimited', completed: '0 / 1', price: '14.5K', up: '89%', down: '11%', votes: 201 },
-    { id: 8, title: 'Antonio Di Natale', rewardTitle: 'Di Natale', image: '97', expires: '2 Weeks', repeatable: '0', completed: '0 / 3', price: '300.2K', up: '90%', down: '10%', votes: 1000 },
-    { id: 9, title: 'Phil Foden', rewardTitle: 'Foden', image: '97', expires: '3 Weeks', repeatable: '0', completed: '0 / 4', price: '250.0K', up: '75%', down: '25%', votes: 850 }
+    { id: 1, title: 'SBC Name', rewardTitle: 'Reward Name', image: '93+', type: 'NEW', expires: '--', repeatable: 'Unlimited', completed: '0 / 2', price: '--', up: '12%', down: '88%', votes: 369 },
+    { id: 2, title: 'SBC Name', rewardTitle: 'Reward Name', image: 'EVO', type: 'NEW', expires: '--', repeatable: '0', completed: '0 / 3', price: '--', up: '83%', down: '17%', votes: 357 },
+    { id: 3, title: 'SBC Name', rewardTitle: 'Reward Name', image: 'PUZZLE', type: 'NEW', expires: '--', repeatable: '0', completed: '0 / 1', price: '--', up: '28%', down: '72%', votes: 180 },
+    { id: 4, title: 'SBC Name', rewardTitle: 'Reward Name', image: '97', type: 'NEW', expires: '--', repeatable: '0', completed: '0 / 4', price: '--', up: '30%', down: '70%', votes: 318 },
+    { id: 5, title: 'SBC Name', rewardTitle: 'Reward Name', image: '97', expires: '--', repeatable: '0', completed: '0 / 5', price: '--', up: '82%', down: '18%', votes: 581 },
+    { id: 6, title: 'SBC Name', rewardTitle: 'Reward Name', image: '96', expires: '--', repeatable: '0', completed: '0 / 4', price: '--', up: '83%', down: '17%', votes: 452 },
+    { id: 7, title: 'SBC Name', rewardTitle: 'Reward Name', image: '85+', expires: '--', repeatable: 'Unlimited', completed: '0 / 1', price: '--', up: '89%', down: '11%', votes: 201 },
+    { id: 8, title: 'SBC Name', rewardTitle: 'Reward Name', image: '97', expires: '--', repeatable: '0', completed: '0 / 3', price: '--', up: '90%', down: '10%', votes: 1000 },
+    { id: 9, title: 'SBC Name', rewardTitle: 'Reward Name', image: '97', expires: '--', repeatable: '0', completed: '0 / 4', price: '--', up: '75%', down: '25%', votes: 850 }
 ];
 
 export default function ActiveSBCs() {
@@ -23,7 +23,7 @@ export default function ActiveSBCs() {
                     <div className="text-sm text-gray-400 mb-1 flex items-center gap-2">
                         Home <span>›</span> Squad Building Challenges
                     </div>
-                    <h1 className="text-2xl font-bold text-white mb-1">EA FIFA 17 Squad Building Challenges & Solutions</h1>
+                    <h1 className="text-2xl font-bold text-white mb-1">FIFA 17 Squad Building Challenges & Solutions</h1>
                     <div className="text-gray-400 text-sm mb-4"></div>
                     <button className="bg-[#2a2a2a] hover:bg-[#333] border border-[#333] text-sm py-1.5 px-3 rounded flex items-center gap-2 transition-colors w-max">
                         <span className="text-xs">↺</span> FIFA 17

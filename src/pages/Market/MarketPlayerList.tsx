@@ -1,17 +1,17 @@
 import React from 'react';
 
 const mockPlayers = [
-    { name: 'Daniel Batz', type: 'NORMAL', price: '10K', updated: '28 mins ago', trend: '+ 2,757.14%', trendUp: true, eaAvg: '150', diffPct: '+ 6566.67%', diffVal: '9.85K', diffUp: true, tax: '500', afterTax: '9.5K' },
-    { name: 'Maarten Paes', type: 'NORMAL', price: '10K', updated: '5 mins ago', trend: '~ 0%', trendUp: true, eaAvg: '150', diffPct: '+ 6566.67%', diffVal: '9.85K', diffUp: true, tax: '500', afterTax: '9.5K' },
-    { name: 'Yassine Benzia', type: 'NORMAL', price: '10K', updated: '17 mins ago', trend: '+ 4,900%', trendUp: true, eaAvg: '150', diffPct: '+ 6566.67%', diffVal: '9.85K', diffUp: true, tax: '500', afterTax: '9.5K' },
-    { name: 'Christian Kabasele', type: 'NORMAL', price: '10K', updated: '17 mins ago', trend: '+ 4,900%', trendUp: true, eaAvg: '150', diffPct: '+ 6566.67%', diffVal: '9.85K', diffUp: true, tax: '500', afterTax: '9.5K' },
-    { name: 'Ilias Bronkhorst', type: 'NORMAL', price: '10K', updated: '49 mins ago', trend: '- 0%', trendUp: false, eaAvg: '150', diffPct: '+ 6566.67%', diffVal: '9.85K', diffUp: true, tax: '500', afterTax: '9.5K' },
-    { name: 'Iker Guarrotxena Vallejo', type: 'NORMAL', price: '10K', updated: '11 mins ago', trend: '+ 4.17%', trendUp: true, eaAvg: '150', diffPct: '+ 6566.67%', diffVal: '9.85K', diffUp: true, tax: '500', afterTax: '9.5K' },
-    { name: 'William Martin', type: 'NORMAL', price: '10K', updated: '2 mins ago', trend: '~ 0%', trendUp: true, eaAvg: '150', diffPct: '+ 6566.67%', diffVal: '9.85K', diffUp: true, tax: '500', afterTax: '9.5K' },
-    { name: 'Mateo Aguiar', type: 'NORMAL', price: '10K', updated: '50 mins ago', trend: '~ 0%', trendUp: true, eaAvg: '150', diffPct: '+ 6566.67%', diffVal: '9.85K', diffUp: true, tax: '500', afterTax: '9.5K' },
-    { name: 'Lucas Perrin', type: 'NORMAL', price: '10K', updated: '43 mins ago', trend: '+ 1,900%', trendUp: true, eaAvg: '150', diffPct: '+ 6566.67%', diffVal: '9.85K', diffUp: true, tax: '500', afterTax: '9.5K' },
-    { name: 'El Bilal Touré', type: 'NORMAL', price: '10K', updated: '43 mins ago', trend: '+ 1,900%', trendUp: true, eaAvg: '150', diffPct: '+ 6566.67%', diffVal: '9.85K', diffUp: true, tax: '500', afterTax: '9.5K' },
-    { name: 'Alan Browne', type: 'NORMAL', price: '10K', updated: '29 mins ago', trend: '~ 0%', trendUp: true, eaAvg: '150', diffPct: '+ 6566.67%', diffVal: '9.85K', diffUp: true, tax: '500', afterTax: '9.5K' },
+    { name: 'Player Name', type: 'NORMAL', price: '0', updated: '--', trend: '--', trendUp: true, avgPrice: '0', diffPct: '--', diffVal: '--', diffUp: true, tax: '0', afterTax: '0' },
+    { name: 'Player Name', type: 'NORMAL', price: '0', updated: '--', trend: '--', trendUp: true, avgPrice: '0', diffPct: '--', diffVal: '--', diffUp: true, tax: '0', afterTax: '0' },
+    { name: 'Player Name', type: 'NORMAL', price: '0', updated: '--', trend: '--', trendUp: true, avgPrice: '0', diffPct: '--', diffVal: '--', diffUp: true, tax: '0', afterTax: '0' },
+    { name: 'Player Name', type: 'NORMAL', price: '0', updated: '--', trend: '--', trendUp: true, avgPrice: '0', diffPct: '--', diffVal: '--', diffUp: true, tax: '0', afterTax: '0' },
+    { name: 'Player Name', type: 'NORMAL', price: '0', updated: '--', trend: '--', trendUp: false, avgPrice: '0', diffPct: '--', diffVal: '--', diffUp: true, tax: '0', afterTax: '0' },
+    { name: 'Player Name', type: 'NORMAL', price: '0', updated: '--', trend: '--', trendUp: true, avgPrice: '0', diffPct: '--', diffVal: '--', diffUp: true, tax: '0', afterTax: '0' },
+    { name: 'Player Name', type: 'NORMAL', price: '0', updated: '--', trend: '--', trendUp: true, avgPrice: '0', diffPct: '--', diffVal: '--', diffUp: true, tax: '0', afterTax: '0' },
+    { name: 'Player Name', type: 'NORMAL', price: '0', updated: '--', trend: '--', trendUp: true, avgPrice: '0', diffPct: '--', diffVal: '--', diffUp: true, tax: '0', afterTax: '0' },
+    { name: 'Player Name', type: 'NORMAL', price: '0', updated: '--', trend: '--', trendUp: true, avgPrice: '0', diffPct: '--', diffVal: '--', diffUp: true, tax: '0', afterTax: '0' },
+    { name: 'Player Name', type: 'NORMAL', price: '0', updated: '--', trend: '--', trendUp: true, avgPrice: '0', diffPct: '--', diffVal: '--', diffUp: true, tax: '0', afterTax: '0' },
+    { name: 'Player Name', type: 'NORMAL', price: '0', updated: '--', trend: '--', trendUp: true, avgPrice: '0', diffPct: '--', diffVal: '--', diffUp: true, tax: '0', afterTax: '0' },
 ];
 
 export default function MarketPlayerList() {
@@ -32,7 +32,7 @@ export default function MarketPlayerList() {
                     </div>
                     <h1 className="text-2xl font-bold text-white mb-2">FIFA 17 Market player list</h1>
                     <p className="text-gray-400 text-sm max-w-2xl leading-relaxed mb-6">
-                        IB Market Player List helps you keep updated with player price trends, price updates and also EA Average prices to help you make more coins in Ultimate Team.
+                        IB Market Player List helps you keep updated with player price trends, price updates and also Average prices to help you make more coins in Ultimate Team.
                     </p>
                 </div>
 
@@ -83,9 +83,9 @@ export default function MarketPlayerList() {
                                     <th className="p-4 uppercase text-center w-28">PRICE<br/><span className="text-[9px] text-gray-500 font-normal">(FUTBIN PRICE)</span></th>
                                     <th className="p-4 uppercase text-center w-28">UPDATED</th>
                                     <th className="p-4 uppercase text-center w-28">TREND</th>
-                                    <th className="p-4 uppercase text-center w-28">EA AVERAGE</th>
+                                    <th className="p-4 uppercase text-center w-28">AVERAGE</th>
                                     <th className="p-4 uppercase text-center w-28">DIFFERENCE</th>
-                                    <th className="p-4 uppercase text-center w-28">EA TAX</th>
+                                    <th className="p-4 uppercase text-center w-28">TAX</th>
                                     <th className="p-4 uppercase text-center w-28">AFTER TAX</th>
                                     <th className="p-4 uppercase text-center w-24">HISTORY</th>
                                 </tr>
@@ -122,7 +122,7 @@ export default function MarketPlayerList() {
                                         </td>
                                         <td className="p-4 text-center">
                                             <div className="flex items-center justify-center gap-1 text-white font-bold">
-                                                {player.eaAvg} <span className="text-[#ffb800] text-[10px]">F</span>
+                                                {player.avgPrice} <span className="text-[#ffb800] text-[10px]">F</span>
                                             </div>
                                         </td>
                                         <td className="p-4 text-center">

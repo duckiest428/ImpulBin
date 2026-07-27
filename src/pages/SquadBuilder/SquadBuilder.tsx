@@ -92,12 +92,12 @@ export default function SquadBuilder() {
                             <div className="text-gray-400 text-sm mb-2 flex items-center space-x-2">
                                 <Link to="/" className="hover:text-white">Home</Link>
                                 <span>›</span>
-                                <Link to="/" className="hover:text-white">EA FIFA 17 Community Squads</Link>
+                                <Link to="/" className="hover:text-white">FIFA 17 Community Squads</Link>
                                 <span>›</span>
                                 <span className="text-gray-200">Squad Builder</span>
                             </div>
-                            <h1 className="text-3xl font-bold mb-1">EA FIFA 17 Squad Builder</h1>
-                            <p className="text-gray-400 text-sm">Create EA FIFA 17 Squads</p>
+                            <h1 className="text-3xl font-bold mb-1">FIFA 17 Squad Builder</h1>
+                            <p className="text-gray-400 text-sm">Create FIFA 17 Squads</p>
                         </div>
 
                         <div className="flex justify-between items-center border-b border-gray-700 mb-6">
@@ -179,14 +179,14 @@ export default function SquadBuilder() {
                     <div className="text-gray-400 text-sm mb-2 flex items-center space-x-2">
                         <Link to="/" className="hover:text-white">Home</Link>
                         <span>›</span>
-                        <Link to="/" className="hover:text-white">EA FIFA 17 Community Squads</Link>
+                        <Link to="/" className="hover:text-white">FIFA 17 Community Squads</Link>
                         <span>›</span>
                         <span className="text-gray-200">Squad Builder</span>
                     </div>
                     <div className="flex justify-between items-start">
                         <div>
-                            <h1 className="text-3xl font-bold mb-1">EA FIFA 17 Squad Builder</h1>
-                            <p className="text-gray-400 text-sm">Create EA FIFA 17 Squads</p>
+                            <h1 className="text-3xl font-bold mb-1">FIFA 17 Squad Builder</h1>
+                            <p className="text-gray-400 text-sm">Create FIFA 17 Squads</p>
                         </div>
                         <button className="border border-[#10b981] text-[#10b981] px-6 py-2 rounded-full font-medium hover:bg-[#10b981] hover:text-white transition-colors">
                             Add Tactics
@@ -307,10 +307,7 @@ function SidebarInfo() {
             </div>
             <div className="flex gap-4 text-sm font-medium">
                 <span className="flex items-center gap-1 text-[#10b981]">
-                    <span className="text-blue-500">PS</span> <span className="text-green-500">XB</span> 0 🟡
-                </span>
-                <span className="flex items-center gap-1 text-[#10b981]">
-                    <span className="text-blue-400">PC</span> 0 🟡
+                    0 🟡
                 </span>
             </div>
         </div>

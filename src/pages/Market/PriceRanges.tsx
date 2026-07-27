@@ -1,13 +1,13 @@
 import React from 'react';
 
 const mockPriceChanges = [
-    { name: 'Alejandro Baena Rodríguez', rating: '99', position: 'LM', version: 'Summer Stars Winners', oldMin: '200,000', oldMax: '802,000', newMin: '47,750', newMax: '900,000', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
-    { name: 'Claudia Pina Medina', rating: '99', position: 'LW', version: 'Futties', oldMin: '150,000', oldMax: '7,100,000', newMin: '247,000', newMax: '4,700,000', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
-    { name: 'Daniel Olmo Carvajal', rating: '99', position: 'CAM', version: 'Summer Stars Winners', oldMin: '500,000', oldMax: '2,160,000', newMin: '162,000', newMax: '3,100,000', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
-    { name: 'Diego Maradona', rating: '99', position: 'CAM', version: 'FUTTIES Icon', oldMin: '300,000', oldMax: '6,578,000', newMin: '275,000', newMax: '5,200,000', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
-    { name: 'Eric García Martret', rating: '99', position: 'CB', version: 'Summer Stars Winners', oldMin: '200,000', oldMax: '802,000', newMin: '40,250', newMax: '750,000', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
-    { name: 'Fabián Ruiz Peña', rating: '99', position: 'CM', version: 'Summer Stars Winners', oldMin: '400,000', oldMax: '1,002,000', newMin: '54,500', newMax: '1,000,000', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
-    { name: 'Ferran Torres García', rating: '99', position: 'ST', version: 'Summer Stars Winners', oldMin: '500,000', oldMax: '1,780,000', newMin: '127,000', newMax: '2,400,000', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
+    { name: 'Player Name', rating: '99', position: 'LM', version: 'Summer Stars Winners', oldMin: '--', oldMax: '--', newMin: '--', newMax: '--', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
+    { name: 'Player Name', rating: '99', position: 'LW', version: 'Futties', oldMin: '--', oldMax: '--', newMin: '--', newMax: '--', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
+    { name: 'Player Name', rating: '99', position: 'CAM', version: 'Summer Stars Winners', oldMin: '--', oldMax: '--', newMin: '--', newMax: '--', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
+    { name: 'Player Name', rating: '99', position: 'CAM', version: 'FUTTIES Icon', oldMin: '--', oldMax: '--', newMin: '--', newMax: '--', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
+    { name: 'Player Name', rating: '99', position: 'CB', version: 'Summer Stars Winners', oldMin: '--', oldMax: '--', newMin: '--', newMax: '--', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
+    { name: 'Player Name', rating: '99', position: 'CM', version: 'Summer Stars Winners', oldMin: '--', oldMax: '--', newMin: '--', newMax: '--', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
+    { name: 'Player Name', rating: '99', position: 'ST', version: 'Summer Stars Winners', oldMin: '--', oldMax: '--', newMin: '--', newMax: '--', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
 ];
 
 export default function PriceRanges() {
@@ -28,10 +28,10 @@ export default function PriceRanges() {
                     <div className="text-sm text-gray-400 mb-1 flex items-center gap-2">
                         Home <span>›</span> Players <span>›</span> Price Ranges
                     </div>
-                    <h1 className="text-2xl font-bold text-white mb-1">EA FIFA 17 Price Range Changes</h1>
+                    <h1 className="text-2xl font-bold text-white mb-1">FIFA 17 Price Range Changes</h1>
                     <div className="text-gray-400 text-sm mb-4">FUT 17 Price Range Updates</div>
                     <button className="bg-[#111] hover:bg-[#222] border border-[#333] text-sm py-1.5 px-3 rounded flex items-center gap-2 transition-colors w-max font-bold">
-                        <span>↺</span> EA FIFA 17
+                        <span>↺</span> FIFA 17
                     </button>
                 </div>
 

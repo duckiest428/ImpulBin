@@ -31,8 +31,8 @@ export default function Players() {
                         <span>›</span>
                         <span className="text-gray-200">Players</span>
                     </div>
-                    <h1 className="text-3xl font-bold mb-1">EA FIFA 17 Players</h1>
-                    <p className="text-gray-400 text-sm">EA FIFA 17 Database & Ratings</p>
+                    <h1 className="text-3xl font-bold mb-1">FIFA 17 Players</h1>
+                    <p className="text-gray-400 text-sm">FIFA 17 Database & Ratings</p>
                 </div>
 
                 {/* Controls */}
