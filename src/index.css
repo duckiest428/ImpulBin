@@ -221,7 +221,7 @@
             top: 64px;
             left: 0;
             width: 100%;
-            height: calc(100vh - 64px);
+            bottom: 0;
             background-color: rgba(18, 18, 18, 0.98);
             backdrop-filter: blur(10px);
             z-index: 250;
