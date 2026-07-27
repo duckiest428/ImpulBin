@@ -12,12 +12,12 @@ export default function Home() {
     ];
 
     return (
-        <div className="w-full min-h-[calc(100vh-64px)] flex flex-col justify-start items-center px-4 py-8 md:py-16 mx-auto">
+        <div className="w-full min-h-[calc(100vh-64px)] flex flex-col justify-start items-center px-4 pt-12 pb-8 md:pt-24 md:pb-16 mx-auto">
             <div className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center text-center">
                 
                 {/* Hero Logo & Search */}
-                <header className="w-full flex flex-col items-center justify-center mb-8 md:mb-12">
-                    <h1 className="text-6xl sm:text-7xl md:text-8xl font-black italic text-[#00e575] tracking-tight mb-6 drop-shadow-[0_0_30px_rgba(0,229,117,0.35)] select-none">
+                <header className="w-full flex flex-col items-center justify-center mb-12 md:mb-20">
+                    <h1 className="text-6xl sm:text-7xl md:text-8xl font-black italic text-[#00e575] tracking-tight mb-10 md:mb-14 drop-shadow-[0_0_30px_rgba(0,229,117,0.35)] select-none">
                         IMPULBIN
                     </h1>
                     
@@ -35,7 +35,7 @@ export default function Home() {
                 </header>
 
                 {/* Filter Pills Section - Centered across container */}
-                <section className="w-full flex flex-wrap justify-center items-center gap-3 sm:gap-4 my-6 md:my-10 px-2">
+                <section className="w-full flex flex-wrap justify-center items-center gap-3 sm:gap-4 mb-14 md:mb-20 px-2">
                     {filters.map((filter) => (
                         <button
                             key={filter.id}
@@ -53,7 +53,7 @@ export default function Home() {
                 </section>
 
                 {/* Cards Section - Centered directly beneath */}
-                <main className="w-full flex justify-center items-center mt-4 mb-12">
+                <main className="w-full flex justify-center items-center mb-16 md:mb-24">
                     <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 max-w-full">
                         {[1, 2, 3, 4, 5, 6].map((slot) => (
                             <div
