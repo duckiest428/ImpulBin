@@ -27,7 +27,7 @@ export default function ConsumablesPrices() {
                     <div className="text-sm text-gray-400 mb-1 flex items-center gap-2">
                         Home <span>›</span> Consumables <span>›</span> Chemistry Styles
                     </div>
-                    <h1 className="text-2xl font-bold text-white mb-6">EA FC 26 Chemistry Styles</h1>
+                    <h1 className="text-2xl font-bold text-white mb-6">EA FIFA 17 Chemistry Styles</h1>
                 </div>
 
                 {/* Tabs */}

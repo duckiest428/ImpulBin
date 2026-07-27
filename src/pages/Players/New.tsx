@@ -25,8 +25,8 @@ export default function New() {
                         <span>›</span>
                         <span className="text-gray-200">New</span>
                     </div>
-                    <h1 className="text-3xl font-bold mb-1">EA FC 26 New Players</h1>
-                    <p className="text-gray-400 text-sm">Latest UT 26 Players added</p>
+                    <h1 className="text-3xl font-bold mb-1">EA FIFA 17 New Players</h1>
+                    <p className="text-gray-400 text-sm">Latest FUT 17 Players added</p>
                 </div>
 
                 <div className="flex justify-end mb-4">

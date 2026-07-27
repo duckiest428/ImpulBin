@@ -56,22 +56,12 @@ export default function Navbar() {
                 <li className="has-dropdown">
                     <Link to="/market/index100" className="text-inherit no-underline">Market</Link>
                     <div className="dropdown-menu">
-                        <Link to="/">Market Player List</Link>
+                        <Link to="/market/players">Market Player List</Link>
                         <Link to="/market/price-ranges">Price Range Updates</Link>
                         <Link to="/market/managers">Manager Prices</Link>
                         <Link to="/market/consumables">Consumable Prices</Link>
                         <Link to="/">Index 81-86</Link>
                         <Link to="/market/index100">Index 100</Link>
-                    </div>
-                </li>
-                <li className="has-dropdown">
-                    Community
-                    <div className="dropdown-menu">
-                        <Link to="/">Forums</Link>
-                        <Link to="/">User rankings</Link>
-                        <Link to="/">Clubs</Link>
-                        <Link to="/">Leagues</Link>
-                        <Link to="/">Nations</Link>
                     </div>
                 </li>
             </ul>
@@ -139,7 +129,7 @@ export default function Navbar() {
                                     Market
                                 </Link>
                             </h3>
-                            <Link to="/" className="mega-link">Market Player List</Link>
+                            <Link to="/market/players" className="mega-link">Market Player List</Link>
                             <Link to="/market/price-ranges" className="mega-link">Price Range Updates</Link>
                             <Link to="/market/managers" className="mega-link">Manager Prices</Link>
                             <Link to="/market/consumables" className="mega-link">Consumable Prices</Link>
@@ -150,17 +140,6 @@ export default function Navbar() {
 
                     {/* Column 4 */}
                     <div className="mega-col">
-                        <div className="mega-category">
-                            <h3 className="mega-heading">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
-                                Community
-                            </h3>
-                            <Link to="/" className="mega-link">Forums</Link>
-                            <Link to="/" className="mega-link">User rankings</Link>
-                            <Link to="/" className="mega-link">Clubs</Link>
-                            <Link to="/" className="mega-link">Leagues</Link>
-                            <Link to="/" className="mega-link">Nations</Link>
-                        </div>
                         <div className="mega-category">
                             <h3 className="mega-heading">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm0-7c-1.65 0-3 1.35-3 3s1.35 3 3 3 3-1.35 3-3-1.35-3-3-3z"/></svg>

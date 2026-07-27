@@ -29,8 +29,8 @@ export default function ManagerPrices() {
                         <div className="text-sm text-gray-400 mb-1 flex items-center gap-2">
                             Home <span>›</span> Managers
                         </div>
-                        <h1 className="text-2xl font-bold text-white mb-1">EA FC 26 Manager Prices</h1>
-                        <div className="text-gray-400 text-sm mb-6">UT 26 Manager Prices from each country</div>
+                        <h1 className="text-2xl font-bold text-white mb-1">EA FIFA 17 Manager Prices</h1>
+                        <div className="text-gray-400 text-sm mb-6">FUT 17 Manager Prices from each country</div>
                     </div>
 
                     {/* Search */}

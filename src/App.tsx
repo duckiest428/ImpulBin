@@ -22,6 +22,8 @@ import PriceRanges from './pages/Market/PriceRanges';
 import ManagerPrices from './pages/Market/ManagerPrices';
 import ConsumablesPrices from './pages/Market/ConsumablesPrices';
 
+import MarketPlayerList from './pages/Market/MarketPlayerList';
+
 export default function App() {
     return (
         <HashRouter>
@@ -44,6 +46,7 @@ export default function App() {
                         <Route path="/sbcs/combinations" element={<RatingCombinations />} />
                         <Route path="/sbcs/best-value" element={<BestValueSBCs />} />
                         
+                        <Route path="/market/players" element={<MarketPlayerList />} />
                         <Route path="/market/index100" element={<Index100 />} />
                         <Route path="/market/price-ranges" element={<PriceRanges />} />
                         <Route path="/market/managers" element={<ManagerPrices />} />

@@ -20,7 +20,7 @@ export default function Footer() {
                     <ul>
                         <li><Link to="/squad-builder">Squad Builder</Link></li>
                         <li><Link to="/">SBC</Link></li>
-                        <li><Link to="/players">EA FC 26 Players</Link></li>
+                        <li><Link to="/players">EA FIFA 17 Players</Link></li>
                     </ul>
                 </div>
             </div>

@@ -31,15 +31,15 @@ export default function Players() {
                         <span>›</span>
                         <span className="text-gray-200">Players</span>
                     </div>
-                    <h1 className="text-3xl font-bold mb-1">EA FC 26 Players</h1>
-                    <p className="text-gray-400 text-sm">EA FC 26 Database & Ratings</p>
+                    <h1 className="text-3xl font-bold mb-1">EA FIFA 17 Players</h1>
+                    <p className="text-gray-400 text-sm">EA FIFA 17 Database & Ratings</p>
                 </div>
 
                 {/* Controls */}
                 <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
                     <div className="flex items-center gap-2 w-full md:w-auto">
                         <button className="bg-black border border-gray-700 px-4 py-2 rounded font-bold hover:bg-gray-800 flex items-center gap-2">
-                            <span>⏱</span> FC 26
+                            <span>⏱</span> FIFA 17
                         </button>
                         <div className="relative flex-1 md:w-80">
                             <input 

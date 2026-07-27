@@ -28,10 +28,10 @@ export default function PriceRanges() {
                     <div className="text-sm text-gray-400 mb-1 flex items-center gap-2">
                         Home <span>›</span> Players <span>›</span> Price Ranges
                     </div>
-                    <h1 className="text-2xl font-bold text-white mb-1">EA FC 26 Price Range Changes</h1>
-                    <div className="text-gray-400 text-sm mb-4">UT 26 Price Range Updates</div>
+                    <h1 className="text-2xl font-bold text-white mb-1">EA FIFA 17 Price Range Changes</h1>
+                    <div className="text-gray-400 text-sm mb-4">FUT 17 Price Range Updates</div>
                     <button className="bg-[#111] hover:bg-[#222] border border-[#333] text-sm py-1.5 px-3 rounded flex items-center gap-2 transition-colors w-max font-bold">
-                        <span>↺</span> EA FC 26
+                        <span>↺</span> EA FIFA 17
                     </button>
                 </div>
 

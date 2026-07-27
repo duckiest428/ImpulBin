@@ -30,10 +30,10 @@ export default function PromoSquads() {
                     <div className="text-sm text-gray-400 mb-1 flex items-center gap-2">
                         Home <span>›</span> TOTW Squads
                     </div>
-                    <h1 className="text-2xl font-bold text-white mb-1">FUT 26 TOTWs, TOTY, TOTS</h1>
-                    <div className="text-gray-400 text-sm mb-4">EA FC 26 Promo Squads</div>
+                    <h1 className="text-2xl font-bold text-white mb-1">FFUT 17 TOTWs, TOTY, TOTS</h1>
+                    <div className="text-gray-400 text-sm mb-4">EA FIFA 17 Promo Squads</div>
                     <button className="bg-[#2a2a2a] hover:bg-[#333] border border-[#333] text-sm py-1.5 px-3 rounded flex items-center gap-2 transition-colors w-max">
-                        <span className="text-xs">↺</span> FC 26
+                        <span className="text-xs">↺</span> FIFA 17
                     </button>
                 </div>
 
