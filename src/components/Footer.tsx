@@ -23,14 +23,6 @@ export default function Footer() {
                         <li><Link to="/players">EA FC 26 Players</Link></li>
                     </ul>
                 </div>
-                <div className="footer-column">
-                    <h3>FUTBIN APPLICATIONS</h3>
-                    <ul>
-                        <li><Link to="/">FUTBIN For Android</Link></li>
-                        <li><Link to="/">FUTBIN For iOS</Link></li>
-                        <li><Link to="/">More Details</Link></li>
-                    </ul>
-                </div>
             </div>
             <div className="footer-bottom">
                 <p>This site was created under license from Electronic Arts Inc. Trademarks are property of their respective owners. Game materials copyright Electronic Arts Inc. and/or its licensors. Electronic Arts Inc. and its licensors have not endorsed and are not responsible for the operations of or content on this site.</p>
@@ -38,12 +30,12 @@ export default function Footer() {
                     <Link to="/">TOS</Link>
                     <Link to="/">Privacy Policy</Link>
                     <Link to="/">Cookie Policy</Link>
-                    <Link to="/">Contact</Link>
                 </div>
-                <p>© 2014-2026 Copyright FUTBIN.com</p>
+                <p>© 2026</p>
                 <br/>
                 <p style={{'color': '#00e575', 'fontWeight': 'bold'}}>A PART OF BETTER COLLECTIVE</p>
             </div>
         </footer>
     );
 }
+
