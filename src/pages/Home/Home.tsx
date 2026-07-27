@@ -25,33 +25,33 @@ export default function Home() {
                 </div>
             </header>
             
-            {/* Filter Pills matching Image 2 */}
-            <section className="flex justify-center gap-2 sm:gap-3 flex-wrap my-8 px-4 max-w-6xl mx-auto">
+            {/* Filter Pills */}
+            <section className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 my-10 sm:my-14 px-4 max-w-5xl mx-auto w-full">
                 {filters.map((filter) => (
                     <button
                         key={filter.id}
                         onClick={() => setActiveFilter(filter.id)}
-                        className={`px-5 py-2 rounded-full border text-sm font-semibold flex items-center gap-2 transition-all cursor-pointer ${
+                        className={`px-5 py-2.5 rounded-full border-2 text-sm sm:text-base font-bold flex items-center gap-2.5 transition-all duration-200 cursor-pointer shadow-md ${
                             activeFilter === filter.id
-                                ? 'border-[#00e575] text-[#00e575] bg-white/5 shadow-[0_0_12px_rgba(0,229,117,0.2)]'
-                                : 'border-gray-700 text-gray-300 hover:border-gray-500 hover:bg-white/5'
+                                ? 'border-[#00e575] text-[#00e575] bg-[#00e575]/10 shadow-[0_0_20px_rgba(0,229,117,0.3)] scale-105'
+                                : 'border-gray-600 text-gray-200 hover:border-gray-400 hover:bg-white/5 hover:text-white'
                         }`}
                     >
-                        <span>{filter.icon}</span>
+                        <span className="text-base">{filter.icon}</span>
                         <span>{filter.label}</span>
                     </button>
                 ))}
             </section>
             
             {/* Placeholder Cards Row */}
-            <main className="max-w-[1700px] mx-auto px-4">
-                <div className="flex flex-wrap xl:flex-nowrap justify-center gap-4 py-8">
+            <main className="max-w-[1700px] mx-auto px-4 pt-6 sm:pt-10 pb-16">
+                <div className="flex flex-wrap justify-center items-center gap-5 sm:gap-6">
                     {[1, 2, 3, 4, 5, 6].map((slot) => (
                         <div
                             key={slot}
-                            className="w-[125px] sm:w-[140px] h-[180px] sm:h-[200px] rounded-xl border-2 border-dashed border-gray-700 hover:border-[#00e575] bg-white/[0.02] flex items-center justify-center text-gray-500 hover:text-[#00e575] transition-all cursor-pointer group"
+                            className="w-[130px] sm:w-[150px] h-[190px] sm:h-[220px] rounded-2xl border-2 border-dashed border-gray-600 hover:border-[#00e575] bg-white/[0.03] flex items-center justify-center text-gray-400 hover:text-[#00e575] transition-all duration-200 cursor-pointer group shadow-lg"
                         >
-                            <span className="text-2xl font-light group-hover:scale-125 transition-transform">+</span>
+                            <span className="text-3xl font-light group-hover:scale-125 transition-transform">+</span>
                         </div>
                     ))}
                 </div>
