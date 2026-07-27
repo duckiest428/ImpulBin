@@ -12,16 +12,16 @@ export default function Home() {
     ];
 
     return (
-        <div className="w-full min-h-[calc(100vh-64px)] flex flex-col justify-start items-center px-4 pt-12 pb-8 md:pt-24 md:pb-16 mx-auto">
-            <div className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center text-center">
+        <div className="w-full min-h-[calc(100vh-64px)] flex flex-col justify-start items-center px-4 pt-[22vh] md:pt-[26vh] pb-16 mx-auto">
+            <div className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center text-center gap-8 md:gap-10">
                 
                 {/* Hero Logo & Search */}
-                <header className="w-full flex flex-col items-center justify-center mb-12 md:mb-20">
-                    <h1 className="text-6xl sm:text-7xl md:text-8xl font-black italic text-[#00e575] tracking-tight mb-10 md:mb-14 drop-shadow-[0_0_30px_rgba(0,229,117,0.35)] select-none">
+                <header className="w-full flex flex-col items-center justify-center w-full gap-8 md:gap-10">
+                    <h1 className="text-6xl sm:text-7xl md:text-8xl font-black italic text-[#00e575] tracking-tight drop-shadow-[0_0_30px_rgba(0,229,117,0.35)] select-none">
                         IMPULBIN
                     </h1>
                     
-                    <div className="w-full max-w-2xl mx-auto flex items-center bg-[#1a1a1a] border border-[#383838] focus-within:border-[#00e575] rounded-full px-6 py-3.5 shadow-2xl transition-all">
+                    <div className="w-full max-w-2xl mx-auto flex items-center bg-[#1a1a1a] border border-[#383838] focus-within:border-[#00e575] rounded-full px-6 py-4 shadow-2xl transition-all">
                         <span className="text-gray-400 text-xl mr-3">🔍</span>
                         <input 
                             type="text" 
@@ -35,12 +35,12 @@ export default function Home() {
                 </header>
 
                 {/* Filter Pills Section - Centered across container */}
-                <section className="w-full flex flex-wrap justify-center items-center gap-3 sm:gap-4 mb-14 md:mb-20 px-2">
+                <section className="w-full flex flex-wrap justify-center items-center gap-4 md:gap-6 px-2 w-full">
                     {filters.map((filter) => (
                         <button
                             key={filter.id}
                             onClick={() => setActiveFilter(filter.id)}
-                            className={`whitespace-nowrap px-5 py-2.5 rounded-full border-2 text-sm sm:text-base font-bold flex items-center justify-center gap-2 transition-all duration-200 cursor-pointer shadow-lg ${
+                            className={`whitespace-nowrap px-6 py-3 rounded-full border-2 text-sm sm:text-base font-bold flex items-center justify-center gap-2 transition-all duration-200 cursor-pointer shadow-lg ${
                                 activeFilter === filter.id
                                     ? 'border-[#00e575] text-[#00e575] bg-[#00e575]/10 shadow-[0_0_20px_rgba(0,229,117,0.3)] scale-105'
                                     : 'border-[#383838] text-gray-200 bg-[#1a1a1a] hover:border-gray-400 hover:bg-white/10 hover:text-white'
@@ -53,14 +53,14 @@ export default function Home() {
                 </section>
 
                 {/* Cards Section - Centered directly beneath */}
-                <main className="w-full flex justify-center items-center mb-16 md:mb-24">
-                    <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 max-w-full">
+                <main className="w-full flex justify-center items-center w-full">
+                    <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-10 max-w-full">
                         {[1, 2, 3, 4, 5, 6].map((slot) => (
                             <div
                                 key={slot}
-                                className="w-[130px] sm:w-[150px] h-[190px] sm:h-[220px] rounded-2xl border-2 border-dashed border-[#383838] hover:border-[#00e575] bg-[#161616] flex items-center justify-center text-gray-500 hover:text-[#00e575] transition-all duration-200 cursor-pointer group shadow-xl hover:-translate-y-1"
+                                className="w-[140px] sm:w-[160px] h-[200px] sm:h-[230px] rounded-2xl border-2 border-dashed border-[#383838] hover:border-[#00e575] bg-[#161616] flex items-center justify-center text-gray-500 hover:text-[#00e575] transition-all duration-200 cursor-pointer group shadow-xl hover:-translate-y-1"
                             >
-                                <span className="text-3xl font-light text-gray-400 group-hover:scale-125 group-hover:text-[#00e575] transition-transform">+</span>
+                                <span className="text-4xl font-light text-gray-400 group-hover:scale-125 group-hover:text-[#00e575] transition-transform">+</span>
                             </div>
                         ))}
                     </div>
