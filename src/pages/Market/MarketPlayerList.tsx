@@ -54,7 +54,7 @@ export default function MarketPlayerList() {
                         <span>↕</span> Sort by
                     </button>
                     <button className="bg-[#111] border border-[#333] hover:bg-[#222] text-white text-sm font-bold py-1.5 px-4 rounded-md transition-colors flex items-center gap-2">
-                        <span>🛡️</span> Version
+                        Version
                     </button>
                     <button className="bg-[#111] border border-[#333] hover:bg-[#222] text-white text-sm font-bold py-1.5 px-4 rounded-md transition-colors flex items-center gap-2">
                         <span>⚑</span> Positions
@@ -63,10 +63,10 @@ export default function MarketPlayerList() {
                         <span>🏆</span> Leagues
                     </button>
                     <button className="bg-[#111] border border-[#333] hover:bg-[#222] text-white text-sm font-bold py-1.5 px-4 rounded-md transition-colors flex items-center gap-2">
-                        <span>🌍</span> Nations
+                        Nations
                     </button>
                     <button className="bg-[#111] border border-[#333] hover:bg-[#222] text-white text-sm font-bold py-1.5 px-4 rounded-md transition-colors flex items-center gap-2">
-                        <span>⚽</span> Clubs
+                        Clubs
                     </button>
                     <button className="bg-[#111] border border-[#333] hover:bg-[#222] text-[#ffb800] text-sm font-bold py-1.5 px-4 rounded-md transition-colors flex items-center gap-2">
                         <span className="bg-[#ffb800] text-black rounded-full w-4 h-4 flex items-center justify-center text-[10px]">F</span> Price

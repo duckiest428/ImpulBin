@@ -1,45 +1,11 @@
 import React from 'react';
 import SBCNav from '../../components/SBCNav';
 
-const ratings = [81, 82, 83, 84, 85, 86, 87, 88];
-
 const mockPlayers = {
-    81: [
-        { name: 'Player Name', pos: 'ST', price: 0 },
-        { name: 'Player Name', pos: 'GK', price: 0 },
-        { name: 'Player Name', pos: 'ST', price: 0 },
-        { name: 'Player Name', pos: 'LW', price: 0 },
-        { name: 'Player Name', pos: 'CM', price: 0 },
-        { name: 'Player Name', pos: 'RW', price: 0 },
-        { name: 'Player Name', pos: 'GK', price: 0 },
-    ],
-    82: [
-        { name: 'Player Name', pos: 'ST', price: 0 },
-        { name: 'Player Name', pos: 'CB', price: 0 },
-        { name: 'Player Name', pos: 'CB', price: 0 },
-        { name: 'Player Name', pos: 'RW', price: 0 },
-        { name: 'Player Name', pos: 'ST', price: 0 },
-        { name: 'Player Name', pos: 'GK', price: 0 },
-        { name: 'Player Name', pos: 'CB', price: 0 },
-    ],
-    83: [
-        { name: 'Player Name', pos: 'RW', price: 0 },
-        { name: 'Player Name', pos: 'CM', price: 0 },
-        { name: 'Player Name', pos: 'GK', price: 0 },
-        { name: 'Player Name', pos: 'GK', price: 0 },
-        { name: 'Player Name', pos: 'CM', price: 0 },
-        { name: 'Player Name', pos: 'LW', price: 0 },
-        { name: 'Player Name', pos: 'LM', price: 0 },
-    ],
-    84: [
-        { name: 'Player Name', pos: 'CB', price: 0 },
-        { name: 'Player Name', pos: 'RB', price: 0 },
-        { name: 'Player Name', pos: 'ST', price: 0 },
-        { name: 'Player Name', pos: 'CM', price: 0 },
-        { name: 'Player Name', pos: 'CDM', price: 0 },
-        { name: 'Player Name', pos: 'CM', price: 0 },
-        { name: 'Player Name', pos: 'ST', price: 0 },
-    ],
+    81: Array.from({ length: 6 }).map((_, i) => ({ id: `81-${i}`, name: 'Player Name', pos: '---', price: '--' })),
+    82: Array.from({ length: 6 }).map((_, i) => ({ id: `82-${i}`, name: 'Player Name', pos: '---', price: '--' })),
+    83: Array.from({ length: 6 }).map((_, i) => ({ id: `83-${i}`, name: 'Player Name', pos: '---', price: '--' })),
+    84: Array.from({ length: 6 }).map((_, i) => ({ id: `84-${i}`, name: 'Player Name', pos: '---', price: '--' })),
 };
 
 export default function CheapestPlayers() {
@@ -72,25 +38,21 @@ export default function CheapestPlayers() {
                             </div>
                             {/* Player List */}
                             <div className="flex flex-col">
-                                {mockPlayers[rating as unknown as keyof typeof mockPlayers].map((player, idx) => (
-                                    <div key={idx} className="flex items-center justify-between p-2 border-b border-[#2d2d2d] hover:bg-[#252525] transition-colors last:border-0">
+                                {mockPlayers[rating as unknown as keyof typeof mockPlayers].map((player) => (
+                                    <div key={player.id} className="flex items-center justify-between p-2 border-b border-[#2d2d2d] hover:bg-[#252525] transition-colors last:border-0">
                                         <div className="flex items-center gap-3 overflow-hidden">
-                                            <div className="w-8 h-8 bg-[#333] rounded overflow-hidden shrink-0">
-                                                <img src={`https://placehold.co/32x32/111/444`} alt="player" className="w-full h-full object-cover" />
+                                            <div className="w-8 h-8 bg-[#252525] border border-[#333] rounded shrink-0 flex items-center justify-center text-gray-500 font-mono text-[10px]">
+                                                --
                                             </div>
                                             <div className="flex flex-col overflow-hidden">
-                                                <span className="text-sm font-semibold truncate text-[#f0f0f0]">
+                                                <span className="text-sm font-semibold truncate text-gray-400">
                                                     {player.name} <span className="text-gray-500 font-normal">({player.pos})</span>
                                                 </span>
-                                                <div className="flex items-center gap-1 mt-0.5">
-                                                    <div className="w-3 h-2 bg-gray-400 rounded-sm"></div>
-                                                    <div className="w-3 h-3 bg-red-600 rounded-full"></div>
-                                                </div>
                                             </div>
                                         </div>
                                         <div className="flex items-center gap-1 shrink-0 bg-[#111] px-2 py-1 rounded border border-[#333]">
                                             <span className="text-[#3b82f6] text-[10px]">■</span>
-                                            <span className="text-xs font-bold text-gray-200">{player.price}</span>
+                                            <span className="text-xs font-bold text-gray-500 font-mono">{player.price}</span>
                                         </div>
                                     </div>
                                 ))}

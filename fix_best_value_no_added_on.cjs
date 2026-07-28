@@ -1,27 +1,32 @@
-import React from 'react';
+const fs = require('fs');
+
+const content = `import React from 'react';
 import SBCNav from '../../components/SBCNav';
 
 export interface BestValueSBCItem {
     id: string;
     set: string;
     challenge: string;
+    setImg: string;
+    challengeImg: string;
+    rewardImg: string;
     price: string;
     reward: string;
-    rewardType: string;
+    rewardType: 'Tradeable' | 'Untradeable';
     value: string;
     vfc: string;
+    graphImg: string;
 }
 
-const mockSBCs: BestValueSBCItem[] = Array.from({ length: 8 }).map((_, idx) => ({
-    id: `best-sbc-${idx + 1}`,
-    set: 'Set Name',
-    challenge: 'Challenge Name',
-    price: '--',
-    reward: 'Reward Name',
-    rewardType: '---',
-    value: '--',
-    vfc: '--',
-}));
+const mockSBCs: BestValueSBCItem[] = [
+    { id: '1', set: 'Intro to Player SBCs', challenge: 'Pride of the Nation', setImg: 'https://placehold.co/40x50/2c3e50/white?text=Set', challengeImg: 'https://placehold.co/40x50/0f172a/white?text=Chall', rewardImg: 'https://placehold.co/40x50/332200/white?text=Pack', price: '700', reward: '1 x Gold Pack', rewardType: 'Untradeable', value: '5,000', vfc: '7.14', graphImg: 'https://placehold.co/100x40/1e1e1e/3b82f6?text=Graph' },
+    { id: '2', set: 'Intro to SBCs', challenge: 'A Brace', setImg: 'https://placehold.co/40x50/2c3e50/white?text=Set', challengeImg: 'https://placehold.co/40x50/0f172a/white?text=Chall', rewardImg: 'https://placehold.co/40x50/332200/white?text=Pack', price: '400', reward: '1 x Silver Pack', rewardType: 'Untradeable', value: '2,500', vfc: '6.25', graphImg: 'https://placehold.co/100x40/1e1e1e/3b82f6?text=Graph' },
+    { id: '3', set: 'Throwback Marquee Matchups', challenge: 'Lombardia FC v Milano FC', setImg: 'https://placehold.co/40x50/2c3e50/white?text=Set', challengeImg: 'https://placehold.co/40x50/0f172a/white?text=Chall', rewardImg: 'https://placehold.co/40x50/332200/white?text=Pack', price: '3,650', reward: '1 x Prime Electrum Players Pack', rewardType: 'Tradeable', value: '20,000', vfc: '5.48', graphImg: 'https://placehold.co/100x40/1e1e1e/3b82f6?text=Graph' },
+    { id: '4', set: 'Throwback Marquee Matchups', challenge: 'Arsenal v Tottenham Hotspur', setImg: 'https://placehold.co/40x50/2c3e50/white?text=Set', challengeImg: 'https://placehold.co/40x50/0f172a/white?text=Chall', rewardImg: 'https://placehold.co/40x50/332200/white?text=Pack', price: '4,600', reward: '1 x Premium Gold Players Pack', rewardType: 'Tradeable', value: '25,000', vfc: '5.43', graphImg: 'https://placehold.co/100x40/1e1e1e/3b82f6?text=Graph' },
+    { id: '5', set: 'Throwback Marquee Matchups', challenge: 'Borussia Dortmund v VfB Stuttgart', setImg: 'https://placehold.co/40x50/2c3e50/white?text=Set', challengeImg: 'https://placehold.co/40x50/0f172a/white?text=Chall', rewardImg: 'https://placehold.co/40x50/332200/white?text=Pack', price: '2,500', reward: '1 x Gold Players Pack', rewardType: 'Tradeable', value: '12,500', vfc: '5.00', graphImg: 'https://placehold.co/100x40/1e1e1e/3b82f6?text=Graph' },
+    { id: '6', set: 'Intro to Player SBCs', challenge: 'League Leader', setImg: 'https://placehold.co/40x50/2c3e50/white?text=Set', challengeImg: 'https://placehold.co/40x50/0f172a/white?text=Chall', rewardImg: 'https://placehold.co/40x50/332200/white?text=Pack', price: '550', reward: '1 x Silver Pack', rewardType: 'Untradeable', value: '2,500', vfc: '4.55', graphImg: 'https://placehold.co/100x40/1e1e1e/3b82f6?text=Graph' },
+    { id: '7', set: 'Throwback Marquee Matchups', challenge: 'FC Barcelona v Athletic Club', setImg: 'https://placehold.co/40x50/2c3e50/white?text=Set', challengeImg: 'https://placehold.co/40x50/0f172a/white?text=Chall', rewardImg: 'https://placehold.co/40x50/332200/white?text=Pack', price: '3,300', reward: '1 x Jumbo Premium Gold Pack', rewardType: 'Tradeable', value: '15,000', vfc: '4.55', graphImg: 'https://placehold.co/100x40/1e1e1e/3b82f6?text=Graph' },
+];
 
 export default function BestValueSBCs() {
     return (
@@ -74,43 +79,35 @@ export default function BestValueSBCs() {
                                 <tr key={sbc.id} className="border-b border-[#2d2d2d] hover:bg-[#252525] transition-colors">
                                     <td className="p-4">
                                         <div className="flex flex-col items-center gap-2">
-                                            <div className="w-10 h-12 bg-[#252525] rounded border border-[#333] flex items-center justify-center text-gray-500 font-mono text-xs">
-                                                --
-                                            </div>
-                                            <span className="font-semibold text-gray-400 whitespace-nowrap">{sbc.set}</span>
+                                            <img src={sbc.setImg} alt={sbc.set} className="w-10 h-12 object-contain rounded" />
+                                            <span className="font-semibold text-white whitespace-nowrap">{sbc.set}</span>
                                         </div>
                                     </td>
                                     <td className="p-4">
                                         <div className="flex flex-col items-center gap-2">
-                                            <div className="w-10 h-12 bg-[#252525] rounded border border-[#333] flex items-center justify-center text-gray-500 font-mono text-xs">
-                                                --
-                                            </div>
-                                            <span className="font-semibold text-gray-400 whitespace-nowrap">{sbc.challenge}</span>
+                                            <img src={sbc.challengeImg} alt={sbc.challenge} className="w-10 h-12 object-contain rounded" />
+                                            <span className="font-semibold text-white whitespace-nowrap">{sbc.challenge}</span>
                                         </div>
                                     </td>
                                     <td className="p-4">
-                                        <span className="font-bold text-gray-500 font-mono flex items-center justify-center gap-1">
+                                        <span className="font-bold text-gray-200 flex items-center justify-center gap-1">
                                             {sbc.price}
-                                            <span className="w-3.5 h-3.5 bg-[#ffb800]/50 text-black text-[9px] font-extrabold rounded-full inline-flex items-center justify-center">C</span>
+                                            <span className="w-3.5 h-3.5 bg-[#ffb800] text-black text-[9px] font-extrabold rounded-full inline-flex items-center justify-center">C</span>
                                         </span>
                                     </td>
                                     <td className="p-4">
                                         <div className="flex flex-col items-center gap-1">
-                                            <div className="w-10 h-12 bg-[#252525] rounded border border-[#333] flex items-center justify-center text-gray-500 font-mono text-xs">
-                                                --
-                                            </div>
-                                            <span className="font-medium text-gray-400">{sbc.reward}</span>
-                                            <span className="text-xs font-semibold text-gray-500">
+                                            <img src={sbc.rewardImg} alt={sbc.reward} className="w-10 h-12 object-contain rounded" />
+                                            <span className="font-medium text-white">{sbc.reward}</span>
+                                            <span className={\`text-xs font-semibold \${sbc.rewardType === 'Untradeable' ? 'text-red-500' : 'text-green-500'}\`}>
                                                 ({sbc.rewardType})
                                             </span>
                                         </div>
                                     </td>
-                                    <td className="p-4 font-bold text-gray-500 font-mono">{sbc.value}</td>
-                                    <td className="p-4 font-bold text-gray-500 font-mono">{sbc.vfc}</td>
+                                    <td className="p-4 font-bold text-white">{sbc.value}</td>
+                                    <td className="p-4 font-bold text-white">{sbc.vfc}</td>
                                     <td className="p-4">
-                                        <div className="w-24 h-6 bg-[#252525] border border-[#333] rounded mx-auto flex items-center justify-center text-gray-600 font-mono text-[10px]">
-                                            -- GRAPH --
-                                        </div>
+                                        <img src={sbc.graphImg} alt="Graph" className="w-24 h-8 object-contain opacity-75 mx-auto rounded" />
                                     </td>
                                 </tr>
                             ))}
@@ -121,3 +118,6 @@ export default function BestValueSBCs() {
         </div>
     );
 }
+`;
+
+fs.writeFileSync('src/pages/SBCs/BestValueSBCs.tsx', content);

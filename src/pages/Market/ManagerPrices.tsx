@@ -1,32 +1,32 @@
 import React from 'react';
 
 const mockManagers = [
-    { country: 'Portugal', flag: '🇵🇹', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Spain', flag: '🇪🇸', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Albania', flag: '🇦🇱', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Algeria', flag: '🇩🇿', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Australia', flag: '🇦🇺', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Austria', flag: '🇦🇹', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Azerbaijan', flag: '🇦🇿', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Bolivia', flag: '🇧🇴', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Bosnia and Herzegovina', flag: '🇧🇦', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Bulgaria', flag: '🇧🇬', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Burkina Faso', flag: '🇧🇫', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Cameroon', flag: '🇨🇲', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Canada', flag: '🇨🇦', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Cape Verde Islands', flag: '🇨🇻', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Chile', flag: '🇨🇱', bronze: '--', silver: '--', gold: '--' },
-    { country: 'China PR', flag: '🇨🇳', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Colombia', flag: '🇨🇴', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Congo DR', flag: '🇨🇩', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Costa Rica', flag: '🇨🇷', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Croatia', flag: '🇭🇷', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Cyprus', flag: '🇨🇾', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Czechia', flag: '🇨🇿', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Portugal', flag: 'https://flagcdn.com/w40/pt.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Spain', flag: 'https://flagcdn.com/w40/es.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Albania', flag: 'https://flagcdn.com/w40/al.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Algeria', flag: 'https://flagcdn.com/w40/dz.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Australia', flag: 'https://flagcdn.com/w40/au.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Austria', flag: 'https://flagcdn.com/w40/at.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Azerbaijan', flag: 'https://flagcdn.com/w40/az.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Bolivia', flag: 'https://flagcdn.com/w40/bo.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Bosnia and Herzegovina', flag: 'https://flagcdn.com/w40/ba.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Bulgaria', flag: 'https://flagcdn.com/w40/bg.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Burkina Faso', flag: 'https://flagcdn.com/w40/bf.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Cameroon', flag: 'https://flagcdn.com/w40/cm.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Canada', flag: 'https://flagcdn.com/w40/ca.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Cape Verde Islands', flag: 'https://flagcdn.com/w40/cv.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Chile', flag: 'https://flagcdn.com/w40/cl.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'China PR', flag: 'https://flagcdn.com/w40/cn.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Colombia', flag: 'https://flagcdn.com/w40/co.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Congo DR', flag: 'https://flagcdn.com/w40/cd.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Costa Rica', flag: 'https://flagcdn.com/w40/cr.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Croatia', flag: 'https://flagcdn.com/w40/hr.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Cyprus', flag: 'https://flagcdn.com/w40/cy.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Czechia', flag: 'https://flagcdn.com/w40/cz.png', bronze: '--', silver: '--', gold: '--' },
     { country: 'Côte d\'Ivoire', flag: '🇨🇮', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Denmark', flag: '🇩🇰', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Ecuador', flag: '🇪🇨', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Egypt', flag: '🇪🇬', bronze: '--', silver: '--', gold: '--' }
+    { country: 'Denmark', flag: 'https://flagcdn.com/w40/dk.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Ecuador', flag: 'https://flagcdn.com/w40/ec.png', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Egypt', flag: 'https://flagcdn.com/w40/eg.png', bronze: '--', silver: '--', gold: '--' }
 ];
 
 export default function ManagerPrices() {
@@ -85,7 +85,7 @@ export default function ManagerPrices() {
                                     <tr key={i} className="border-b border-[#2d2d2d] hover:bg-[#252525] transition-colors">
                                         <td className="p-4">
                                             <div className="flex items-center gap-3">
-                                                <span className="text-xl">{m.flag}</span>
+                                                <img src={m.flag} alt={m.country} className="w-6 h-auto shadow-sm" />
                                                 <span className="text-white">{m.country}</span>
                                             </div>
                                         </td>

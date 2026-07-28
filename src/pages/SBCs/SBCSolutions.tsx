@@ -66,24 +66,24 @@ export default function SBCSolutions() {
                                 <tr key={idx} className="border-b border-[#222] hover:bg-[#1a1a1a] transition-colors">
                                     <td className="p-4 text-center">
                                         <div className="flex flex-col items-center justify-center gap-2">
-                                            <div className="w-10 h-12 bg-[#2c3e50] border-2 border-indigo-400 rounded flex items-center justify-center shadow-lg shadow-indigo-500/20">
-                                                <span className="text-indigo-300 text-xs">🛡️</span>
+                                            <div className="w-10 h-12 bg-[#252525] rounded border border-[#333] flex items-center justify-center text-gray-500 font-mono text-xs">
+                                                --
                                             </div>
-                                            <span className="text-white font-medium text-xs">Set Name</span>
+                                            <span className="text-gray-400 font-medium text-xs">Set Name</span>
                                         </div>
                                     </td>
                                     <td className="p-4 text-center">
                                         <div className="flex flex-col items-center justify-center gap-2">
-                                            <div className="w-8 h-10 bg-cyan-900 border border-cyan-500 rounded flex items-center justify-center">
-                                                <span className="text-cyan-400 text-xs">🏃</span>
+                                            <div className="w-10 h-12 bg-[#252525] rounded border border-[#333] flex items-center justify-center text-gray-500 font-mono text-xs">
+                                                --
                                             </div>
-                                            <span className="text-white font-medium text-xs">Challenge Name</span>
+                                            <span className="text-gray-400 font-medium text-xs">Challenge Name</span>
                                         </div>
                                     </td>
-                                    <td className="p-4 text-center font-bold text-white">Squad Name</td>
-                                    <td className="p-4 text-center text-[#ffb800]">--</td>
-                                    <td className="p-4 text-center text-gray-300">--/33</td>
-                                    <td className="p-4 text-center text-white">--</td>
+                                    <td className="p-4 text-center font-bold text-gray-400">Squad Name</td>
+                                    <td className="p-4 text-center text-gray-500 font-mono">--</td>
+                                    <td className="p-4 text-center text-gray-500 font-mono">--/33</td>
+                                    <td className="p-4 text-center text-gray-500 font-mono">--</td>
                                 </tr>
                             ))}
                         </tbody>

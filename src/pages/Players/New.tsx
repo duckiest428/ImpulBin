@@ -40,12 +40,12 @@ export default function New() {
                     <table className="w-full text-left border-collapse whitespace-nowrap text-sm">
                         <thead>
                             <tr className="bg-black/50 border-b border-gray-800 text-xs font-bold text-gray-400 uppercase">
-                                <th className="p-4">Name</th>
-                                <th className="p-4 text-center">Rating</th>
-                                <th className="p-4 text-center">Position</th>
-                                <th className="p-4 text-center">Price</th>
-                                <th className="p-4 text-center">Range</th>
-                                <th className="p-4 text-center">Added On</th>
+                                <th className="p-4">NAME</th>
+                                <th className="p-4 text-center">RATING</th>
+                                <th className="p-4 text-center">POSITION</th>
+                                <th className="p-4 text-center">PRICE</th>
+                                <th className="p-4 text-center">RANGE</th>
+                                <th className="p-4 text-center">ADDED ON</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-gray-800/50">
@@ -59,7 +59,7 @@ export default function New() {
                                             <div>
                                                 <div className="font-bold text-white text-base">{player.name}</div>
                                                 <div className="text-xs text-gray-400 flex gap-1 mt-1">
-                                                    <span>🛡</span> <span>🌍</span>
+                                                    <img src="https://flagcdn.com/w40/pt.png" alt="nation" className="w-4 h-3 inline-block object-cover rounded-sm" /> <img src="https://cdn.futbin.com/content/fifa24/img/clubs/241.png" alt="club" className="w-4 h-4 inline-block object-contain" />
                                                 </div>
                                             </div>
                                         </div>

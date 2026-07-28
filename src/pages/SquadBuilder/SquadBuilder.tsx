@@ -124,7 +124,7 @@ export default function SquadBuilder() {
                         </div>
 
                         <div className="flex flex-wrap gap-2 mb-4">
-                            {['🛡 Version', '📍 Position', '🏆 League', '🌍 Nation', '🛡 Club', '✨ SM & WF', '👟 Foot', '🏃 WR'].map(filter => (
+                            {['Version', 'Position', 'League', 'Nation', 'Club', 'SM & WF', 'Foot', 'WR'].map(filter => (
                                 <button key={filter} className="bg-black border border-gray-700 px-3 py-1.5 rounded text-sm font-medium hover:bg-gray-800 transition-colors flex items-center">
                                     <span>{filter}</span>
                                 </button>
@@ -307,7 +307,7 @@ function SidebarInfo() {
             </div>
             <div className="flex gap-4 text-sm font-medium">
                 <span className="flex items-center gap-1 text-[#10b981]">
-                    0 🟡
+                    0 <span className="w-3.5 h-3.5 bg-[#ffb800] text-black text-[9px] font-extrabold rounded-full inline-flex items-center justify-center ml-1">C</span>
                 </span>
             </div>
         </div>

@@ -1,20 +1,35 @@
 import React from 'react';
 
-const mockPriceChanges = [
-    { name: 'Player Name', rating: '99', position: 'LM', version: 'Summer Stars Winners', oldMin: '--', oldMax: '--', newMin: '--', newMax: '--', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
-    { name: 'Player Name', rating: '99', position: 'LW', version: 'Futties', oldMin: '--', oldMax: '--', newMin: '--', newMax: '--', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
-    { name: 'Player Name', rating: '99', position: 'CAM', version: 'Summer Stars Winners', oldMin: '--', oldMax: '--', newMin: '--', newMax: '--', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
-    { name: 'Player Name', rating: '99', position: 'CAM', version: 'FUTTIES Icon', oldMin: '--', oldMax: '--', newMin: '--', newMax: '--', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
-    { name: 'Player Name', rating: '99', position: 'CB', version: 'Summer Stars Winners', oldMin: '--', oldMax: '--', newMin: '--', newMax: '--', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
-    { name: 'Player Name', rating: '99', position: 'CM', version: 'Summer Stars Winners', oldMin: '--', oldMax: '--', newMin: '--', newMax: '--', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
-    { name: 'Player Name', rating: '99', position: 'ST', version: 'Summer Stars Winners', oldMin: '--', oldMax: '--', newMin: '--', newMax: '--', updatedOn: '2026-07-27', img: 'https://placehold.co/48x64/1e1e1e/444' },
-];
+export interface PriceRangeChangeItem {
+    id: string;
+    name: string;
+    rating: string;
+    position: string;
+    version: string;
+    oldMin: string;
+    oldMax: string;
+    newMin: string;
+    newMax: string;
+    addedOn: string;
+}
+
+const mockPriceChanges: PriceRangeChangeItem[] = Array.from({ length: 12 }).map((_, index) => ({
+    id: `placeholder-${index + 1}`,
+    name: 'Player Name',
+    rating: '--',
+    position: '---',
+    version: '---',
+    oldMin: '--',
+    oldMax: '--',
+    newMin: '--',
+    newMax: '--',
+    addedOn: '-- / -- / ----',
+}));
 
 export default function PriceRanges() {
     return (
         <div className="w-full min-h-screen bg-[#1a1a1a] text-white pt-24 px-4 pb-16 relative">
-            
-            {/* Background Overlay Mock */}
+            {/* Background Overlay */}
             <div className="absolute inset-0 top-16 h-[50vh] bg-gradient-to-b from-[#1a1a1a]/80 to-[#1a1a1a] z-0 overflow-hidden pointer-events-none">
                 <div className="w-full h-full opacity-5 flex items-center justify-center text-9xl font-black italic select-none">
                     MARKET
@@ -22,7 +37,6 @@ export default function PriceRanges() {
             </div>
 
             <div className="max-w-7xl mx-auto flex flex-col gap-6 relative z-10">
-                
                 {/* Header */}
                 <div>
                     <div className="text-sm text-gray-400 mb-1 flex items-center gap-2">
@@ -35,93 +49,111 @@ export default function PriceRanges() {
                     </button>
                 </div>
 
-                {/* Filters */}
+                {/* Search & Filters */}
                 <div className="flex flex-col gap-4 mb-2">
                     <div className="relative w-full md:w-80">
-                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <span className="text-white text-sm font-bold">🔍</span>
+                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+                            🔍
                         </div>
-                        <input 
-                            type="text" 
+                        <input
+                            type="text"
                             placeholder="Player name"
-                            className="bg-[#0a0a0a] border border-transparent rounded pl-9 pr-3 py-2 text-sm w-full text-white placeholder-gray-500 focus:outline-none focus:border-[#333]"
+                            className="bg-[#0a0a0a] border border-[#333] rounded pl-9 pr-3 py-2 text-sm w-full text-white placeholder-gray-500 focus:outline-none focus:border-[#00e575]"
                         />
                     </div>
                     <div className="flex flex-wrap items-center gap-2">
-                        <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-white text-sm font-bold py-1.5 px-4 rounded transition-colors flex items-center gap-2">
-                            <span>🛡️</span> Version
+                        <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-white text-sm font-bold py-1.5 px-4 rounded transition-colors">
+                            Version
                         </button>
-                        <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-white text-sm font-bold py-1.5 px-4 rounded transition-colors flex items-center gap-2">
-                            <span>⚑</span> Positions
+                        <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-white text-sm font-bold py-1.5 px-4 rounded transition-colors">
+                            Positions
                         </button>
-                        <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-white text-sm font-bold py-1.5 px-4 rounded transition-colors flex items-center gap-2">
-                            <span>🏆</span> Leagues
+                        <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-white text-sm font-bold py-1.5 px-4 rounded transition-colors">
+                            Leagues
                         </button>
-                        <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-white text-sm font-bold py-1.5 px-4 rounded transition-colors flex items-center gap-2">
-                            <span>🌍</span> Nations
+                        <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-white text-sm font-bold py-1.5 px-4 rounded transition-colors">
+                            Nations
                         </button>
-                        <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-white text-sm font-bold py-1.5 px-4 rounded transition-colors flex items-center gap-2">
-                            <span>⚽</span> Clubs
+                        <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-white text-sm font-bold py-1.5 px-4 rounded transition-colors">
+                            Clubs
                         </button>
                     </div>
                 </div>
 
                 {/* Table */}
-                <div className="w-full bg-[#1e1e1e]/60 rounded-lg border border-[#333] overflow-hidden">
-                    <table className="w-full text-left border-collapse">
+                <div className="w-full bg-[#1e1e1e] rounded-lg border border-[#333] overflow-x-auto">
+                    <table className="w-full text-left border-collapse min-w-[900px]">
                         <thead>
-                            <tr className="bg-[#111] text-[10px] font-bold text-white tracking-widest border-b border-[#333]">
-                                <th className="p-4 uppercase">NAME</th>
-                                <th className="p-4 uppercase text-center">RATING</th>
-                                <th className="p-4 uppercase text-center">POSITION</th>
-                                <th className="p-4 uppercase text-center">VERSION</th>
-                                <th className="p-4 uppercase text-center text-red-500 flex items-center justify-center gap-1"><span>⏬</span> OLD MIN</th>
-                                <th className="p-4 uppercase text-center text-green-500"><span>⏫</span> OLD MAX</th>
-                                <th className="p-4 uppercase text-center text-red-500"><span>⏬</span> NEW MIN</th>
-                                <th className="p-4 uppercase text-center text-green-500"><span>⏫</span> NEW MAX</th>
-                                <th className="p-4 uppercase text-right">📅 UPDATED ON</th>
+                            <tr className="bg-[#111] text-[11px] font-bold text-gray-300 tracking-wider border-b border-[#333]">
+                                <th className="p-3.5 uppercase">NAME</th>
+                                <th className="p-3.5 uppercase text-center">RATING</th>
+                                <th className="p-3.5 uppercase text-center">POSITION</th>
+                                <th className="p-3.5 uppercase text-center">VERSION</th>
+                                <th className="p-3.5 uppercase text-center text-red-400">OLD MIN</th>
+                                <th className="p-3.5 uppercase text-center text-green-400">OLD MAX</th>
+                                <th className="p-3.5 uppercase text-center text-red-400">NEW MIN</th>
+                                <th className="p-3.5 uppercase text-center text-green-400">NEW MAX</th>
+                                <th className="p-3.5 uppercase text-right">ADDED ON</th>
                             </tr>
                         </thead>
                         <tbody className="text-sm">
-                            {mockPriceChanges.map((player, i) => (
-                                <tr key={i} className="border-b border-[#2d2d2d] hover:bg-[#252525] transition-colors">
-                                    <td className="p-4">
+                            {mockPriceChanges.map((player) => (
+                                <tr key={player.id} className="border-b border-[#2d2d2d] hover:bg-[#252525] transition-colors">
+                                    <td className="p-3.5">
                                         <div className="flex items-center gap-3">
-                                            <div className="w-12 h-16 bg-[#2a2a2a] rounded overflow-hidden flex-shrink-0 border border-purple-500/30 relative">
-                                                {/* Player Card Placeholder */}
-                                                <div className="absolute top-1 left-1 text-[10px] font-black">{player.rating}</div>
+                                            <div className="w-10 h-12 bg-[#252525] rounded border border-[#333] flex-shrink-0 flex items-center justify-center text-gray-500 font-mono text-xs">
+                                                --
                                             </div>
-                                            <span className="font-bold text-white">{player.name}</span>
+                                            <span className="font-bold text-gray-400">{player.name}</span>
                                         </div>
                                     </td>
-                                    <td className="p-4 text-center">
-                                        <span className="bg-purple-900/50 border border-purple-500 text-purple-200 px-2 py-1 rounded text-xs font-bold">
+                                    <td className="p-3.5 text-center">
+                                        <span className="bg-[#252525] border border-[#333] text-gray-400 px-2.5 py-0.5 rounded text-xs font-mono font-bold">
                                             {player.rating}
                                         </span>
                                     </td>
-                                    <td className="p-4 text-center font-medium text-gray-300">{player.position}</td>
-                                    <td className="p-4 text-center text-gray-300">{player.version}</td>
-                                    <td className="p-4 text-center font-medium">
-                                        {player.oldMin} <span className="text-[#ffb800] text-[10px]">F</span>
+                                    <td className="p-3.5 text-center">
+                                        <span className="bg-[#222] border border-[#333] text-gray-400 px-2 py-0.5 rounded text-xs font-mono">
+                                            {player.position}
+                                        </span>
                                     </td>
-                                    <td className="p-4 text-center font-medium">
-                                        {player.oldMax} <span className="text-[#ffb800] text-[10px]">F</span>
+                                    <td className="p-3.5 text-center">
+                                        <span className="bg-[#222] border border-[#333] text-gray-400 px-2.5 py-0.5 rounded text-xs font-mono">
+                                            {player.version}
+                                        </span>
                                     </td>
-                                    <td className="p-4 text-center font-bold text-white">
-                                        {player.newMin} <span className="text-[#ffb800] text-[10px]">F</span>
+                                    <td className="p-3.5 text-center font-medium text-gray-500 font-mono">
+                                        <span className="inline-flex items-center gap-1">
+                                            {player.oldMin}
+                                            <span className="w-3.5 h-3.5 bg-[#ffb800]/50 text-black text-[9px] font-extrabold rounded-full inline-flex items-center justify-center">C</span>
+                                        </span>
                                     </td>
-                                    <td className="p-4 text-center font-bold text-white">
-                                        {player.newMax} <span className="text-[#ffb800] text-[10px]">F</span>
+                                    <td className="p-3.5 text-center font-medium text-gray-500 font-mono">
+                                        <span className="inline-flex items-center gap-1">
+                                            {player.oldMax}
+                                            <span className="w-3.5 h-3.5 bg-[#ffb800]/50 text-black text-[9px] font-extrabold rounded-full inline-flex items-center justify-center">C</span>
+                                        </span>
                                     </td>
-                                    <td className="p-4 text-right text-gray-400 text-xs">
-                                        {player.updatedOn}
+                                    <td className="p-3.5 text-center font-medium text-gray-500 font-mono">
+                                        <span className="inline-flex items-center gap-1">
+                                            {player.newMin}
+                                            <span className="w-3.5 h-3.5 bg-[#ffb800]/50 text-black text-[9px] font-extrabold rounded-full inline-flex items-center justify-center">C</span>
+                                        </span>
+                                    </td>
+                                    <td className="p-3.5 text-center font-medium text-gray-500 font-mono">
+                                        <span className="inline-flex items-center gap-1">
+                                            {player.newMax}
+                                            <span className="w-3.5 h-3.5 bg-[#ffb800]/50 text-black text-[9px] font-extrabold rounded-full inline-flex items-center justify-center">C</span>
+                                        </span>
+                                    </td>
+                                    <td className="p-3.5 text-right text-gray-500 text-xs font-mono">
+                                        {player.addedOn}
                                     </td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                 </div>
-
             </div>
         </div>
     );
