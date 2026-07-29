@@ -24,19 +24,20 @@ interface PlayerHoverCardContentProps {
 }
 
 import { ChemStyleIconMap } from '../utils/chemstyles';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export function PlayerHoverCardContent({ playerData }: PlayerHoverCardContentProps) {
-    const position = playerData?.position || 'ST';
+    const position = playerData?.position || '';
     const previewStats = positionStatsMapping[position as keyof typeof positionStatsMapping] || positionStatsMapping['ST'];
-    const topChemstyle = playerData?.topChemstyle || 'Hunter';
-    const chemIconChar = ChemStyleIconMap[topChemstyle] || ChemStyleIconMap['Basic'];
+    const topChemstyle = playerData?.topChemstyle;
+    const chemIconChar = topChemstyle ? (ChemStyleIconMap[topChemstyle] || ChemStyleIconMap['Basic']) : null;
 
     return (
         <div className="w-[320px] bg-[#1c1e22] rounded-lg border border-[#333] shadow-[0_10px_40px_rgba(0,0,0,0.8)] flex flex-col font-sans text-white z-[9999]">
             {/* Top Bar */}
             <div className="flex justify-end items-center px-3 py-1.5 border-b border-[#333] bg-[#1a1c20] rounded-t-lg">
                 <div className="flex items-center gap-1.5">
-                    <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5" alt="coins" />
+                    <img src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} className="w-3.5 h-3.5" alt="coins" />
                     <span className="font-bold text-[13px] font-mono tracking-tight text-gray-400">---</span>
                 </div>
             </div>
@@ -46,8 +47,8 @@ export function PlayerHoverCardContent({ playerData }: PlayerHoverCardContentPro
                 {/* Left Side: Card Render Placeholder */}
                 <div className="w-[95px] shrink-0 flex flex-col items-center justify-center [@container]">
                     <FIFA17PlayerCardBase 
-                        name={playerData?.name || "Player Name"} 
-                        rating={playerData?.rating || 99} 
+                        name={playerData?.name || ""} 
+                        rating={playerData?.rating || "--"} 
                         position={position}
                         cardBackgroundUrl={playerData?.cardBackgroundUrl}
                         playerImageUrl={playerData?.playerImageUrl}
@@ -133,10 +134,14 @@ export function PlayerHoverCardContent({ playerData }: PlayerHoverCardContentPro
                 <div className="w-[100px] shrink-0 p-3 flex flex-col text-center justify-between">
                     <div className="mb-1.5 border-b border-[#333] pb-3 pt-0.5">
                         <span className="text-gray-100 font-bold text-[11px] block mb-1.5">Top Chemstyle</span>
-                        <div className="text-center">
-                            <span className="chem-icon text-gray-300 text-[20px]">{chemIconChar}</span>
+                        <div className="text-center min-h-[24px] flex items-center justify-center">
+                            {chemIconChar ? (
+                                <span className="chem-icon text-gray-300 text-[20px]">{chemIconChar}</span>
+                            ) : (
+                                <span className="text-gray-500 font-mono text-[11px]">---</span>
+                            )}
                         </div>
-                        <span className="text-gray-500 text-[10px] font-bold font-mono uppercase mt-1 block">{topChemstyle}</span>
+                        <span className="text-gray-500 text-[10px] font-bold font-mono uppercase mt-1 block">{topChemstyle || '---'}</span>
                     </div>
                     <div className="mb-1.5 border-b border-[#333] pb-3 pt-0.5">
                         <span className="text-gray-100 font-bold text-[11px] block mb-1">Total Stats</span>
@@ -162,7 +167,7 @@ export interface PlayerHoverWrapperProps { position?: string;
     playerData?: any;
 }
 
-export function PlayerHoverWrapper({ children, playerData }: PlayerHoverWrapperProps) {
+export const PlayerHoverWrapper: React.FC<PlayerHoverWrapperProps> = ({ children, playerData }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [showHoverCard, setShowHoverCard] = useState(false);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);

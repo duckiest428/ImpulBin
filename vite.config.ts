@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/ImpulBin/', // Use the repository name for GitHub Pages
+    base: '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

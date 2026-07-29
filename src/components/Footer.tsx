@@ -33,7 +33,6 @@ export default function Footer() {
                 </div>
                 <p>© 2026</p>
                 <br/>
-                <p style={{'color': '#00e575', 'fontWeight': 'bold'}}>A PART OF BETTER COLLECTIVE</p>
             </div>
         </footer>
     );

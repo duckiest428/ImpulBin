@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
 import { PlayerHoverWrapper } from '../../components/PlayerHoverCard';
-import { FIFA17PlayerCard } from '../../components/FIFA17PlayerCard';
+import { FIFA17PlayerCardBase } from '../../components/FIFA17PlayerCard';
+import { popularPlayers } from '../../data/mockPlayers';
 
 export default function Home() {
     const [activeFilter, setActiveFilter] = useState('Popular');
 
     const filters = [
-        { id: 'Popular', label: 'Popular', icon: '🔥' },
-        { id: 'Latest Promo', label: 'Latest Promo', icon: '⚡' },
-        { id: 'New players', label: 'New players', icon: '🚀' },
-        { id: 'Latest SBCs', label: 'Latest SBCs', icon: '🔥' },
-        { id: 'Cheapest by rating', label: 'Cheapest by rating', icon: '🎯' },
+        { id: 'Popular', label: 'Popular', icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg> },
+        { id: 'Latest Promo', label: 'Latest Promo', icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> },
+        { id: 'New players', label: 'New players', icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg> },
+        { id: 'Latest SBCs', label: 'Latest SBCs', icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg> },
+        { id: 'Cheapest by rating', label: 'Cheapest by rating', icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg> },
     ];
 
     return (
         <div className="w-full min-h-[calc(100vh-64px)] flex flex-col justify-start items-center px-3 sm:px-4 pt-[10vh] sm:pt-[16vh] md:pt-[22vh] pb-16 mx-auto overflow-x-hidden">
-            <div className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center text-center gap-6 sm:gap-8 md:gap-10">
+            <div className="w-full max-w-[1600px] mx-auto flex flex-col items-center justify-center text-center gap-6 sm:gap-8 md:gap-10">
                 
                 {/* Hero Logo & Search */}
                 <header className="w-full flex flex-col items-center justify-center gap-6 sm:gap-8">
@@ -42,59 +43,47 @@ export default function Home() {
                         <button
                             key={filter.id}
                             onClick={() => setActiveFilter(filter.id)}
-                            className={`whitespace-nowrap px-3 sm:px-6 py-1.5 sm:py-3 rounded-full border-2 text-xs sm:text-base font-bold flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 cursor-pointer shadow-lg ${
+                            className={`whitespace-nowrap px-3 sm:px-6 py-1.5 sm:py-3 rounded-full border text-xs sm:text-base font-bold flex items-center justify-center gap-1.5 sm:gap-2 transition-all duration-200 cursor-pointer shadow-lg ${
                                 activeFilter === filter.id
-                                    ? 'border-[#00e575] text-[#00e575] bg-[#00e575]/10 shadow-[0_0_20px_rgba(0,229,117,0.3)] scale-105'
-                                    : 'border-[#383838] text-gray-200 bg-[#1a1a1a] hover:border-gray-400 hover:bg-white/10 hover:text-white'
+                                    ? 'border-[#00e575] text-white bg-transparent'
+                                    : 'border-[#383838] text-gray-200 bg-transparent hover:border-gray-400 hover:text-white'
                             }`}
                         >
-                            <span className="text-sm sm:text-lg">{filter.icon}</span>
+                            <span className={`text-sm sm:text-lg ${activeFilter === filter.id ? 'text-[#00e575]' : 'text-gray-400'}`}>{filter.icon}</span>
                             <span>{filter.label}</span>
                         </button>
                     ))}
                 </section>
 
                 {/* Cards Section - Centered directly beneath */}
-                <main className="w-full flex justify-center items-center">
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-6 md:gap-8 max-w-full justify-items-center">
-                        {[1, 2, 3, 4, 5, 6].map((slot) => {
-                            if (slot === 1) {
-                                return (
-                                    <div key={slot} className="flex flex-col items-center gap-1.5 sm:gap-2">
-                                        <div className="flex items-center justify-center gap-1.5 bg-[#1a1c20] border border-[#333] px-2 py-0.5 rounded text-[10px] sm:text-xs font-mono font-bold text-gray-300 shadow-sm w-full max-w-[85%]">
-                                            <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5" alt="coins" />
-                                            60,000
-                                        </div>
-                                        <FIFA17PlayerCard 
-                                            name="Mbappé"
-                                            rating={92}
-                                            position="ST"
-                                        />
-                                        <div className="flex items-center gap-1 text-[#ff5500] font-bold text-[11px] sm:text-sm mt-0.5">
-                                            🔥 398
+                <main className="w-full flex justify-center items-center px-2">
+                    <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-2 max-w-full justify-items-center">
+                        {popularPlayers.map((player) => (
+                            <PlayerHoverWrapper key={player.id} playerData={player}>
+                                <div className="flex flex-col items-center gap-1.5 transition-transform hover:scale-105 cursor-pointer">
+                                    <div className="w-[85px] sm:w-[95px] md:w-[110px]">
+                                        <div className="w-full">
+                                            <FIFA17PlayerCardBase 
+                                                name=""
+                                                rating="--"
+                                                position=""
+                                            />
                                         </div>
                                     </div>
-                                );
-                            }
-                            return (
-                                <div key={slot} className="flex flex-col items-center gap-1.5 sm:gap-2">
-                                    <div className="flex items-center justify-center gap-1.5 bg-[#1a1c20] border border-[#333] px-2 py-0.5 rounded text-[10px] sm:text-xs font-mono font-bold text-gray-300 shadow-sm w-full max-w-[85%]">
-                                        <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5" alt="coins" />
-                                        ---
-                                    </div>
-                                    <FIFA17PlayerCard 
-                                        name="---"
-                                        rating="--"
-                                        position="-"
-                                    />
-                                    <div className="flex items-center gap-1 text-[#ff5500] font-bold text-[11px] sm:text-sm mt-0.5">
-                                        🔥 --
+                                    <div className="flex items-center text-[10px] sm:text-[11px] font-bold overflow-hidden rounded-[4px] bg-[#222222] border border-[#333] shadow-sm">
+                                        <div className="px-1.5 py-0.5 bg-white/10 text-white border-r border-[#333]">-</div>
+                                        <div className="px-1.5 py-0.5 bg-white/10 text-white border-r border-[#333] flex items-center gap-0.5">-<span className="text-[8px]">★</span></div>
+                                        <div className="px-1.5 py-0.5 bg-white/10 text-white border-r border-[#333] flex items-center gap-0.5">-<span className="text-[8px] font-black text-red-500">!</span></div>
+                                        <div className="px-1.5 py-0.5 text-black bg-[#00e575]">--.-</div>
                                     </div>
                                 </div>
-                            );
-                        })}
+                            </PlayerHoverWrapper>
+                        ))}
                     </div>
                 </main>
+                <div className="mt-8 mb-4">
+                    <button className="text-[#00e575] font-bold hover:underline text-sm sm:text-base cursor-pointer">All Popular Players</button>
+                </div>
 
             </div>
         </div>

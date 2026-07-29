@@ -1,5 +1,6 @@
 import React from 'react';
 import { PlayerHoverWrapper } from './PlayerHoverCard';
+import { getAssetUrl } from '../utils/assetUrl';
 
 export interface FIFA17PlayerCardProps {
   name: string;
@@ -40,9 +41,8 @@ export function FIFA17PlayerCardBase({
   stats = defaultStats,
   isLoading
 }: FIFA17PlayerCardProps) {
-  const isPlaceholder = rating === '--';
-  const defaultCardBg = `${import.meta.env.BASE_URL}assets/cards/placeholder.png`;
-  const bgUrl = cardBackgroundUrl || defaultCardBg;
+  const isPlaceholder = rating === '--' || !rating;
+  const bgUrl = cardBackgroundUrl || getAssetUrl('assets/cards/placeholder.png');
 
   return (
       <div className="relative w-full aspect-[3/4] font-sans text-[#222] group [container-type:inline-size]">
