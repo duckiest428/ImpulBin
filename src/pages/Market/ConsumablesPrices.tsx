@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChemStyleIconMap } from '../../utils/chemstyles';
 import { getAssetUrl } from '../../utils/assetUrl';
+import { ChemStyleIcon } from '../../components/ChemStyleIcon';
 
 
 const mockConsumables = [
@@ -390,18 +391,7 @@ export default function ConsumablesPrices() {
                     <h1 className="text-2xl font-bold text-white mb-6">FIFA 17 Chemistry Styles</h1>
                 </div>
 
-                {/* Tabs */}
-                <div className="flex border-b border-[#333] gap-8">
-                    <button className="px-1 py-3 text-sm font-bold text-white border-b-2 border-[#00e575]">
-                        Chemistry Styles
-                    </button>
-                    <button className="px-1 py-3 text-sm font-bold text-gray-400 border-b-2 border-transparent relative opacity-50 cursor-not-allowed">
-                        Manager League
-                        <span className="absolute -top-1 -right-4 bg-[#ffb800] text-black text-[9px] font-black px-1.5 py-0.5 rounded uppercase tracking-wider">
-                            COMING SOON
-                        </span>
-                    </button>
-                </div>
+
 
                 {/* Table */}
                 <div className="w-full bg-[#1e1e1e]/80 rounded-lg border border-[#333] overflow-hidden mt-4 shadow-2xl backdrop-blur-sm">
@@ -421,7 +411,7 @@ export default function ConsumablesPrices() {
                                 <tr key={i} className="border-b border-[#2d2d2d] hover:bg-[#252525] transition-colors">
                                     <td className="p-4">
                                         <div className="flex items-center gap-3">
-                                            <span className="chem-icon text-gray-300 text-[24px] w-6 text-center">{ChemStyleIconMap[c.name] || ''}</span>
+                                            <ChemStyleIcon name={c.name} className="w-6 h-6 shrink-0" />
                                             <span className="text-white">{c.name}</span>
                                         </div>
                                     </td>

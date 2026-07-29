@@ -25,6 +25,7 @@ interface PlayerHoverCardContentProps {
 
 import { ChemStyleIconMap } from '../utils/chemstyles';
 import { getAssetUrl } from '../utils/assetUrl';
+import { ChemStyleIcon } from './ChemStyleIcon';
 
 export function PlayerHoverCardContent({ playerData }: PlayerHoverCardContentProps) {
     const isPlaceholder = !playerData || playerData.isPlaceholder || playerData.rating === '--' || !playerData.rating;
@@ -182,8 +183,8 @@ export function PlayerHoverCardContent({ playerData }: PlayerHoverCardContentPro
                     <div className="mb-1.5 border-b border-[#333] pb-3 pt-0.5">
                         <span className="text-gray-100 font-bold text-[11px] block mb-1.5">Top Chemstyle</span>
                         <div className="text-center min-h-[24px] flex items-center justify-center">
-                            {chemIconChar ? (
-                                <span className="chem-icon text-gray-200 text-[20px]">{chemIconChar}</span>
+                            {!isPlaceholder && topChemstyle !== '---' ? (
+                                <ChemStyleIcon name={topChemstyle} className="w-5 h-5 mx-auto" />
                             ) : (
                                 <span className="text-gray-500 font-mono text-[11px]">---</span>
                             )}
