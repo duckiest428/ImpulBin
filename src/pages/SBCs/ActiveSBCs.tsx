@@ -1,5 +1,6 @@
 import React from 'react';
 import SBCNav from '../../components/SBCNav';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 const activeSBCs = [
     { id: 1, title: 'SBC Name', rewardTitle: 'Reward Name', image: '93+', type: 'NEW', expires: '--', repeatable: 'Unlimited', completed: '0 / 2', price: '--', up: '12%', down: '88%', votes: 369 },
@@ -24,7 +25,7 @@ export default function ActiveSBCs() {
                         Home <span>›</span> Squad Building Challenges
                     </div>
                     <h1 className="text-2xl font-bold text-white mb-1 flex items-center gap-2">
-                        <img src={`${import.meta.env.BASE_URL}assets/icons/main-sbcs.svg`} className="w-[28px] h-[28px]" alt="SBCs" />
+                        <img src={getAssetUrl('assets/icons/main-sbcs.svg')} className="w-[28px] h-[28px]" alt="SBCs" />
                         FIFA 17 Squad Building Challenges & Solutions
                     </h1>
                     <div className="text-gray-400 text-sm mb-4"></div>

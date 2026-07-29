@@ -1,5 +1,6 @@
 import React from 'react';
 import SBCNav from '../../components/SBCNav';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 export default function RatingCombinations() {
     const mainRatings = [75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87];
@@ -24,7 +25,7 @@ export default function RatingCombinations() {
                 
                 {/* Header */}
                 <div>
-                    <h1 className="text-2xl font-bold text-white mb-4 flex items-center gap-2"><img src={`${import.meta.env.BASE_URL}assets/icons/main-sbcs.svg`} className="w-[28px] h-[28px]" alt="SBCs" />SBC Rating Combinations</h1>
+                    <h1 className="text-2xl font-bold text-white mb-4 flex items-center gap-2"><img src={getAssetUrl('assets/icons/main-sbcs.svg')} className="w-[28px] h-[28px]" alt="SBCs" />SBC Rating Combinations</h1>
                     <button className="bg-[#2a2a2a] hover:bg-[#333] border border-[#333] text-sm py-1.5 px-3 rounded flex items-center gap-2 transition-colors w-max">
                         <span className="text-xs">↺</span> FIFA 17
                     </button>

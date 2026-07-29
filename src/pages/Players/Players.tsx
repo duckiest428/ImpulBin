@@ -2,6 +2,7 @@ import { Eye } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { mockPlayers } from '../../data/mockPlayers';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 export default function Players() {
     const getStatColor = (value: number) => {
@@ -32,7 +33,7 @@ export default function Players() {
                         <span>›</span>
                         <span className="text-gray-200">Players</span>
                     </div>
-                    <h1 className="text-3xl font-bold mb-1 flex items-center gap-2"><img src={`${import.meta.env.BASE_URL}assets/icons/main-players.svg`} className="w-[32px] h-[32px]" alt="Players" />FIFA 17 Players</h1>
+                    <h1 className="text-3xl font-bold mb-1 flex items-center gap-2"><img src={getAssetUrl('assets/icons/main-players.svg')} className="w-[32px] h-[32px]" alt="Players" />FIFA 17 Players</h1>
                     <p className="text-gray-400 text-sm">FIFA 17 Database & Ratings</p>
                 </div>
 
@@ -120,7 +121,7 @@ export default function Players() {
                                     </td>
                                     <td className="p-4">
                                         <div className="font-bold flex items-center gap-1">
-                                            {player.price} <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5 inline" alt="coins" />
+                                            {player.price} <img src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} className="w-3.5 h-3.5 inline" alt="coins" />
                                         </div>
                                         <div className={`text-xs ${player.priceChange.startsWith('+') ? 'text-green-500' : 'text-red-500'}`}>
                                             {player.priceChange.startsWith('+') ? '↗' : '↘'} {player.priceChange}

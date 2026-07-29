@@ -58,8 +58,8 @@ export default function Home() {
                 {/* Cards Section - Centered directly beneath */}
                 <main className="w-full flex justify-center items-center px-2">
                     <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-2 max-w-full justify-items-center">
-                        {popularPlayers.map((player) => (
-                            <PlayerHoverWrapper key={player.id} playerData={player}>
+                        {popularPlayers.map((_, idx) => (
+                            <PlayerHoverWrapper key={idx} playerData={{ isPlaceholder: true, rating: '--', name: '', position: '' }}>
                                 <div className="flex flex-col items-center gap-1.5 transition-transform hover:scale-105 cursor-pointer">
                                     <div className="w-[85px] sm:w-[95px] md:w-[110px]">
                                         <div className="w-full">

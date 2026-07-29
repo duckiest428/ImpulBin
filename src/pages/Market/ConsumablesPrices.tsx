@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChemStyleIconMap } from '../../utils/chemstyles';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 
 const mockConsumables = [
@@ -425,13 +426,13 @@ export default function ConsumablesPrices() {
                                         </div>
                                     </td>
                                     <td className="p-4 text-gray-300">
-                                        {c.price} <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5 inline ml-1" alt="coins" />
+                                        {c.price} <img src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} className="w-3.5 h-3.5 inline ml-1" alt="coins" />
                                     </td>
                                     <td className="p-4 text-gray-300">
-                                        {c.min} <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5 inline ml-1" alt="coins" />
+                                        {c.min} <img src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} className="w-3.5 h-3.5 inline ml-1" alt="coins" />
                                     </td>
                                     <td className="p-4 text-gray-300">
-                                        {c.max} <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5 inline ml-1" alt="coins" />
+                                        {c.max} <img src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} className="w-3.5 h-3.5 inline ml-1" alt="coins" />
                                     </td>
                                     <td className="p-4">
                                         <div className="flex items-end gap-3 text-[10px] text-gray-400 uppercase font-bold tracking-wider">

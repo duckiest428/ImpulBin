@@ -1,5 +1,6 @@
 import React from 'react';
 import SBCNav from '../../components/SBCNav';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 export default function SBCSolutions() {
     return (
@@ -15,7 +16,7 @@ export default function SBCSolutions() {
                     <div className="text-sm text-gray-400 mb-1">
                         Home <span>›</span> SBC Community Squads
                     </div>
-                    <h1 className="text-2xl font-bold text-white flex items-center gap-2"><img src={`${import.meta.env.BASE_URL}assets/icons/main-sbcs.svg`} className="w-[28px] h-[28px]" alt="SBCs" />SBC Community Squads</h1>
+                    <h1 className="text-2xl font-bold text-white flex items-center gap-2"><img src={getAssetUrl('assets/icons/main-sbcs.svg')} className="w-[28px] h-[28px]" alt="SBCs" />SBC Community Squads</h1>
                     <div className="text-gray-400 text-sm">Search and filter SBC squads</div>
                 </div>
 

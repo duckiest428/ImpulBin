@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { mockPlayers } from '../../data/mockPlayers';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 type Player = typeof mockPlayers[0];
 
@@ -96,7 +97,7 @@ export default function SquadBuilder() {
                                 <span>›</span>
                                 <span className="text-gray-200">Squad Builder</span>
                             </div>
-                            <h1 className="text-3xl font-bold mb-1 flex items-center gap-2"><img src={`${import.meta.env.BASE_URL}assets/icons/main-squad-builder.svg`} className="w-[32px] h-[32px]" alt="Squad Builder" />FIFA 17 Squad Builder</h1>
+                            <h1 className="text-3xl font-bold mb-1 flex items-center gap-2"><img src={getAssetUrl('assets/icons/main-squad-builder.svg')} className="w-[32px] h-[32px]" alt="Squad Builder" />FIFA 17 Squad Builder</h1>
                             <p className="text-gray-400 text-sm">Create FIFA 17 Squads</p>
                         </div>
 
@@ -185,7 +186,7 @@ export default function SquadBuilder() {
                     </div>
                     <div className="flex justify-between items-start">
                         <div>
-                            <h1 className="text-3xl font-bold mb-1 flex items-center gap-2"><img src={`${import.meta.env.BASE_URL}assets/icons/main-squad-builder.svg`} className="w-[32px] h-[32px]" alt="Squad Builder" />FIFA 17 Squad Builder</h1>
+                            <h1 className="text-3xl font-bold mb-1 flex items-center gap-2"><img src={getAssetUrl('assets/icons/main-squad-builder.svg')} className="w-[32px] h-[32px]" alt="Squad Builder" />FIFA 17 Squad Builder</h1>
                             <p className="text-gray-400 text-sm">Create FIFA 17 Squads</p>
                         </div>
                         <button className="border border-[#10b981] text-[#10b981] px-6 py-2 rounded-full font-medium hover:bg-[#10b981] hover:text-white transition-colors">
@@ -307,7 +308,7 @@ function SidebarInfo() {
             </div>
             <div className="flex gap-4 text-sm font-medium">
                 <span className="flex items-center gap-1 text-[#10b981]">
-                    0 <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5 inline" alt="coins" />
+                    0 <img src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} className="w-3.5 h-3.5 inline" alt="coins" />
                 </span>
             </div>
         </div>

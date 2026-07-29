@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 const promoSquads = [
     { title: 'Promo Team Name', date: '--', color: 'bg-red-900/40 border-red-500', players: 10 },
@@ -31,7 +32,7 @@ export default function PromoSquads() {
                         Home <span>›</span> TOTW Squads
                     </div>
                     <h1 className="text-2xl font-bold text-white mb-1 flex items-center gap-2">
-                        <img src={`${import.meta.env.BASE_URL}assets/icons/main-squads.svg`} className="w-[28px] h-[28px]" alt="Squads" />
+                        <img src={getAssetUrl('assets/icons/main-squads.svg')} className="w-[28px] h-[28px]" alt="Squads" />
                         FFUT 17 TOTWs, TOTY, TOTS
                     </h1>
                     <div className="text-gray-400 text-sm mb-4">FIFA 17 Promo Squads</div>
