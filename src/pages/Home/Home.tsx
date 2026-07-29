@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { PlayerHoverWrapper } from '../../components/PlayerHoverCard';
 
 export default function Home() {
     const [activeFilter, setActiveFilter] = useState('Popular');
@@ -55,14 +56,28 @@ export default function Home() {
                 {/* Cards Section - Centered directly beneath */}
                 <main className="w-full flex justify-center items-center">
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-6 md:gap-8 max-w-full justify-items-center">
-                        {[1, 2, 3, 4, 5, 6].map((slot) => (
-                            <div
-                                key={slot}
-                                className="w-[130px] sm:w-[150px] md:w-[160px] h-[180px] sm:h-[210px] md:h-[230px] rounded-2xl border-2 border-dashed border-[#383838] hover:border-[#00e575] bg-[#161616] flex items-center justify-center text-gray-500 hover:text-[#00e575] transition-all duration-200 cursor-pointer group shadow-xl hover:-translate-y-1"
-                            >
-                                <span className="text-3xl sm:text-4xl font-light text-gray-400 group-hover:scale-125 group-hover:text-[#00e575] transition-transform">+</span>
-                            </div>
-                        ))}
+                        {[1, 2, 3, 4, 5, 6].map((slot) => {
+                            if (slot === 1) {
+                                return (
+                                    <PlayerHoverWrapper key={slot} position="ST">
+                                        <div className="w-[130px] sm:w-[150px] md:w-[160px] h-[180px] sm:h-[210px] md:h-[230px] rounded-2xl bg-[#161616] border border-[#383838] hover:border-[#00e575] flex flex-col items-center justify-center relative cursor-pointer shadow-xl overflow-hidden transition-all duration-200">
+                                            <div className="absolute inset-0 flex items-center justify-center opacity-10">
+                                                <span className="text-8xl font-black italic">99</span>
+                                            </div>
+                                            <img src="https://placehold.co/120x160/1e1e1e/white?text=Card" alt="Player Card" className="w-[90%] h-[90%] object-contain relative z-10" />
+                                        </div>
+                                    </PlayerHoverWrapper>
+                                );
+                            }
+                            return (
+                                <div
+                                    key={slot}
+                                    className="w-[130px] sm:w-[150px] md:w-[160px] h-[180px] sm:h-[210px] md:h-[230px] rounded-2xl border-2 border-dashed border-[#383838] hover:border-[#00e575] bg-[#161616] flex items-center justify-center text-gray-500 hover:text-[#00e575] transition-all duration-200 cursor-pointer group shadow-xl hover:-translate-y-1"
+                                >
+                                    <span className="text-3xl sm:text-4xl font-light text-gray-400 group-hover:scale-125 group-hover:text-[#00e575] transition-transform">+</span>
+                                </div>
+                            );
+                        })}
                     </div>
                 </main>
 

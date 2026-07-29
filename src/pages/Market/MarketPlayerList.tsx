@@ -1,4 +1,5 @@
 import React from 'react';
+import { PlayerHoverWrapper } from '../../components/PlayerHoverCard';
 
 const mockPlayers = [
     { name: 'Player Name', type: 'NORMAL', price: '0', updated: '--', trend: '--', trendUp: true, avgPrice: '0', diffPct: '--', diffVal: '--', diffUp: true, tax: '0', afterTax: '0' },
@@ -95,9 +96,11 @@ export default function MarketPlayerList() {
                                     <tr key={i} className="border-b border-[#2d2d2d] hover:bg-[#252525] transition-colors">
                                         <td className="p-4">
                                             <div className="flex items-center gap-4">
-                                                <div className="w-10 h-14 bg-[#2a2a2a] rounded relative border border-[#333]">
-                                                    <img src={`https://placehold.co/40x56/1e1e1e/444`} alt="Player" className="w-full h-full object-cover rounded" />
-                                                </div>
+                                                <PlayerHoverWrapper>
+                                                    <div className="w-10 h-14 bg-[#2a2a2a] rounded relative border border-[#333]">
+                                                        <img src={`https://placehold.co/40x56/1e1e1e/444`} alt="Player" className="w-full h-full object-cover rounded" />
+                                                    </div>
+                                                </PlayerHoverWrapper>
                                                 <div className="flex flex-col">
                                                     <span className="font-bold text-white mb-1">{player.name}</span>
                                                     <div className="flex items-center gap-1 mb-1">

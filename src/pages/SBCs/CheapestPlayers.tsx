@@ -1,5 +1,6 @@
 import React from 'react';
 import SBCNav from '../../components/SBCNav';
+import { PlayerHoverWrapper } from '../../components/PlayerHoverCard';
 
 const mockPlayers = {
     81: Array.from({ length: 6 }).map((_, i) => ({ id: `81-${i}`, name: 'Player Name', pos: '---', price: '--' })),
@@ -41,9 +42,11 @@ export default function CheapestPlayers() {
                                 {mockPlayers[rating as unknown as keyof typeof mockPlayers].map((player) => (
                                     <div key={player.id} className="flex items-center justify-between p-2 border-b border-[#2d2d2d] hover:bg-[#252525] transition-colors last:border-0">
                                         <div className="flex items-center gap-3 overflow-hidden">
-                                            <div className="w-8 h-8 bg-[#252525] border border-[#333] rounded shrink-0 flex items-center justify-center text-gray-500 font-mono text-[10px]">
-                                                --
-                                            </div>
+                                            <PlayerHoverWrapper position="CB">
+                                                <div className="w-8 h-8 bg-[#252525] border border-[#333] rounded shrink-0 flex items-center justify-center text-gray-500 font-mono text-[10px]">
+                                                    --
+                                                </div>
+                                            </PlayerHoverWrapper>
                                             <div className="flex flex-col overflow-hidden">
                                                 <span className="text-sm font-semibold truncate text-gray-400">
                                                     {player.name} <span className="text-gray-500 font-normal">({player.pos})</span>
