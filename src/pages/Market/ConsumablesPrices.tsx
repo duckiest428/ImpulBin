@@ -1,14 +1,373 @@
 import React from 'react';
+import { ChemStyleIconMap } from '../../utils/chemstyles';
+
 
 const mockConsumables = [
-    { name: 'Anchor', icon: '⚓', price: '--', min: '--', max: '--', boosts: { pac: 2, sho: 0, pas: 0, dri: 0, def: 2, phy: 2 }, pos: 'DEF' },
-    { name: 'Architect', icon: 'A', price: '--', min: '--', max: '--', boosts: { pac: 0, sho: 0, pas: 3, dri: 0, def: 0, phy: 3 }, pos: 'MID' },
-    { name: 'Artist', icon: '🎨', price: '--', min: '--', max: '--', boosts: { pac: 0, sho: 0, pas: 3, dri: 3, def: 0, phy: 0 }, pos: 'ATT' },
-    { name: 'Backbone', icon: '🏛️', price: '--', min: '--', max: '--', boosts: { pac: 0, sho: 0, pas: 2, dri: 0, def: 2, phy: 2 }, pos: 'DEF' },
-    { name: 'Basic', icon: '👟', price: '--', min: '--', max: '--', boosts: { pac: 1, sho: 1, pas: 1, dri: 1, def: 1, phy: 1 }, pos: 'DEF, MID, ATT' },
-    { name: 'Cat', icon: '🐱', price: '--', min: '--', max: '--', boosts: { div: 0, han: 0, kic: 0, ref: 2, spd: 2, pos: 2 }, pos: 'GK', isGk: true },
-    { name: 'Catalyst', icon: '⚡', price: '--', min: '--', max: '--', boosts: { pac: 3, sho: 0, pas: 3, dri: 0, def: 0, phy: 0 }, pos: 'ATT' },
-    { name: 'Deadeye', icon: '🎯', price: '--', min: '--', max: '--', boosts: { pac: 0, sho: 3, pas: 3, dri: 0, def: 0, phy: 0 }, pos: 'ATT' },
+    {
+        "name": "Anchor",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 2,
+            "sho": 0,
+            "pas": 0,
+            "dri": 0,
+            "def": 2,
+            "phy": 2
+        },
+        "pos": "DEF"
+    },
+    {
+        "name": "Architect",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 0,
+            "sho": 0,
+            "pas": 3,
+            "dri": 0,
+            "def": 0,
+            "phy": 3
+        },
+        "pos": "MID"
+    },
+    {
+        "name": "Artist",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 0,
+            "sho": 0,
+            "pas": 3,
+            "dri": 3,
+            "def": 0,
+            "phy": 0
+        },
+        "pos": "ATT"
+    },
+    {
+        "name": "Backbone",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 0,
+            "sho": 0,
+            "pas": 2,
+            "dri": 0,
+            "def": 2,
+            "phy": 2
+        },
+        "pos": "DEF"
+    },
+    {
+        "name": "Basic",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 1,
+            "sho": 1,
+            "pas": 1,
+            "dri": 1,
+            "def": 1,
+            "phy": 1
+        },
+        "pos": "DEF, MID, ATT"
+    },
+    {
+        "name": "Cat",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "div": 0,
+            "han": 0,
+            "kic": 0,
+            "ref": 2,
+            "spd": 2,
+            "pos": 2
+        },
+        "pos": "GK",
+        "isGk": true
+    },
+    {
+        "name": "Catalyst",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 3,
+            "sho": 0,
+            "pas": 3,
+            "dri": 0,
+            "def": 0,
+            "phy": 0
+        },
+        "pos": "ATT"
+    },
+    {
+        "name": "Deadeye",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 0,
+            "sho": 3,
+            "pas": 3,
+            "dri": 0,
+            "def": 0,
+            "phy": 0
+        },
+        "pos": "ATT"
+    },
+    {
+        "name": "Engine",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 2,
+            "sho": 0,
+            "pas": 2,
+            "dri": 2,
+            "def": 0,
+            "phy": 0
+        },
+        "pos": "ATT"
+    },
+    {
+        "name": "Finisher",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 0,
+            "sho": 3,
+            "pas": 0,
+            "dri": 0,
+            "def": 0,
+            "phy": 3
+        },
+        "pos": "ATT"
+    },
+    {
+        "name": "GK Basic",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "div": 1,
+            "han": 1,
+            "kic": 1,
+            "ref": 1,
+            "spd": 1,
+            "pos": 1
+        },
+        "pos": "GK",
+        "isGk": true
+    },
+    {
+        "name": "Gladiator",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 0,
+            "sho": 2,
+            "pas": 0,
+            "dri": 0,
+            "def": 2,
+            "phy": 0
+        },
+        "pos": "MID"
+    },
+    {
+        "name": "Glove",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "div": 2,
+            "han": 2,
+            "kic": 0,
+            "ref": 0,
+            "spd": 0,
+            "pos": 2
+        },
+        "pos": "GK",
+        "isGk": true
+    },
+    {
+        "name": "Guardian",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 0,
+            "sho": 0,
+            "pas": 0,
+            "dri": 3,
+            "def": 3,
+            "phy": 0
+        },
+        "pos": "DEF"
+    },
+    {
+        "name": "Hawk",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 2,
+            "sho": 2,
+            "pas": 0,
+            "dri": 0,
+            "def": 0,
+            "phy": 2
+        },
+        "pos": "ATT"
+    },
+    {
+        "name": "Hunter",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 3,
+            "sho": 3,
+            "pas": 0,
+            "dri": 0,
+            "def": 0,
+            "phy": 0
+        },
+        "pos": "ATT"
+    },
+    {
+        "name": "Maestro",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 0,
+            "sho": 2,
+            "pas": 2,
+            "dri": 2,
+            "def": 0,
+            "phy": 0
+        },
+        "pos": "MID"
+    },
+    {
+        "name": "Marksman",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 0,
+            "sho": 2,
+            "pas": 0,
+            "dri": 2,
+            "def": 0,
+            "phy": 2
+        },
+        "pos": "ATT"
+    },
+    {
+        "name": "Powerhouse",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 0,
+            "sho": 0,
+            "pas": 3,
+            "dri": 0,
+            "def": 3,
+            "phy": 0
+        },
+        "pos": "MID"
+    },
+    {
+        "name": "Sentinel",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 0,
+            "sho": 0,
+            "pas": 0,
+            "dri": 0,
+            "def": 3,
+            "phy": 3
+        },
+        "pos": "DEF"
+    },
+    {
+        "name": "Shadow",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 3,
+            "sho": 0,
+            "pas": 0,
+            "dri": 0,
+            "def": 3,
+            "phy": 0
+        },
+        "pos": "DEF"
+    },
+    {
+        "name": "Shield",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "div": 0,
+            "han": 0,
+            "kic": 2,
+            "ref": 2,
+            "spd": 2,
+            "pos": 0
+        },
+        "pos": "GK",
+        "isGk": true
+    },
+    {
+        "name": "Sniper",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "pac": 0,
+            "sho": 3,
+            "pas": 0,
+            "dri": 3,
+            "def": 0,
+            "phy": 0
+        },
+        "pos": "ATT"
+    },
+    {
+        "name": "Wall",
+        "price": "--",
+        "min": "--",
+        "max": "--",
+        "boosts": {
+            "div": 2,
+            "han": 2,
+            "kic": 2,
+            "ref": 0,
+            "spd": 0,
+            "pos": 0
+        },
+        "pos": "GK",
+        "isGk": true
+    }
 ];
 
 export default function ConsumablesPrices() {
@@ -61,29 +420,29 @@ export default function ConsumablesPrices() {
                                 <tr key={i} className="border-b border-[#2d2d2d] hover:bg-[#252525] transition-colors">
                                     <td className="p-4">
                                         <div className="flex items-center gap-3">
-                                            <span className="text-xl w-6 text-center">{c.icon}</span>
+                                            <span className="chem-icon text-gray-300 text-[24px] w-6 text-center">{ChemStyleIconMap[c.name] || ''}</span>
                                             <span className="text-white">{c.name}</span>
                                         </div>
                                     </td>
                                     <td className="p-4 text-gray-300">
-                                        {c.price} <span className="text-[#ffb800] text-[10px]">F</span>
+                                        {c.price} <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5 inline ml-1" alt="coins" />
                                     </td>
                                     <td className="p-4 text-gray-300">
-                                        {c.min} <span className="text-[#ffb800] text-[10px]">F</span>
+                                        {c.min} <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5 inline ml-1" alt="coins" />
                                     </td>
                                     <td className="p-4 text-gray-300">
-                                        {c.max} <span className="text-[#ffb800] text-[10px]">F</span>
+                                        {c.max} <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5 inline ml-1" alt="coins" />
                                     </td>
                                     <td className="p-4">
                                         <div className="flex items-end gap-3 text-[10px] text-gray-400 uppercase font-bold tracking-wider">
                                             {c.isGk ? (
                                                 <>
-                                                    <div className="flex flex-col items-center gap-1 w-6"><span>DIV</span>{c.boosts.div! > 0 && <div className={`w-4 h-1 bg-[#00e575] ${c.boosts.div === 2 ? 'border-b-2 border-transparent border-t-[3px] border-t-[#00e575] bg-transparent' : c.boosts.div === 3 ? 'border-y-2 border-transparent border-t-[3px] border-b-[3px] border-[#00e575] bg-transparent h-2.5' : ''}`}></div>}</div>
-                                                    <div className="flex flex-col items-center gap-1 w-6"><span>HAN</span>{c.boosts.han! > 0 && <div className="w-4 h-1 bg-[#00e575]"></div>}</div>
-                                                    <div className="flex flex-col items-center gap-1 w-6"><span>KIC</span>{c.boosts.kic! > 0 && <div className="w-4 h-1 bg-[#00e575]"></div>}</div>
-                                                    <div className="flex flex-col items-center gap-1 w-6"><span>REF</span>{c.boosts.ref! > 0 && <div className="w-4 h-2 border-y-[3px] border-[#00e575] bg-transparent"></div>}</div>
-                                                    <div className="flex flex-col items-center gap-1 w-6"><span>SPD</span>{c.boosts.spd! > 0 && <div className="w-4 h-2 border-y-[3px] border-[#00e575] bg-transparent"></div>}</div>
-                                                    <div className="flex flex-col items-center gap-1 w-6"><span>POS</span>{c.boosts.pos! > 0 && <div className="w-4 h-2 border-y-[3px] border-[#00e575] bg-transparent"></div>}</div>
+                                                    <div className="flex flex-col items-center gap-1 w-6"><span>DIV</span>{c.boosts.div! > 0 && <div className={`w-4 ${c.boosts.div === 1 ? 'h-1 bg-[#00e575]' : c.boosts.div === 2 ? 'h-2 border-y-[3px] border-[#00e575] bg-transparent' : 'h-3 border-y-[3px] border-[#00e575] bg-transparent flex flex-col justify-center items-center'} `}>{c.boosts.div === 3 && <div className="w-4 h-[3px] bg-[#00e575]"></div>}</div>}</div>
+                                                    <div className="flex flex-col items-center gap-1 w-6"><span>HAN</span>{c.boosts.han! > 0 && <div className={`w-4 ${c.boosts.han === 1 ? 'h-1 bg-[#00e575]' : c.boosts.han === 2 ? 'h-2 border-y-[3px] border-[#00e575] bg-transparent' : 'h-3 border-y-[3px] border-[#00e575] bg-transparent flex flex-col justify-center items-center'} `}>{c.boosts.han === 3 && <div className="w-4 h-[3px] bg-[#00e575]"></div>}</div>}</div>
+                                                    <div className="flex flex-col items-center gap-1 w-6"><span>KIC</span>{c.boosts.kic! > 0 && <div className={`w-4 ${c.boosts.kic === 1 ? 'h-1 bg-[#00e575]' : c.boosts.kic === 2 ? 'h-2 border-y-[3px] border-[#00e575] bg-transparent' : 'h-3 border-y-[3px] border-[#00e575] bg-transparent flex flex-col justify-center items-center'} `}>{c.boosts.kic === 3 && <div className="w-4 h-[3px] bg-[#00e575]"></div>}</div>}</div>
+                                                    <div className="flex flex-col items-center gap-1 w-6"><span>REF</span>{c.boosts.ref! > 0 && <div className={`w-4 ${c.boosts.ref === 1 ? 'h-1 bg-[#00e575]' : c.boosts.ref === 2 ? 'h-2 border-y-[3px] border-[#00e575] bg-transparent' : 'h-3 border-y-[3px] border-[#00e575] bg-transparent flex flex-col justify-center items-center'} `}>{c.boosts.ref === 3 && <div className="w-4 h-[3px] bg-[#00e575]"></div>}</div>}</div>
+                                                    <div className="flex flex-col items-center gap-1 w-6"><span>SPD</span>{c.boosts.spd! > 0 && <div className={`w-4 ${c.boosts.spd === 1 ? 'h-1 bg-[#00e575]' : c.boosts.spd === 2 ? 'h-2 border-y-[3px] border-[#00e575] bg-transparent' : 'h-3 border-y-[3px] border-[#00e575] bg-transparent flex flex-col justify-center items-center'} `}>{c.boosts.spd === 3 && <div className="w-4 h-[3px] bg-[#00e575]"></div>}</div>}</div>
+                                                    <div className="flex flex-col items-center gap-1 w-6"><span>POS</span>{c.boosts.pos! > 0 && <div className={`w-4 ${c.boosts.pos === 1 ? 'h-1 bg-[#00e575]' : c.boosts.pos === 2 ? 'h-2 border-y-[3px] border-[#00e575] bg-transparent' : 'h-3 border-y-[3px] border-[#00e575] bg-transparent flex flex-col justify-center items-center'} `}>{c.boosts.pos === 3 && <div className="w-4 h-[3px] bg-[#00e575]"></div>}</div>}</div>
                                                 </>
                                             ) : (
                                                 <>

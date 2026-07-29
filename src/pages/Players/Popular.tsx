@@ -27,7 +27,7 @@ export default function Popular() {
                         <span>›</span>
                         <span className="text-gray-200">Popular</span>
                     </div>
-                    <h1 className="text-3xl font-bold mb-1">FIFA 17 Popular Players</h1>
+                    <h1 className="text-3xl font-bold mb-1 flex items-center gap-2"><img src={`${import.meta.env.BASE_URL}assets/icons/main-players.svg`} className="w-[32px] h-[32px]" alt="Players" />FIFA 17 Popular Players</h1>
                     <p className="text-gray-400 text-sm">Hottest FUT 17 Players</p>
                 </div>
 
@@ -41,7 +41,7 @@ export default function Popular() {
                     {mockPlayers.map(player => (
                         <div key={player.id} className="flex flex-col items-center group">
                             <div className="flex items-center gap-1 mb-2 bg-[#1a1c23] border border-gray-800 px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-                                <span className="w-3.5 h-3.5 bg-[#ffb800] text-black text-[9px] font-extrabold rounded-full inline-flex items-center justify-center">C</span>
+                                <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5 inline" alt="coins" />
                                 <span>{player.price}</span>
                             </div>
 

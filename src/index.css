@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'chemstyles';
+    src: url('/ImpulBin/assets/fonts/chemistry-style-icons.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.chem-icon {
+    font-family: 'chemstyles';
+    font-size: inherit;
+    line-height: 1;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+}
+
         :root {
             --bg-color: #121212;
             --nav-bg: #0a0a0a;

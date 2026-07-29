@@ -20,18 +20,23 @@ const positionStatsMapping = {
 };
 
 interface PlayerHoverCardContentProps {
-    position?: string;
+    playerData?: any;
 }
 
-export function PlayerHoverCardContent({ position = 'ST' }: PlayerHoverCardContentProps) {
+import { ChemStyleIconMap } from '../utils/chemstyles';
+
+export function PlayerHoverCardContent({ playerData }: PlayerHoverCardContentProps) {
+    const position = playerData?.position || 'ST';
     const previewStats = positionStatsMapping[position as keyof typeof positionStatsMapping] || positionStatsMapping['ST'];
+    const topChemstyle = playerData?.topChemstyle || 'Hunter';
+    const chemIconChar = ChemStyleIconMap[topChemstyle] || ChemStyleIconMap['Basic'];
 
     return (
         <div className="w-[320px] bg-[#1c1e22] rounded-lg border border-[#333] shadow-[0_10px_40px_rgba(0,0,0,0.8)] flex flex-col font-sans text-white z-[9999]">
             {/* Top Bar */}
             <div className="flex justify-end items-center px-3 py-1.5 border-b border-[#333] bg-[#1a1c20] rounded-t-lg">
                 <div className="flex items-center gap-1.5">
-                    <span className="w-3.5 h-3.5 bg-[#ffb800] text-black text-[9px] font-extrabold rounded-full inline-flex items-center justify-center">C</span>
+                    <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5" alt="coins" />
                     <span className="font-bold text-[13px] font-mono tracking-tight text-gray-400">---</span>
                 </div>
             </div>
@@ -40,7 +45,16 @@ export function PlayerHoverCardContent({ position = 'ST' }: PlayerHoverCardConte
             <div className="flex p-3 gap-3 border-b border-[#333]">
                 {/* Left Side: Card Render Placeholder */}
                 <div className="w-[95px] shrink-0 flex flex-col items-center justify-center [@container]">
-                    <FIFA17PlayerCardBase name="Player Name" rating={99} position={position} />
+                    <FIFA17PlayerCardBase 
+                        name={playerData?.name || "Player Name"} 
+                        rating={playerData?.rating || 99} 
+                        position={position}
+                        cardBackgroundUrl={playerData?.cardBackgroundUrl}
+                        playerImageUrl={playerData?.playerImageUrl}
+                        nationFlagUrl={playerData?.nationFlagUrl}
+                        clubCrestUrl={playerData?.clubCrestUrl}
+                        stats={playerData?.stats}
+                    />
                 </div>
 
                 {/* Right Side: Metadata */}
@@ -48,41 +62,47 @@ export function PlayerHoverCardContent({ position = 'ST' }: PlayerHoverCardConte
                     <div className="grid grid-cols-3 gap-1 text-center">
                         <div className="flex flex-col items-center justify-center">
                             <span className="text-gray-200 font-bold text-[11px] mb-0.5">SM</span>
-                            <span className="text-[#ffb800] font-bold text-[12px]">★ <span className="text-gray-500 font-mono">-</span></span>
+                            <span className="text-[#ffb800] font-bold text-[12px]">★ <span className="text-gray-500 font-mono">{playerData?.skillMoves || '-'}</span></span>
                         </div>
                         <div className="flex flex-col items-center justify-center">
                             <span className="text-gray-200 font-bold text-[11px] mb-0.5">WF</span>
-                            <span className="text-[#ffb800] font-bold text-[12px]">★ <span className="text-gray-500 font-mono">-</span></span>
+                            <span className="text-[#ffb800] font-bold text-[12px]">★ <span className="text-gray-500 font-mono">{playerData?.weakFoot || '-'}</span></span>
                         </div>
                         <div className="flex flex-col items-center justify-center">
                             <span className="text-gray-200 font-bold text-[11px] mb-0.5">Foot</span>
-                            <span className="font-bold text-gray-500 text-[12px] font-mono">---</span>
+                            <span className="font-bold text-gray-500 text-[12px] font-mono">{playerData?.foot || '---'}</span>
                         </div>
                     </div>
                     
                     <div className="text-center text-[10px] text-gray-400 font-semibold border-b border-[#333] pb-2 pt-2">
-                        ---cm | -'-" / --kg / ---
+                        {playerData?.height || '---cm'} | {playerData?.heightImperial || '-"-\''} / {playerData?.weight || '--kg'} / {playerData?.workRates || '---'}
                     </div>
 
                     <div className="flex flex-col flex-1 border-b border-[#333] pb-2 pt-2">
                         <span className="text-center text-gray-100 font-bold text-[11px] mb-1.5">Specialities / Traits</span>
                         <div className="flex flex-wrap justify-center gap-1">
-                            <span className="bg-[#252525] border border-[#444] px-1.5 py-0.5 rounded text-[9px] text-gray-500 font-mono">----------</span>
-                            <span className="bg-[#252525] border border-[#444] px-1.5 py-0.5 rounded text-[9px] text-gray-500 font-mono">----------</span>
-                            <span className="bg-[#252525] border border-[#444] px-1.5 py-0.5 rounded text-[9px] text-gray-500 font-mono">----------</span>
+                            {playerData?.traits ? playerData.traits.slice(0, 3).map((trait: string, idx: number) => (
+                                <span key={idx} className="bg-[#252525] border border-[#444] px-1.5 py-0.5 rounded text-[9px] text-gray-500 font-mono">{trait}</span>
+                            )) : (
+                                <>
+                                    <span className="bg-[#252525] border border-[#444] px-1.5 py-0.5 rounded text-[9px] text-gray-500 font-mono">----------</span>
+                                    <span className="bg-[#252525] border border-[#444] px-1.5 py-0.5 rounded text-[9px] text-gray-500 font-mono">----------</span>
+                                    <span className="bg-[#252525] border border-[#444] px-1.5 py-0.5 rounded text-[9px] text-gray-500 font-mono">----------</span>
+                                </>
+                            )}
                         </div>
                     </div>
 
                     <div className="flex items-center justify-between px-0.5 pt-2">
-                        <div className="flex items-center gap-1.5">
+                        <div className="flex items-center gap-1.5"> 
                              <div className="w-5 h-5 bg-[#252525] rounded border border-[#444]"></div>
                              <span className="text-[10px] font-bold text-gray-500 font-mono truncate w-10">-------</span>
                         </div>
-                        <div className="flex items-center gap-1.5">
+                        <div className="flex items-center gap-1.5"> 
                              <div className="w-6 h-4 bg-[#252525] rounded-sm border border-[#444]"></div>
                              <span className="text-[10px] font-bold text-gray-500 font-mono truncate w-6">----</span>
                         </div>
-                        <div className="flex items-center gap-1.5">
+                        <div className="flex items-center gap-1.5"> 
                              <div className="w-5 h-5 bg-[#252525] rounded border border-[#444]"></div>
                              <span className="text-[10px] font-bold text-gray-500 font-mono truncate w-10">-------</span>
                         </div>
@@ -94,25 +114,29 @@ export function PlayerHoverCardContent({ position = 'ST' }: PlayerHoverCardConte
             <div className="flex">
                 {/* Left Column: 5 Stats */}
                 <div className="flex-1 p-3 border-r border-[#333] flex flex-col gap-2.5 justify-center">
-                    {previewStats.map((stat, idx) => (
-                        <div key={idx} className="flex flex-col">
-                            <div className="flex justify-between items-end mb-1">
-                                <span className="text-gray-100 text-[11px] font-semibold">{stat}</span>
-                                <span className="text-gray-500 font-bold text-[11px] font-mono">--</span>
+                    {previewStats.map((stat, idx) => {
+                        const val = playerData?.stats ? playerData.stats[stat.substring(0,3).toUpperCase() as any] : null;
+                        return (
+                            <div key={idx} className="flex flex-col">
+                                <div className="flex justify-between items-end mb-1">
+                                    <span className="text-gray-100 text-[11px] font-semibold">{stat}</span>
+                                    <span className="text-gray-500 font-bold text-[11px] font-mono">{val || '--'}</span>
+                                </div>
+                                <div className="w-full h-1 bg-[#333] rounded-full overflow-hidden">
+                                    <div className={`h-full ${val ? (val > 80 ? 'bg-[#00e575]' : val > 70 ? 'bg-[#ffb800]' : 'bg-[#ff5500]') : 'bg-[#444]'}`} style={{ width: `${val || 0}%` }}></div>
+                                </div>
                             </div>
-                            <div className="w-full h-1 bg-[#333] rounded-full overflow-hidden">
-                                <div className="h-full bg-[#444] w-0"></div>
-                            </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
-
                 {/* Right Column: Chemstyle & Totals */}
                 <div className="w-[100px] shrink-0 p-3 flex flex-col text-center justify-between">
                     <div className="mb-1.5 border-b border-[#333] pb-3 pt-0.5">
                         <span className="text-gray-100 font-bold text-[11px] block mb-1.5">Top Chemstyle</span>
-                        <div className="w-8 h-5 mx-auto bg-[#252525] rounded my-0.5 border border-[#444]"></div>
-                        <span className="text-gray-500 text-[10px] font-bold font-mono uppercase mt-1 block">------</span>
+                        <div className="text-center">
+                            <span className="chem-icon text-gray-300 text-[20px]">{chemIconChar}</span>
+                        </div>
+                        <span className="text-gray-500 text-[10px] font-bold font-mono uppercase mt-1 block">{topChemstyle}</span>
                     </div>
                     <div className="mb-1.5 border-b border-[#333] pb-3 pt-0.5">
                         <span className="text-gray-100 font-bold text-[11px] block mb-1">Total Stats</span>
@@ -133,12 +157,12 @@ export function PlayerHoverCardContent({ position = 'ST' }: PlayerHoverCardConte
     );
 }
 
-interface PlayerHoverWrapperProps {
+export interface PlayerHoverWrapperProps { position?: string;
     children: ReactNode;
-    position?: string;
+    playerData?: any;
 }
 
-export function PlayerHoverWrapper({ children, position = 'ST' }: PlayerHoverWrapperProps) {
+export function PlayerHoverWrapper({ children, playerData }: PlayerHoverWrapperProps) {
     const [isHovered, setIsHovered] = useState(false);
     const [showHoverCard, setShowHoverCard] = useState(false);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -148,7 +172,7 @@ export function PlayerHoverWrapper({ children, position = 'ST' }: PlayerHoverWra
         if (isHovered) {
             timeoutRef.current = setTimeout(() => {
                 setShowHoverCard(true);
-            }, 2000);
+            }, 600); // 600ms hover delay
         } else {
             if (timeoutRef.current) clearTimeout(timeoutRef.current);
             setShowHoverCard(false);
@@ -168,8 +192,8 @@ export function PlayerHoverWrapper({ children, position = 'ST' }: PlayerHoverWra
         >
             {children}
             {showHoverCard && (
-                <div className="absolute top-1/2 left-full -translate-y-1/2 ml-4 z-[9999] pointer-events-none">
-                    <PlayerHoverCardContent position={position} />
+                <div className="absolute top-1/2 left-[105%] -translate-y-1/2 ml-2 z-[9999] pointer-events-none">
+                    <PlayerHoverCardContent playerData={playerData} />
                 </div>
             )}
         </div>

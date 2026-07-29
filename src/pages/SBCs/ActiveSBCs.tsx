@@ -23,7 +23,10 @@ export default function ActiveSBCs() {
                     <div className="text-sm text-gray-400 mb-1 flex items-center gap-2">
                         Home <span>›</span> Squad Building Challenges
                     </div>
-                    <h1 className="text-2xl font-bold text-white mb-1">FIFA 17 Squad Building Challenges & Solutions</h1>
+                    <h1 className="text-2xl font-bold text-white mb-1 flex items-center gap-2">
+                        <img src={`${import.meta.env.BASE_URL}assets/icons/main-sbcs.svg`} className="w-[28px] h-[28px]" alt="SBCs" />
+                        FIFA 17 Squad Building Challenges & Solutions
+                    </h1>
                     <div className="text-gray-400 text-sm mb-4"></div>
                     <button className="bg-[#2a2a2a] hover:bg-[#333] border border-[#333] text-sm py-1.5 px-3 rounded flex items-center gap-2 transition-colors w-max">
                         <span className="text-xs">↺</span> FIFA 17

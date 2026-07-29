@@ -32,7 +32,7 @@ export default function MarketPlayerList() {
                     <div className="text-sm text-gray-400 mb-1 flex items-center gap-2">
                         Home <span>›</span> Market <span>›</span> Market player list
                     </div>
-                    <h1 className="text-2xl font-bold text-white mb-2">FIFA 17 Market player list</h1>
+                    <h1 className="text-2xl font-bold text-white mb-2 flex items-center gap-2"><img src={`${import.meta.env.BASE_URL}assets/icons/main-market.svg`} className="w-[28px] h-[28px]" alt="Market" />FIFA 17 Market player list</h1>
                     <p className="text-gray-400 text-sm max-w-2xl leading-relaxed mb-6">
                         IB Market Player List helps you keep updated with player price trends, price updates and also Average prices to help you make more coins in Ultimate Team.
                     </p>

@@ -32,7 +32,7 @@ export default function BestValueSBCs() {
                     <div className="text-sm text-gray-400 mb-1 flex items-center gap-2">
                         Home <span>›</span> SBC Challenges
                     </div>
-                    <h1 className="text-2xl font-bold text-white mb-1">Best SBC's</h1>
+                    <h1 className="text-2xl font-bold text-white mb-1 flex items-center gap-2"><img src={`${import.meta.env.BASE_URL}assets/icons/main-sbcs.svg`} className="w-[28px] h-[28px]" alt="SBCs" />Best SBC's</h1>
                     <div className="text-gray-400 text-sm mb-4">List of all active challenges</div>
                     <button className="bg-[#2a2a2a] hover:bg-[#333] border border-[#333] text-sm py-1.5 px-3 rounded flex items-center gap-2 transition-colors w-max">
                         <span className="text-xs">↺</span> FIFA 17
@@ -48,7 +48,7 @@ export default function BestValueSBCs() {
                     <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-white text-sm py-1.5 px-4 rounded transition-colors font-medium">Pack Rewards</button>
                     <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-white text-sm py-1.5 px-4 rounded transition-colors font-medium">Reward Type</button>
                     <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-[#ffb800] text-sm py-1.5 px-4 rounded transition-colors font-medium flex items-center gap-2">
-                        <span className="inline-block w-3.5 h-3.5 bg-[#ffb800] text-black text-[9px] font-extrabold rounded-full text-center leading-[14px]">C</span> Price
+                        <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5 inline" alt="coins" /> Price
                     </button>
                     <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-[#ffb800] text-sm py-1.5 px-4 rounded transition-colors font-medium flex items-center gap-2">
                         <span className="text-xs">🎁</span> Reward Value
@@ -91,7 +91,7 @@ export default function BestValueSBCs() {
                                     <td className="p-4">
                                         <span className="font-bold text-gray-500 font-mono flex items-center justify-center gap-1">
                                             {sbc.price}
-                                            <span className="w-3.5 h-3.5 bg-[#ffb800]/50 text-black text-[9px] font-extrabold rounded-full inline-flex items-center justify-center">C</span>
+                                            <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5 inline" alt="coins" />
                                         </span>
                                     </td>
                                     <td className="p-4">

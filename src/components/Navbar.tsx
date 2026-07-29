@@ -99,8 +99,8 @@ export default function Navbar() {
                     <div className="mega-col">
                         <div className="mega-category">
                             <h3 className="mega-heading">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg> 
-                                Players
+                                <img src={`${import.meta.env.BASE_URL}assets/icons/main-players.svg`} className="w-[18px] h-[18px]" alt="Players" />
+                                 Players
                             </h3>
                             <Link to="/players" className="mega-link" >Players</Link>
                             <Link to="/players/popular" className="mega-link" >Popular Players</Link>
@@ -108,7 +108,7 @@ export default function Navbar() {
                         </div>
                         <div className="mega-category">
                             <h3 className="mega-heading">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                                <img src={`${import.meta.env.BASE_URL}assets/icons/main-squads.svg`} className="w-[18px] h-[18px]" alt="Squads" />
                                 Squads
                             </h3>
                             <Link to="/squads/promo" className="mega-link">All Promo Squads</Link>
@@ -119,7 +119,7 @@ export default function Navbar() {
                     <div className="mega-col">
                         <div className="mega-category">
                             <h3 className="mega-heading">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h-2v5H6v2h2v5h2v-5h2v-2z"/></svg>
+                                <img src={`${import.meta.env.BASE_URL}assets/icons/main-squad-builder.svg`} className="w-[18px] h-[18px]" alt="Squad Builder" />
                                 Squad Builder
                             </h3>
                             <Link to="/squad-builder" className="mega-link" >Squad Builder</Link>
@@ -127,7 +127,7 @@ export default function Navbar() {
                         </div>
                         <div className="mega-category">
                             <h3 className="mega-heading">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 11H19V7c0-1.1-.9-2-2-2h-4V3.5C13 2.12 11.88 1 10.5 1S8 2.12 8 3.5V5H4c-1.1 0-1.99.9-1.99 2v3.8H3.5c1.49 0 2.7 1.21 2.7 2.7s-1.21 2.7-2.7 2.7H2V20c0 1.1.9 2 2 2h3.8v-1.5c0-1.49 1.21-2.7 2.7-2.7 1.49 0 2.7 1.21 2.7 2.7V22H17c1.1 0 2-.9 2-2v-4h1.5c1.38 0 2.5-1.12 2.5-2.5S21.88 11 20.5 11z"/></svg>
+                                <img src={`${import.meta.env.BASE_URL}assets/icons/main-sbcs.svg`} className="w-[18px] h-[18px]" alt="SBCs" />
                                 SBCs
                             </h3>
                             <Link to="/sbcs" className="mega-link">Active SBCs</Link>
@@ -143,7 +143,7 @@ export default function Navbar() {
                         <div className="mega-category">
                             <h3 className="mega-heading">
                                 <Link to="/market/index100" className="flex items-center gap-2 text-inherit no-underline">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>
+                                    <img src={`${import.meta.env.BASE_URL}assets/icons/main-market.svg`} className="w-[18px] h-[18px]" alt="Market" />
                                     Market
                                 </Link>
                             </h3>

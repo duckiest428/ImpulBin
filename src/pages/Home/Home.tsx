@@ -62,7 +62,7 @@ export default function Home() {
                                 return (
                                     <div key={slot} className="flex flex-col items-center gap-1.5 sm:gap-2">
                                         <div className="flex items-center justify-center gap-1.5 bg-[#1a1c20] border border-[#333] px-2 py-0.5 rounded text-[10px] sm:text-xs font-mono font-bold text-gray-300 shadow-sm w-full max-w-[85%]">
-                                            <span className="w-3 h-3 bg-[#118cd7] text-white text-[8px] font-extrabold rounded-sm inline-flex items-center justify-center border border-[#0d6b9e]"></span>
+                                            <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5" alt="coins" />
                                             60,000
                                         </div>
                                         <FIFA17PlayerCard 
@@ -79,7 +79,7 @@ export default function Home() {
                             return (
                                 <div key={slot} className="flex flex-col items-center gap-1.5 sm:gap-2">
                                     <div className="flex items-center justify-center gap-1.5 bg-[#1a1c20] border border-[#333] px-2 py-0.5 rounded text-[10px] sm:text-xs font-mono font-bold text-gray-300 shadow-sm w-full max-w-[85%]">
-                                        <span className="w-3 h-3 bg-[#118cd7] text-white text-[8px] font-extrabold rounded-sm inline-flex items-center justify-center border border-[#0d6b9e]"></span>
+                                        <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5" alt="coins" />
                                         ---
                                     </div>
                                     <FIFA17PlayerCard 

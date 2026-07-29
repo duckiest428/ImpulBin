@@ -129,25 +129,25 @@ export default function PriceRanges() {
                                     <td className="p-3.5 text-center font-medium text-gray-500 font-mono">
                                         <span className="inline-flex items-center gap-1">
                                             {player.oldMin}
-                                            <span className="w-3.5 h-3.5 bg-[#ffb800]/50 text-black text-[9px] font-extrabold rounded-full inline-flex items-center justify-center">C</span>
+                                            <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5 inline" alt="coins" />
                                         </span>
                                     </td>
                                     <td className="p-3.5 text-center font-medium text-gray-500 font-mono">
                                         <span className="inline-flex items-center gap-1">
                                             {player.oldMax}
-                                            <span className="w-3.5 h-3.5 bg-[#ffb800]/50 text-black text-[9px] font-extrabold rounded-full inline-flex items-center justify-center">C</span>
+                                            <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5 inline" alt="coins" />
                                         </span>
                                     </td>
                                     <td className="p-3.5 text-center font-medium text-gray-500 font-mono">
                                         <span className="inline-flex items-center gap-1">
                                             {player.newMin}
-                                            <span className="w-3.5 h-3.5 bg-[#ffb800]/50 text-black text-[9px] font-extrabold rounded-full inline-flex items-center justify-center">C</span>
+                                            <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5 inline" alt="coins" />
                                         </span>
                                     </td>
                                     <td className="p-3.5 text-center font-medium text-gray-500 font-mono">
                                         <span className="inline-flex items-center gap-1">
                                             {player.newMax}
-                                            <span className="w-3.5 h-3.5 bg-[#ffb800]/50 text-black text-[9px] font-extrabold rounded-full inline-flex items-center justify-center">C</span>
+                                            <img src={`${import.meta.env.BASE_URL}assets/icons/coins_bin-2.png.webp`} className="w-3.5 h-3.5 inline" alt="coins" />
                                         </span>
                                     </td>
                                     <td className="p-3.5 text-right text-gray-500 text-xs font-mono">
