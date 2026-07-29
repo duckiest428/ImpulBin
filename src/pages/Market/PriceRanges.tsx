@@ -1,5 +1,6 @@
 import React from 'react';
 import { PlayerHoverWrapper } from '../../components/PlayerHoverCard';
+import { FIFA17PlayerCardBase } from '../../components/FIFA17PlayerCard';
 
 export interface PriceRangeChangeItem {
     id: string;
@@ -103,8 +104,8 @@ export default function PriceRanges() {
                                     <td className="p-3.5">
                                         <div className="flex items-center gap-3">
                                             <PlayerHoverWrapper position="ST">
-                                                <div className="w-10 h-12 bg-[#252525] rounded border border-[#333] flex-shrink-0 flex items-center justify-center text-gray-500 font-mono text-xs">
-                                                    --
+                                                <div className="w-[38px] shrink-0 [@container]">
+                                                    <FIFA17PlayerCardBase name={player.name} rating={player.rating} position={player.position} />
                                                 </div>
                                             </PlayerHoverWrapper>
                                             <span className="font-bold text-gray-400">{player.name}</span>

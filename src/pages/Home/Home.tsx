@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { PlayerHoverWrapper } from '../../components/PlayerHoverCard';
+import { FIFA17PlayerCard } from '../../components/FIFA17PlayerCard';
 
 export default function Home() {
     const [activeFilter, setActiveFilter] = useState('Popular');
@@ -59,22 +60,36 @@ export default function Home() {
                         {[1, 2, 3, 4, 5, 6].map((slot) => {
                             if (slot === 1) {
                                 return (
-                                    <PlayerHoverWrapper key={slot} position="ST">
-                                        <div className="w-[130px] sm:w-[150px] md:w-[160px] h-[180px] sm:h-[210px] md:h-[230px] rounded-2xl bg-[#161616] border border-[#383838] hover:border-[#00e575] flex flex-col items-center justify-center relative cursor-pointer shadow-xl overflow-hidden transition-all duration-200">
-                                            <div className="absolute inset-0 flex items-center justify-center opacity-10">
-                                                <span className="text-8xl font-black italic">99</span>
-                                            </div>
-                                            <img src="https://placehold.co/120x160/1e1e1e/white?text=Card" alt="Player Card" className="w-[90%] h-[90%] object-contain relative z-10" />
+                                    <div key={slot} className="flex flex-col items-center gap-1.5 sm:gap-2">
+                                        <div className="flex items-center justify-center gap-1.5 bg-[#1a1c20] border border-[#333] px-2 py-0.5 rounded text-[10px] sm:text-xs font-mono font-bold text-gray-300 shadow-sm w-full max-w-[85%]">
+                                            <span className="w-3 h-3 bg-[#118cd7] text-white text-[8px] font-extrabold rounded-sm inline-flex items-center justify-center border border-[#0d6b9e]"></span>
+                                            60,000
                                         </div>
-                                    </PlayerHoverWrapper>
+                                        <FIFA17PlayerCard 
+                                            name="Mbappé"
+                                            rating={92}
+                                            position="ST"
+                                        />
+                                        <div className="flex items-center gap-1 text-[#ff5500] font-bold text-[11px] sm:text-sm mt-0.5">
+                                            🔥 398
+                                        </div>
+                                    </div>
                                 );
                             }
                             return (
-                                <div
-                                    key={slot}
-                                    className="w-[130px] sm:w-[150px] md:w-[160px] h-[180px] sm:h-[210px] md:h-[230px] rounded-2xl border-2 border-dashed border-[#383838] hover:border-[#00e575] bg-[#161616] flex items-center justify-center text-gray-500 hover:text-[#00e575] transition-all duration-200 cursor-pointer group shadow-xl hover:-translate-y-1"
-                                >
-                                    <span className="text-3xl sm:text-4xl font-light text-gray-400 group-hover:scale-125 group-hover:text-[#00e575] transition-transform">+</span>
+                                <div key={slot} className="flex flex-col items-center gap-1.5 sm:gap-2">
+                                    <div className="flex items-center justify-center gap-1.5 bg-[#1a1c20] border border-[#333] px-2 py-0.5 rounded text-[10px] sm:text-xs font-mono font-bold text-gray-300 shadow-sm w-full max-w-[85%]">
+                                        <span className="w-3 h-3 bg-[#118cd7] text-white text-[8px] font-extrabold rounded-sm inline-flex items-center justify-center border border-[#0d6b9e]"></span>
+                                        ---
+                                    </div>
+                                    <FIFA17PlayerCard 
+                                        name="---"
+                                        rating="--"
+                                        position="-"
+                                    />
+                                    <div className="flex items-center gap-1 text-[#ff5500] font-bold text-[11px] sm:text-sm mt-0.5">
+                                        🔥 --
+                                    </div>
                                 </div>
                             );
                         })}

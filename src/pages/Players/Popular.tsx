@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { mockPlayers } from '../../data/mockPlayers';
 import PlayerCard from '../../components/PlayerCard';
+import { FIFA17PlayerCard } from '../../components/FIFA17PlayerCard';
 
 export default function Popular() {
     return (
@@ -44,8 +45,20 @@ export default function Popular() {
                                 <span>{player.price}</span>
                             </div>
 
-                            <div className="relative cursor-pointer transition-transform duration-300 group-hover:-translate-y-2 group-hover:scale-105">
-                                <PlayerCard player={player} width="w-48 sm:w-56" />
+                            <div>
+                                <FIFA17PlayerCard
+                                    name={player.name}
+                                    rating={player.rating}
+                                    position={player.position}
+                                    stats={{
+                                        stat1: { label: 'PAC', value: player.pac },
+                                        stat2: { label: 'DRI', value: player.dri },
+                                        stat3: { label: 'SHO', value: player.sho },
+                                        stat4: { label: 'DEF', value: player.def },
+                                        stat5: { label: 'PAS', value: player.pas },
+                                        stat6: { label: 'PHY', value: player.phy },
+                                    }}
+                                />
                             </div>
                             
                             <div className="mt-4 flex items-center gap-2 bg-black/50 px-4 py-1.5 rounded-full border border-gray-800/50">

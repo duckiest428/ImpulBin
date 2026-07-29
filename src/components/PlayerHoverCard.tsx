@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
+import { FIFA17PlayerCardBase } from './FIFA17PlayerCard';
 
 const positionStatsMapping = {
     GK: ['Acceleration', 'SprintSpeed', 'Reactions', 'Jumping', 'Strength'],
@@ -38,17 +39,8 @@ export function PlayerHoverCardContent({ position = 'ST' }: PlayerHoverCardConte
             {/* Main Body */}
             <div className="flex p-3 gap-3 border-b border-[#333]">
                 {/* Left Side: Card Render Placeholder */}
-                <div className="w-[95px] shrink-0 flex flex-col items-center">
-                    <div className="w-full aspect-[2/3] bg-[#222] border border-[#333] rounded-lg flex items-center justify-center text-gray-600 font-mono text-[10px] shadow-inner overflow-hidden relative">
-                        <span className="absolute text-[9px] top-1.5 left-1.5 text-gray-500">--</span>
-                        <span className="absolute text-[9px] top-4 left-1.5 text-gray-500">---</span>
-                        -- CARD --
-                        <div className="absolute bottom-1.5 flex gap-1 items-center justify-center w-full">
-                            <div className="w-3 h-3 bg-[#111] rounded-[2px]"></div>
-                            <div className="w-3 h-2.5 bg-[#111] rounded-[2px]"></div>
-                            <div className="w-3 h-3 bg-[#111] rounded-[2px]"></div>
-                        </div>
-                    </div>
+                <div className="w-[95px] shrink-0 flex flex-col items-center justify-center [@container]">
+                    <FIFA17PlayerCardBase name="Player Name" rating={99} position={position} />
                 </div>
 
                 {/* Right Side: Metadata */}
