@@ -219,12 +219,22 @@ export interface PlayerHoverWrapperProps { position?: string;
 export const PlayerHoverWrapper: React.FC<PlayerHoverWrapperProps> = ({ children, playerData }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [showHoverCard, setShowHoverCard] = useState(false);
+    const [cardPosition, setCardPosition] = useState<'right' | 'left'>('right');
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
     const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         if (isHovered) {
             timeoutRef.current = setTimeout(() => {
+                if (containerRef.current) {
+                    const rect = containerRef.current.getBoundingClientRect();
+                    // if it's too close to the right edge (e.g., within 350px, hover card is ~330px wide)
+                    if (window.innerWidth - rect.right < 350) {
+                        setCardPosition('left');
+                    } else {
+                        setCardPosition('right');
+                    }
+                }
                 setShowHoverCard(true);
             }, 600); // 600ms hover delay
         } else {
@@ -246,7 +256,7 @@ export const PlayerHoverWrapper: React.FC<PlayerHoverWrapperProps> = ({ children
         >
             {children}
             {showHoverCard && (
-                <div className="absolute top-1/2 left-[105%] -translate-y-1/2 ml-2 z-[9999] pointer-events-none">
+                <div className={`absolute top-1/2 -translate-y-1/2 z-[9999] pointer-events-none ${cardPosition === 'right' ? 'left-[105%] ml-2' : 'right-[105%] mr-2'}`}>
                     <PlayerHoverCardContent playerData={playerData} />
                 </div>
             )}
