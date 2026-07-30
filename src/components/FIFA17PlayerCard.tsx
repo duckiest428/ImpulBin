@@ -1,6 +1,7 @@
 import React from 'react';
 import { PlayerHoverWrapper } from './PlayerHoverCard';
 import { getAssetUrl } from '../utils/assetUrl';
+import { SafeImage } from './SafeImage';
 
 export interface FIFA17PlayerCardProps {
   name: string;
@@ -48,7 +49,7 @@ export function FIFA17PlayerCardBase({
       <div className="relative w-full aspect-[3/4] font-sans text-[#222] group [container-type:inline-size]">
         {/* LAYER 1 (Base - Z-Index 10): Card Frame Asset */}
         <div className="absolute inset-0 z-10 flex items-center justify-center drop-shadow-lg">
-          <img src={bgUrl} className="w-full h-full object-contain" alt="Card Background" />
+          <SafeImage src={bgUrl} fallbackType="card" className="w-full h-full object-contain" alt="Card Background" />
         </div>
 
         {/* ONLY RENDER DATA IF NOT A PLACEHOLDER */}
@@ -60,7 +61,7 @@ export function FIFA17PlayerCardBase({
                     style={{ top: '15%', left: '50%', transform: 'translateX(-50%)', width: '60%', height: '40%' }}
                 >
                     {playerImageUrl ? (
-                        <img src={playerImageUrl} alt={name} className="w-full h-full object-contain object-bottom drop-shadow-md" />
+                        <SafeImage src={playerImageUrl} fallbackType="player" alt={name} className="w-full h-full object-contain object-bottom drop-shadow-md" />
                     ) : (
                         <svg className="w-[75%] h-[85%] opacity-30 text-[#444] object-bottom" viewBox="0 0 100 100" fill="currentColor" preserveAspectRatio="xMidYMax meet">
                         {/* Head */}
@@ -80,13 +81,13 @@ export function FIFA17PlayerCardBase({
                         <span className="font-medium leading-none mb-1 uppercase" style={{ fontSize: '8cqi' }}>{position}</span>
                         
                         {nationFlagUrl ? (
-                            <img src={nationFlagUrl} className="w-[50%] h-auto mb-1 shadow-sm" alt="nation" />
+                            <SafeImage src={nationFlagUrl} fallbackType="generic" className="w-[50%] h-auto mb-1 shadow-sm" alt="nation" />
                         ) : (
                             <div className="w-[50%] aspect-[3/2] bg-black/20 mb-1" />
                         )}
                         
                         {clubCrestUrl ? (
-                            <img src={clubCrestUrl} className="w-[50%] h-auto shadow-sm" alt="club" />
+                            <SafeImage src={clubCrestUrl} fallbackType="generic" className="w-[50%] h-auto shadow-sm" alt="club" />
                         ) : (
                             <div className="w-[50%] aspect-square rounded-full bg-black/20" />
                         )}

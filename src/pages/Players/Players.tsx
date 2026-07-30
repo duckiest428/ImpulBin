@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { mockPlayers } from '../../data/mockPlayers';
 import { getAssetUrl } from '../../utils/assetUrl';
+import { SafeImage } from '../../components/SafeImage';
 
 export default function Players() {
     const getStatColor = (value: number) => {
@@ -100,7 +101,7 @@ export default function Players() {
                                     <td className="p-4">
                                         <div className="flex items-center gap-3">
                                             <div className="relative w-12 h-12 flex-shrink-0">
-                                                <img src={player.image} alt={player.name} className="w-full h-full object-contain" />
+                                                <SafeImage src={player.image} fallbackType="player" alt={player.name} className="w-full h-full object-contain" />
                                             </div>
                                             <div>
                                                 <div className="font-bold text-white text-base">{player.name}</div>
@@ -121,7 +122,7 @@ export default function Players() {
                                     </td>
                                     <td className="p-4">
                                         <div className="font-bold flex items-center gap-1">
-                                            {player.price} <img src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} className="w-3.5 h-3.5 inline" alt="coins" />
+                                            {player.price} <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
                                         </div>
                                         <div className={`text-xs ${player.priceChange.startsWith('+') ? 'text-green-500' : 'text-red-500'}`}>
                                             {player.priceChange.startsWith('+') ? '↗' : '↘'} {player.priceChange}

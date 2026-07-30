@@ -2,6 +2,7 @@ import React from 'react';
 import { PlayerHoverWrapper } from '../../components/PlayerHoverCard';
 import { FIFA17PlayerCardBase } from '../../components/FIFA17PlayerCard';
 import { getAssetUrl } from '../../utils/assetUrl';
+import { SafeImage } from '../../components/SafeImage';
 
 export interface PriceRangeChangeItem {
     id: string;
@@ -130,25 +131,25 @@ export default function PriceRanges() {
                                     <td className="p-3.5 text-center font-medium text-gray-500 font-mono">
                                         <span className="inline-flex items-center gap-1">
                                             {player.oldMin}
-                                            <img src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} className="w-3.5 h-3.5 inline" alt="coins" />
+                                            <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
                                         </span>
                                     </td>
                                     <td className="p-3.5 text-center font-medium text-gray-500 font-mono">
                                         <span className="inline-flex items-center gap-1">
                                             {player.oldMax}
-                                            <img src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} className="w-3.5 h-3.5 inline" alt="coins" />
+                                            <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
                                         </span>
                                     </td>
                                     <td className="p-3.5 text-center font-medium text-gray-500 font-mono">
                                         <span className="inline-flex items-center gap-1">
                                             {player.newMin}
-                                            <img src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} className="w-3.5 h-3.5 inline" alt="coins" />
+                                            <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
                                         </span>
                                     </td>
                                     <td className="p-3.5 text-center font-medium text-gray-500 font-mono">
                                         <span className="inline-flex items-center gap-1">
                                             {player.newMax}
-                                            <img src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} className="w-3.5 h-3.5 inline" alt="coins" />
+                                            <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
                                         </span>
                                     </td>
                                     <td className="p-3.5 text-right text-gray-500 text-xs font-mono">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getAssetUrl } from '../utils/assetUrl';
+import { SafeImage } from './SafeImage';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -100,7 +101,7 @@ export default function Navbar() {
                     <div className="mega-col">
                         <div className="mega-category">
                             <h3 className="mega-heading">
-                                <img src={getAssetUrl('assets/icons/main-players.svg')} className="w-[18px] h-[18px]" alt="Players" />
+                                <SafeImage src={getAssetUrl('assets/icons/main-players.svg')} className="w-[18px] h-[18px]" alt="Players" />
                                  Players
                             </h3>
                             <Link to="/players" className="mega-link" >Players</Link>
@@ -109,7 +110,7 @@ export default function Navbar() {
                         </div>
                         <div className="mega-category">
                             <h3 className="mega-heading">
-                                <img src={getAssetUrl('assets/icons/main-squads.svg')} className="w-[18px] h-[18px]" alt="Squads" />
+                                <SafeImage src={getAssetUrl('assets/icons/main-squads.svg')} className="w-[18px] h-[18px]" alt="Squads" />
                                 Squads
                             </h3>
                             <Link to="/squads/promo" className="mega-link">All Promo Squads</Link>
@@ -120,7 +121,7 @@ export default function Navbar() {
                     <div className="mega-col">
                         <div className="mega-category">
                             <h3 className="mega-heading">
-                                <img src={getAssetUrl('assets/icons/main-squad-builder.svg')} className="w-[18px] h-[18px]" alt="Squad Builder" />
+                                <SafeImage src={getAssetUrl('assets/icons/main-squad-builder.svg')} className="w-[18px] h-[18px]" alt="Squad Builder" />
                                 Squad Builder
                             </h3>
                             <Link to="/squad-builder" className="mega-link" >Squad Builder</Link>
@@ -128,7 +129,7 @@ export default function Navbar() {
                         </div>
                         <div className="mega-category">
                             <h3 className="mega-heading">
-                                <img src={getAssetUrl('assets/icons/main-sbcs.svg')} className="w-[18px] h-[18px]" alt="SBCs" />
+                                <SafeImage src={getAssetUrl('assets/icons/main-sbcs.svg')} className="w-[18px] h-[18px]" alt="SBCs" />
                                 SBCs
                             </h3>
                             <Link to="/sbcs" className="mega-link">Active SBCs</Link>
@@ -144,7 +145,7 @@ export default function Navbar() {
                         <div className="mega-category">
                             <h3 className="mega-heading">
                                 <Link to="/market/index100" className="flex items-center gap-2 text-inherit no-underline">
-                                    <img src={getAssetUrl('assets/icons/main-market.svg')} className="w-[18px] h-[18px]" alt="Market" />
+                                    <SafeImage src={getAssetUrl('assets/icons/main-market.svg')} className="w-[18px] h-[18px]" alt="Market" />
                                     Market
                                 </Link>
                             </h3>
@@ -161,7 +162,7 @@ export default function Navbar() {
                     <div className="mega-col">
                         <div className="mega-category">
                             <h3 className="mega-heading">
-                                <img src={getAssetUrl('assets/icons/main-objectives.svg')} className="w-[18px] h-[18px]" alt="Objectives" />
+                                <SafeImage src={getAssetUrl('assets/icons/main-objectives.svg')} className="w-[18px] h-[18px]" alt="Objectives" />
                                 Objectives
                             </h3>
                             <Link to="/" className="mega-link">All Objectives</Link>
@@ -174,16 +175,16 @@ export default function Navbar() {
                 <div className="mega-sidebar">
                     <h3 className="mega-sidebar-heading">Tools & Games</h3>
                     <Link to="/" className="mega-sidebar-link">
-                        <span className="flex items-center gap-2"><img src={getAssetUrl('assets/icons/main-guess-the-player.svg')} className="w-5 h-5 opacity-70" alt="Guess The Player" /> Guess The Player</span>
+                        <span className="flex items-center gap-2"><SafeImage src={getAssetUrl('assets/icons/main-guess-the-player.svg')} className="w-5 h-5 opacity-70" alt="Guess The Player" /> Guess The Player</span>
                     </Link>
                     <Link to="/" className="mega-sidebar-link">
-                        <span className="flex items-center gap-2"><img src={getAssetUrl('assets/icons/main-card-creator.svg')} className="w-5 h-5 opacity-70" alt="FUT Card Creator" /> FUT Card Creator</span>
+                        <span className="flex items-center gap-2"><SafeImage src={getAssetUrl('assets/icons/main-card-creator.svg')} className="w-5 h-5 opacity-70" alt="FUT Card Creator" /> FUT Card Creator</span>
                     </Link>
                     <Link to="/" className="mega-sidebar-link">
-                        <span className="flex items-center gap-2"><img src={getAssetUrl('assets/icons/main-higher-lower.svg')} className="w-5 h-5 opacity-70" alt="Higher or Lower" /> Higher or Lower</span>
+                        <span className="flex items-center gap-2"><SafeImage src={getAssetUrl('assets/icons/main-higher-lower.svg')} className="w-5 h-5 opacity-70" alt="Higher or Lower" /> Higher or Lower</span>
                     </Link>
                     <Link to="/" className="mega-sidebar-link">
-                        <span className="flex items-center gap-2"><img src={getAssetUrl('assets/icons/main-tier-list.svg')} className="w-5 h-5 opacity-70" alt="Tier List Builder" /> Tier List Builder</span>
+                        <span className="flex items-center gap-2"><SafeImage src={getAssetUrl('assets/icons/main-tier-list.svg')} className="w-5 h-5 opacity-70" alt="Tier List Builder" /> Tier List Builder</span>
                     </Link>
                 </div>
             </div>
