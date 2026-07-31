@@ -43,7 +43,7 @@ export function FIFA17PlayerCardBase({
   isLoading
 }: FIFA17PlayerCardProps) {
   const isPlaceholder = rating === '--' || !rating;
-  const bgUrl = cardBackgroundUrl || 'https://duckiest428.github.io/ImpulBin/assets/cards/placeholder.png';
+  const bgUrl = cardBackgroundUrl || 'https://duckiest428.github.io/impulbin/assets/cards/placeholder.png';
 
   return (
       <div className="relative w-full aspect-[3/4] font-sans text-[#222] group [container-type:inline-size]">

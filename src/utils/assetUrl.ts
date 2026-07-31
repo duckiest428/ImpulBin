@@ -28,7 +28,7 @@ export function getFallbackDataUri(type: 'coin' | 'card' | 'player' | 'generic' 
     case 'coin':
       return 'https://cdn.futbin.com/design/img/coins_bin.png';
     case 'card':
-      return 'https://duckiest428.github.io/ImpulBin/assets/cards/placeholder.png';
+      return 'https://duckiest428.github.io/impulbin/assets/cards/placeholder.png';
     case 'player':
       return PLAYER_SILHOUETTE_SVG_DATA_URI;
     default:
