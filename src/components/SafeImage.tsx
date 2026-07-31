@@ -16,12 +16,12 @@ export const SafeImage: React.FC<SafeImageProps> = ({
   ...props
 }) => {
   const typeKey: FallbackType = fallbackType || 'generic';
-  const initialSrc = src ? (src.startsWith('http') || src.startsWith('data:') ? src : getAssetUrl(src)) : getFallbackDataUri(typeKey);
+  const initialSrc = src || getFallbackDataUri(typeKey);
   const [imgSrc, setImgSrc] = useState<string>(initialSrc);
   const [hasError, setHasError] = useState<boolean>(false);
 
   useEffect(() => {
-    const resolvedSrc = src ? (src.startsWith('http') || src.startsWith('data:') ? src : getAssetUrl(src)) : getFallbackDataUri(typeKey);
+    const resolvedSrc = src || getFallbackDataUri(typeKey);
     setImgSrc(resolvedSrc);
     setHasError(false);
   }, [src, typeKey]);
@@ -29,7 +29,10 @@ export const SafeImage: React.FC<SafeImageProps> = ({
   const handleError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     if (!hasError) {
       setHasError(true);
-      setImgSrc(getFallbackDataUri(typeKey));
+      const fallback = getFallbackDataUri(typeKey);
+      if (imgSrc !== fallback) {
+        setImgSrc(fallback);
+      }
     }
     if (onError) {
       onError(e);
@@ -42,6 +45,7 @@ export const SafeImage: React.FC<SafeImageProps> = ({
       alt={alt || ''}
       className={className}
       onError={handleError}
+      referrerPolicy="no-referrer"
       {...props}
     />
   );
