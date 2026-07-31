@@ -131,25 +131,25 @@ export default function PriceRanges() {
                                     <td className="p-3.5 text-center font-medium text-gray-500 font-mono">
                                         <span className="inline-flex items-center gap-1">
                                             {player.oldMin}
-                                            <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.png')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
+                                            <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
                                         </span>
                                     </td>
                                     <td className="p-3.5 text-center font-medium text-gray-500 font-mono">
                                         <span className="inline-flex items-center gap-1">
                                             {player.oldMax}
-                                            <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.png')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
+                                            <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
                                         </span>
                                     </td>
                                     <td className="p-3.5 text-center font-medium text-gray-500 font-mono">
                                         <span className="inline-flex items-center gap-1">
                                             {player.newMin}
-                                            <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.png')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
+                                            <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
                                         </span>
                                     </td>
                                     <td className="p-3.5 text-center font-medium text-gray-500 font-mono">
                                         <span className="inline-flex items-center gap-1">
                                             {player.newMax}
-                                            <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.png')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
+                                            <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
                                         </span>
                                     </td>
                                     <td className="p-3.5 text-right text-gray-500 text-xs font-mono">

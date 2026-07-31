@@ -26,7 +26,7 @@ export const GENERIC_PLACEHOLDER_SVG_DATA_URI = `data:image/svg+xml;utf8,${encod
 export function getFallbackDataUri(type: 'coin' | 'card' | 'player' | 'generic' = 'generic'): string {
   switch (type) {
     case 'coin':
-      return getAssetUrl('assets/icons/coins_bin-2.png.png');
+      return 'https://cdn.futbin.com/design/img/coins_bin.png';
     case 'card':
       return getAssetUrl('assets/cards/placeholder.png');
     case 'player':

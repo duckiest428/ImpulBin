@@ -82,7 +82,7 @@ export function PlayerHoverCardContent({ playerData }: PlayerHoverCardContentPro
             {/* Top Bar */}
             <div className="flex justify-end items-center px-3 py-1.5 border-b border-[#333] bg-[#1a1c20] rounded-t-lg">
                 <div className="flex items-center gap-1.5">
-                    <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.png')} fallbackType="coin" className="w-3.5 h-3.5" alt="coins" />
+                    <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} fallbackType="coin" className="w-3.5 h-3.5" alt="coins" />
                     <span className="font-bold text-[13px] font-mono tracking-tight text-gray-300">{priceVal}</span>
                 </div>
             </div>

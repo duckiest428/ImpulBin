@@ -50,7 +50,7 @@ export default function BestValueSBCs() {
                     <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-white text-sm py-1.5 px-4 rounded transition-colors font-medium">Pack Rewards</button>
                     <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-white text-sm py-1.5 px-4 rounded transition-colors font-medium">Reward Type</button>
                     <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-[#ffb800] text-sm py-1.5 px-4 rounded transition-colors font-medium flex items-center gap-2">
-                        <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.png')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" /> Price
+                        <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" /> Price
                     </button>
                     <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-[#ffb800] text-sm py-1.5 px-4 rounded transition-colors font-medium flex items-center gap-2">
                         <span className="text-xs">🎁</span> Reward Value
@@ -93,7 +93,7 @@ export default function BestValueSBCs() {
                                     <td className="p-4">
                                         <span className="font-bold text-gray-500 font-mono flex items-center justify-center gap-1">
                                             {sbc.price}
-                                            <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.png')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
+                                            <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
                                         </span>
                                     </td>
                                     <td className="p-4">
