@@ -30,7 +30,7 @@ export default function Navbar() {
         
         <div className="nav-center">
             <div className="nav-search-compact">
-                <span style={{'color': '#888'}}>🔍</span>
+                <SafeImage src={getAssetUrl('assets/icons/search.svg')} alt="Search" className="w-4 h-4 text-gray-400 shrink-0" />
                 <input type="text" placeholder="Search for Player..." />
                 <select>
                     <option>FIFA 17</option>

@@ -412,8 +412,8 @@ export default function ConsumablesPrices() {
                                 <tr key={i} className="border-b border-[#2d2d2d] hover:bg-[#252525] transition-colors">
                                     <td className="p-4">
                                         <div className="flex items-center gap-3">
-                                            <ChemStyleIcon name={c.name} className="w-6 h-6 shrink-0" />
-                                            <span className="text-white">{c.name}</span>
+                                            <ChemStyleIcon name={c.name} className="w-6 h-6 shrink-0 flex items-center justify-center text-[#00e575]" size="1.5rem" />
+                                            <span className="text-white text-sm font-semibold leading-none">{c.name}</span>
                                         </div>
                                     </td>
                                     <td className="p-4 text-gray-300">

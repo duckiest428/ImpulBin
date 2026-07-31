@@ -185,7 +185,7 @@ export function PlayerHoverCardContent({ playerData }: PlayerHoverCardContentPro
                         <span className="text-gray-100 font-bold text-[11px] block mb-1.5">Top Chemstyle</span>
                         <div className="text-center min-h-[24px] flex items-center justify-center">
                             {!isPlaceholder && topChemstyle !== '---' ? (
-                                <ChemStyleIcon name={topChemstyle} className="w-5 h-5 mx-auto" />
+                                <ChemStyleIcon name={topChemstyle} className="w-5 h-5 mx-auto flex items-center justify-center text-[#00e575]" size="1.25rem" />
                             ) : (
                                 <span className="text-gray-500 font-mono text-[11px]">---</span>
                             )}
