@@ -43,7 +43,7 @@ export default function Popular() {
                     {mockPlayers.map(player => (
                         <div key={player.id} className="flex flex-col items-center group">
                             <div className="flex items-center gap-1 mb-2 bg-[#1a1c23] border border-gray-800 px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-                                <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
+                                <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.png')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
                                 <span>{player.price}</span>
                             </div>
 

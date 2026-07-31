@@ -157,18 +157,6 @@ export default function Navbar() {
                             <Link to="/market/index100" className="mega-link">Index 100</Link>
                         </div>
                     </div>
-
-                    {/* Column 4 */}
-                    <div className="mega-col">
-                        <div className="mega-category">
-                            <h3 className="mega-heading">
-                                <SafeImage src={getAssetUrl('assets/icons/main-objectives.svg')} className="w-[18px] h-[18px]" alt="Objectives" />
-                                Objectives
-                            </h3>
-                            <Link to="/" className="mega-link">All Objectives</Link>
-                            <Link to="/" className="mega-link">FIFA Season</Link>
-                        </div>
-                    </div>
                 </div>
 
                 {/* Sidebar */}

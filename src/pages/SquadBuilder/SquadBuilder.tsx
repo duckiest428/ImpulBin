@@ -309,7 +309,7 @@ function SidebarInfo() {
             </div>
             <div className="flex gap-4 text-sm font-medium">
                 <span className="flex items-center gap-1 text-[#10b981]">
-                    0 <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
+                    0 <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.png')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
                 </span>
             </div>
         </div>

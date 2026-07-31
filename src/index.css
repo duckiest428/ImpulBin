@@ -52,8 +52,8 @@
             align-items: center;
             justify-content: space-between;
             background-color: var(--nav-bg);
-            padding: 0 20px;
-            height: 64px;
+            padding: 0 clamp(10px, 2vw, 20px);
+            height: clamp(56px, 6vh, 64px);
             box-shadow: 0 2px 10px rgba(0,0,0,0.8);
             position: sticky;
             top: 0;
@@ -63,17 +63,17 @@
         .nav-left {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: clamp(8px, 1.5vw, 15px);
         }
 
         .menu-toggle {
             background: none;
             border: none;
             color: white;
-            font-size: 24px;
+            font-size: clamp(20px, 2.5vw, 24px);
             cursor: pointer;
-            width: 30px;
-            height: 30px;
+            width: clamp(24px, 3vw, 30px);
+            height: clamp(24px, 3vw, 30px);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -82,20 +82,20 @@
         .nav-icon-logo {
             background-color: var(--impulsum-green);
             color: #000;
-            padding: 4px 8px;
+            padding: clamp(2px, 0.5vw, 4px) clamp(4px, 1vw, 8px);
             border-radius: 4px;
             font-weight: 900;
             font-style: italic;
-            font-size: 18px;
+            font-size: clamp(14px, 1.5vw, 18px);
             letter-spacing: -1px;
         }
 
         .nav-center {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: clamp(10px, 2vw, 20px);
             flex: 1;
-            margin-left: 20px;
+            margin-left: clamp(10px, 2vw, 20px);
         }
 
         .nav-search-compact {
@@ -104,8 +104,8 @@
             background-color: #1a1a1a;
             border: 1px solid #333;
             border-radius: 6px;
-            padding: 6px 12px;
-            width: 280px;
+            padding: clamp(4px, 0.8vw, 6px) clamp(8px, 1.5vw, 12px);
+            width: clamp(180px, 25vw, 280px);
         }
 
         .nav-search-compact input {
@@ -114,8 +114,8 @@
             color: white;
             outline: none;
             width: 100%;
-            margin-left: 8px;
-            font-size: 13px;
+            margin-left: clamp(4px, 1vw, 8px);
+            font-size: clamp(11px, 1.2vw, 13px);
         }
 
         .nav-search-compact input::placeholder {
@@ -128,14 +128,14 @@
             color: #ccc;
             outline: none;
             border-left: 1px solid #444;
-            padding-left: 10px;
-            font-size: 13px;
+            padding-left: clamp(6px, 1vw, 10px);
+            font-size: clamp(11px, 1.2vw, 13px);
             cursor: pointer;
         }
 
         .nav-links {
             display: flex;
-            gap: 6px;
+            gap: clamp(2px, 0.5vw, 6px);
             list-style: none;
             height: 100%;
         }
@@ -144,12 +144,12 @@
         .has-dropdown {
             position: relative;
             cursor: pointer;
-            padding: 22px 10px;
+            padding: clamp(16px, 2vw, 22px) clamp(6px, 1vw, 10px);
             font-weight: 600;
-            font-size: 14px;
+            font-size: clamp(12px, 1.2vw, 14px);
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: clamp(2px, 0.5vw, 4px);
             color: #eee;
             transition: color 0.2s;
         }
