@@ -64,7 +64,15 @@ export default function Players() {
                 <div className="flex flex-wrap gap-2 mb-6">
                     {['Version', 'Positions', 'Leagues', 'Nations', 'Clubs', 'Price', 'PlayStyles', 'Roles', 'Rating', 'SM & WF', 'FUTBIN Rating', 'Stats'].map(filter => (
                         <button key={filter} className="bg-black border border-gray-700 px-3 py-2 rounded text-sm font-medium hover:bg-gray-800 transition-colors flex items-center gap-2">
-                            <span>{filter}</span>
+                            {filter === 'SM & WF' ? (
+                                <span className="flex items-center gap-1.5">
+                                    <span>SM & WF</span>
+                                    <SafeImage src={getAssetUrl('assets/icons/0_starskills.svg')} className="w-3.5 h-3.5 inline-block" alt="SM" />
+                                    <SafeImage src={getAssetUrl('assets/icons/0_weakfoot.svg')} className="w-2.5 h-3.5 inline-block" alt="WF" />
+                                </span>
+                            ) : (
+                                <span>{filter}</span>
+                            )}
                         </button>
                     ))}
                     <button className="bg-black border border-gray-700 px-3 py-2 rounded text-sm font-bold hover:bg-gray-800">+</button>
@@ -81,8 +89,18 @@ export default function Players() {
                                 <th className="p-4">PRICE</th>
                                 <th className="p-4 text-center">FUTBIN RATING</th>
                                 <th className="p-4 text-center">FOOT</th>
-                                <th className="p-4 text-center">SM</th>
-                                <th className="p-4 text-center">WF</th>
+                                <th className="p-4 text-center">
+                                    <div className="flex items-center justify-center gap-1">
+                                        <span>SM</span>
+                                        <SafeImage src={getAssetUrl('assets/icons/0_starskills.svg')} className="w-3.5 h-3.5 inline-block" alt="SM" />
+                                    </div>
+                                </th>
+                                <th className="p-4 text-center">
+                                    <div className="flex items-center justify-center gap-1">
+                                        <span>WF</span>
+                                        <SafeImage src={getAssetUrl('assets/icons/0_weakfoot.svg')} className="w-2.5 h-3.5 inline-block" alt="WF" />
+                                    </div>
+                                </th>
                                 <th className="p-4 text-center text-green-500">PAC</th>
                                 <th className="p-4 text-center text-red-500">SHO</th>
                                 <th className="p-4 text-center text-green-500">PAS</th>
@@ -135,8 +153,18 @@ export default function Players() {
                                         </div>
                                     </td>
                                     <td className="p-4 font-bold text-gray-300">{(player as any).foot || "R"}</td>
-                                    <td className="p-4">{player.sm}★</td>
-                                    <td className="p-4">{player.wf}★</td>
+                                    <td className="p-4 text-center">
+                                        <div className="flex items-center justify-center gap-1 font-bold">
+                                            <span>{player.sm}</span>
+                                            <SafeImage src={getAssetUrl('assets/icons/0_starskills.svg')} className="w-3.5 h-3.5 inline-block" alt="SM" />
+                                        </div>
+                                    </td>
+                                    <td className="p-4 text-center">
+                                        <div className="flex items-center justify-center gap-1 font-bold">
+                                            <span>{player.wf}</span>
+                                            <SafeImage src={getAssetUrl('assets/icons/0_weakfoot.svg')} className="w-2.5 h-3.5 inline-block" alt="WF" />
+                                        </div>
+                                    </td>
                                     
                                     <td className="p-4"><span className={`px-2 py-1 border rounded font-medium ${getStatColor(player.pac)}`}>{player.pac}</span></td>
                                     <td className="p-4"><span className={`px-2 py-1 border rounded font-medium ${getStatColor(player.sho)}`}>{player.sho}</span></td>

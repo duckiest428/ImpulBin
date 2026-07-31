@@ -1,4 +1,6 @@
 import React from 'react';
+import { getAssetUrl } from '../../utils/assetUrl';
+import { SafeImage } from '../../components/SafeImage';
 
 const mockSquads = [
     { id: 1, user: 'User Name', date: '--', name: 'Squad Name', formation: '4-1-2-1-2(2)', rating: 99, chemistry: '--/33', price: '--', platform: 'PC' },
@@ -89,8 +91,10 @@ export default function CommunitySquads() {
                                     <td className="p-4 text-center">
                                         <div className="flex flex-col items-center">
                                             <span className="font-bold text-white text-lg">{sq.rating}</span>
-                                            <div className="flex text-[#ffb800] text-[10px]">
-                                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                            <div className="flex text-[#ffb800] gap-0.5 justify-center mt-0.5">
+                                                {[1, 2, 3, 4, 5].map(s => (
+                                                    <SafeImage key={s} src={getAssetUrl('assets/icons/0_starskills.svg')} className="w-2.5 h-2.5 inline-block" alt="star" />
+                                                ))}
                                             </div>
                                         </div>
                                     </td>

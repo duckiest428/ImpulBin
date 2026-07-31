@@ -5,6 +5,7 @@ import PlayerCard from '../../components/PlayerCard';
 import { FIFA17PlayerCard } from '../../components/FIFA17PlayerCard';
 import { getAssetUrl } from '../../utils/assetUrl';
 import { SafeImage } from '../../components/SafeImage';
+import { PlayerHoverWrapper } from '../../components/PlayerHoverCard';
 
 export default function Popular() {
     return (
@@ -41,33 +42,35 @@ export default function Popular() {
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-y-12 gap-x-4">
                     {mockPlayers.map(player => (
-                        <div key={player.id} className="flex flex-col items-center group">
-                            <div className="flex items-center gap-1 mb-2 bg-[#1a1c23] border border-gray-800 px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-                                <SafeImage src={'https://cdn.futbin.com/design/img/coins_bin.png'} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
-                                <span>{player.price}</span>
-                            </div>
+                        <PlayerHoverWrapper key={player.id} playerData={player}>
+                            <div className="flex flex-col items-center group">
+                                <div className="flex items-center gap-1 mb-2 bg-[#1a1c23] border border-gray-800 px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                                    <SafeImage src={'https://cdn.futbin.com/design/img/coins_bin.png'} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
+                                    <span>{player.price}</span>
+                                </div>
 
-                            <div>
-                                <FIFA17PlayerCard
-                                    name={player.name}
-                                    rating={player.rating}
-                                    position={player.position}
-                                    stats={{
-                                        stat1: { label: 'PAC', value: player.pac },
-                                        stat2: { label: 'DRI', value: player.dri },
-                                        stat3: { label: 'SHO', value: player.sho },
-                                        stat4: { label: 'DEF', value: player.def },
-                                        stat5: { label: 'PAS', value: player.pas },
-                                        stat6: { label: 'PHY', value: player.phy },
-                                    }}
-                                />
+                                <div>
+                                    <FIFA17PlayerCard
+                                        name={player.name}
+                                        rating={player.rating}
+                                        position={player.position}
+                                        stats={{
+                                            stat1: { label: 'PAC', value: player.pac },
+                                            stat2: { label: 'DRI', value: player.dri },
+                                            stat3: { label: 'SHO', value: player.sho },
+                                            stat4: { label: 'DEF', value: player.def },
+                                            stat5: { label: 'PAS', value: player.pas },
+                                            stat6: { label: 'PHY', value: player.phy },
+                                        }}
+                                    />
+                                </div>
+                                
+                                <div className="mt-4 flex items-center gap-2 bg-black/50 px-4 py-1.5 rounded-full border border-gray-800/50">
+                                    <span className="text-orange-500 text-lg">🔥</span> 
+                                    <span className="text-white font-bold">{player.pop}</span>
+                                </div>
                             </div>
-                            
-                            <div className="mt-4 flex items-center gap-2 bg-black/50 px-4 py-1.5 rounded-full border border-gray-800/50">
-                                <span className="text-orange-500 text-lg">🔥</span> 
-                                <span className="text-white font-bold">{player.pop}</span>
-                            </div>
-                        </div>
+                        </PlayerHoverWrapper>
                     ))}
                 </div>
             </div>

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { PlayerHoverWrapper } from '../../components/PlayerHoverCard';
 import { FIFA17PlayerCardBase } from '../../components/FIFA17PlayerCard';
 import { popularPlayers } from '../../data/mockPlayers';
+import { getAssetUrl } from '../../utils/assetUrl';
+import { SafeImage } from '../../components/SafeImage';
 
 export default function Home() {
     const [activeFilter, setActiveFilter] = useState('Popular');
@@ -70,10 +72,17 @@ export default function Home() {
                                             />
                                         </div>
                                     </div>
+                                    {/* Info bar below card */}
                                     <div className="flex items-center text-[10px] sm:text-[11px] font-bold overflow-hidden rounded-[4px] bg-[#222222] border border-[#333] shadow-sm">
                                         <div className="px-1.5 py-0.5 bg-white/10 text-white border-r border-[#333]">-</div>
-                                        <div className="px-1.5 py-0.5 bg-white/10 text-white border-r border-[#333] flex items-center gap-0.5">-<span className="text-[8px]">★</span></div>
-                                        <div className="px-1.5 py-0.5 bg-white/10 text-white border-r border-[#333] flex items-center gap-0.5">-<span className="text-[8px] font-black text-red-500">!</span></div>
+                                        <div className="px-1.5 py-0.5 bg-white/10 text-white border-r border-[#333] flex items-center gap-0.5">
+                                            <span>-</span>
+                                            <SafeImage src={getAssetUrl('assets/icons/0_starskills.svg')} className="w-2.5 h-2.5 inline-block object-contain" alt="SM" />
+                                        </div>
+                                        <div className="px-1.5 py-0.5 bg-white/10 text-white border-r border-[#333] flex items-center gap-0.5">
+                                            <span>-</span>
+                                            <SafeImage src={getAssetUrl('assets/icons/0_weakfoot.svg')} className="w-2 h-2.5 inline-block object-contain" alt="WF" />
+                                        </div>
                                         <div className="px-1.5 py-0.5 text-black bg-[#00e575]">--.-</div>
                                     </div>
                                 </div>

@@ -108,11 +108,17 @@ export function PlayerHoverCardContent({ playerData }: PlayerHoverCardContentPro
                     <div className="grid grid-cols-3 gap-1 text-center">
                         <div className="flex flex-col items-center justify-center">
                             <span className="text-gray-200 font-bold text-[11px] mb-0.5">SM</span>
-                            <span className="text-[#ffb800] font-bold text-[12px]">★ <span className="text-gray-200 font-mono">{smVal}</span></span>
+                            <span className="text-[#ffb800] font-bold text-[12px] flex items-center justify-center gap-1">
+                                <SafeImage src={getAssetUrl('assets/icons/0_starskills.svg')} className="w-3.5 h-3.5 object-contain inline-block" alt="SM" />
+                                <span className="text-gray-200 font-mono">{smVal}</span>
+                            </span>
                         </div>
                         <div className="flex flex-col items-center justify-center">
                             <span className="text-gray-200 font-bold text-[11px] mb-0.5">WF</span>
-                            <span className="text-[#ffb800] font-bold text-[12px]">★ <span className="text-gray-200 font-mono">{wfVal}</span></span>
+                            <span className="text-[#ffb800] font-bold text-[12px] flex items-center justify-center gap-1">
+                                <SafeImage src={getAssetUrl('assets/icons/0_weakfoot.svg')} className="w-2.5 h-3.5 object-contain inline-block" alt="WF" />
+                                <span className="text-gray-200 font-mono">{wfVal}</span>
+                            </span>
                         </div>
                         <div className="flex flex-col items-center justify-center">
                             <span className="text-gray-200 font-bold text-[11px] mb-0.5">Foot</span>

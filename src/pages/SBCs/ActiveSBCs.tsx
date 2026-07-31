@@ -1,6 +1,7 @@
 import React from 'react';
 import SBCNav from '../../components/SBCNav';
 import { getAssetUrl } from '../../utils/assetUrl';
+import { SafeImage } from '../../components/SafeImage';
 
 const activeSBCs = [
     { id: 1, title: 'SBC Name', rewardTitle: 'Reward Name', image: '93+', type: 'NEW', expires: '--', repeatable: 'Unlimited', completed: '0 / 2', price: '--', up: '12%', down: '88%', votes: 369 },
@@ -74,7 +75,7 @@ export default function ActiveSBCs() {
                             <span>↕</span> Sorting
                         </button>
                         <button className="bg-[#111] border border-[#333] hover:border-gray-500 text-white text-sm py-1.5 px-3 rounded transition-colors flex items-center gap-2">
-                            <span className="text-red-500 font-bold">0</span> <span className="text-[#ffb800]">★</span>
+                            <span className="text-red-500 font-bold">0</span> <SafeImage src={getAssetUrl('assets/icons/0_starskills.svg')} className="w-3.5 h-3.5 inline-block" alt="star" />
                         </button>
                     </div>
                 </div>
@@ -88,7 +89,7 @@ export default function ActiveSBCs() {
                                 <h3 className="font-bold text-sm truncate pr-2">{sbc.title}</h3>
                                 <div className="flex items-center gap-2 shrink-0">
                                     {sbc.type && <span className="bg-[#00e575] text-black text-[10px] font-bold px-2 py-0.5 rounded-sm">NEW</span>}
-                                    <span className="text-gray-400 hover:text-white cursor-pointer">★</span>
+                                    <SafeImage src={getAssetUrl('assets/icons/0_starskills.svg')} className="w-3.5 h-3.5 cursor-pointer inline-block opacity-70 hover:opacity-100" alt="star" />
                                 </div>
                             </div>
 
