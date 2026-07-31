@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { SafeImage } from '../../components/SafeImage';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 const mockManagers = [
     { country: 'Portugal', flag: 'https://flagcdn.com/w40/pt.png', bronze: '--', silver: '--', gold: '--' },
@@ -23,13 +25,19 @@ const mockManagers = [
     { country: 'Croatia', flag: 'https://flagcdn.com/w40/hr.png', bronze: '--', silver: '--', gold: '--' },
     { country: 'Cyprus', flag: 'https://flagcdn.com/w40/cy.png', bronze: '--', silver: '--', gold: '--' },
     { country: 'Czechia', flag: 'https://flagcdn.com/w40/cz.png', bronze: '--', silver: '--', gold: '--' },
-    { country: 'Côte d\'Ivoire', flag: '🇨🇮', bronze: '--', silver: '--', gold: '--' },
+    { country: 'Côte d\'Ivoire', flag: 'https://flagcdn.com/w40/ci.png', bronze: '--', silver: '--', gold: '--' },
     { country: 'Denmark', flag: 'https://flagcdn.com/w40/dk.png', bronze: '--', silver: '--', gold: '--' },
     { country: 'Ecuador', flag: 'https://flagcdn.com/w40/ec.png', bronze: '--', silver: '--', gold: '--' },
     { country: 'Egypt', flag: 'https://flagcdn.com/w40/eg.png', bronze: '--', silver: '--', gold: '--' }
 ];
 
 export default function ManagerPrices() {
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const filteredManagers = mockManagers.filter(m => 
+        m.country.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
     return (
         <div className="w-full min-h-screen bg-[#1a1a1a] text-white pt-24 px-4 pb-16 relative">
             
@@ -54,12 +62,14 @@ export default function ManagerPrices() {
                     {/* Search */}
                     <div className="relative w-full md:w-80">
                         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <span className="text-white text-sm font-bold">🔍</span>
+                            <SafeImage src={getAssetUrl('assets/icons/search.svg')} alt="Search" className="w-4 h-4 text-gray-400 shrink-0" />
                         </div>
                         <input 
                             type="text" 
                             placeholder="Search"
-                            className="bg-[#0a0a0a] border border-transparent rounded pl-9 pr-3 py-2 text-sm w-full text-white placeholder-gray-500 focus:outline-none focus:border-[#333]"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            className="bg-[#0a0a0a] border border-[#333] rounded pl-9 pr-3 py-2 text-sm w-full text-white placeholder-gray-500 focus:outline-none focus:border-[#00e575]"
                         />
                     </div>
 
@@ -69,34 +79,43 @@ export default function ManagerPrices() {
                             <thead>
                                 <tr className="bg-[#0a0a0a] text-[10px] font-bold text-white tracking-widest border-b border-[#333]">
                                     <th className="p-4 uppercase w-1/2">COUNTRY</th>
-                                    <th className="p-4 text-center">
-                                        <div className="w-4 h-5 bg-orange-700/50 border border-orange-500 rounded-sm mx-auto"></div>
+                                    <th className="p-4 text-center w-1/6">
+                                        <SafeImage src={getAssetUrl('assets/cards/0_bronze.webp')} fallbackType="card" className="h-8 w-auto mx-auto object-contain drop-shadow" alt="Bronze Manager Card" />
                                     </th>
-                                    <th className="p-4 text-center">
-                                        <div className="w-4 h-5 bg-gray-400/50 border border-gray-300 rounded-sm mx-auto"></div>
+                                    <th className="p-4 text-center w-1/6">
+                                        <SafeImage src={getAssetUrl('assets/cards/0_silver.webp')} fallbackType="card" className="h-8 w-auto mx-auto object-contain drop-shadow" alt="Silver Manager Card" />
                                     </th>
-                                    <th className="p-4 text-center">
-                                        <div className="w-4 h-5 bg-yellow-600/50 border border-yellow-400 rounded-sm mx-auto"></div>
+                                    <th className="p-4 text-center w-1/6">
+                                        <SafeImage src={getAssetUrl('assets/cards/0_gold.webp')} fallbackType="card" className="h-8 w-auto mx-auto object-contain drop-shadow" alt="Gold Manager Card" />
                                     </th>
                                 </tr>
                             </thead>
                             <tbody className="text-sm font-semibold">
-                                {mockManagers.map((m, i) => (
+                                {filteredManagers.map((m, i) => (
                                     <tr key={i} className="border-b border-[#2d2d2d] hover:bg-[#252525] transition-colors">
                                         <td className="p-4">
                                             <div className="flex items-center gap-3">
-                                                <img src={m.flag} alt={m.country} className="w-6 h-auto shadow-sm" />
+                                                <img src={m.flag} alt={m.country} className="w-6 h-auto shadow-sm rounded-sm" />
                                                 <span className="text-white">{m.country}</span>
                                             </div>
                                         </td>
                                         <td className="p-4 text-center text-gray-300">
-                                            {m.bronze !== '-' ? <>{m.bronze} <span className="text-[#ffb800] text-[10px]">F</span></> : '-'}
+                                            <div className="flex items-center justify-center gap-1">
+                                                <span>{m.bronze}</span>
+                                                <SafeImage src="https://cdn.futbin.com/design/img/coins_bin.png" fallbackType="coin" className="w-3.5 h-3.5 inline shrink-0" alt="coins" />
+                                            </div>
                                         </td>
                                         <td className="p-4 text-center text-gray-300">
-                                            {m.silver !== '-' ? <>{m.silver} <span className="text-[#ffb800] text-[10px]">F</span></> : '-'}
+                                            <div className="flex items-center justify-center gap-1">
+                                                <span>{m.silver}</span>
+                                                <SafeImage src="https://cdn.futbin.com/design/img/coins_bin.png" fallbackType="coin" className="w-3.5 h-3.5 inline shrink-0" alt="coins" />
+                                            </div>
                                         </td>
                                         <td className="p-4 text-center text-gray-300">
-                                            {m.gold !== '-' ? <>{m.gold} <span className="text-[#ffb800] text-[10px]">F</span></> : '-'}
+                                            <div className="flex items-center justify-center gap-1">
+                                                <span>{m.gold}</span>
+                                                <SafeImage src="https://cdn.futbin.com/design/img/coins_bin.png" fallbackType="coin" className="w-3.5 h-3.5 inline shrink-0" alt="coins" />
+                                            </div>
                                         </td>
                                     </tr>
                                 ))}

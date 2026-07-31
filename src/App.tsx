@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -23,8 +23,21 @@ import ManagerPrices from './pages/Market/ManagerPrices';
 import ConsumablesPrices from './pages/Market/ConsumablesPrices';
 
 import MarketPlayerList from './pages/Market/MarketPlayerList';
+import { getAssetUrl } from './utils/assetUrl';
 
 export default function App() {
+    useEffect(() => {
+        const iconUrl = getAssetUrl('assets/icons/impulbin.png');
+        let link: HTMLLinkElement | null = document.querySelector("link[rel*='icon']");
+        if (!link) {
+            link = document.createElement('link');
+            link.type = 'image/png';
+            link.rel = 'shortcut icon';
+            document.head.appendChild(link);
+        }
+        link.href = iconUrl;
+    }, []);
+
     return (
         <HashRouter>
             <div className="min-h-screen flex flex-col">
