@@ -122,7 +122,7 @@ export default function Players() {
                                     </td>
                                     <td className="p-4">
                                         <div className="font-bold flex items-center gap-1">
-                                            {player.price} <SafeImage src={getAssetUrl('assets/icons/coins_bin-2.png.webp')} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
+                                            {player.price} <SafeImage src={'https://cdn.futbin.com/design/img/coins_bin.png'} fallbackType="coin" className="w-3.5 h-3.5 inline" alt="coins" />
                                         </div>
                                         <div className={`text-xs ${player.priceChange.startsWith('+') ? 'text-green-500' : 'text-red-500'}`}>
                                             {player.priceChange.startsWith('+') ? '↗' : '↘'} {player.priceChange}

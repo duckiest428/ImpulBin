@@ -16,12 +16,12 @@ export const SafeImage: React.FC<SafeImageProps> = ({
   ...props
 }) => {
   const typeKey: FallbackType = fallbackType || 'generic';
-  const initialSrc = src || getFallbackDataUri(typeKey);
+  const initialSrc = src ? (src.startsWith('http') || src.startsWith('data:') ? src : getAssetUrl(src)) : getFallbackDataUri(typeKey);
   const [imgSrc, setImgSrc] = useState<string>(initialSrc);
   const [hasError, setHasError] = useState<boolean>(false);
 
   useEffect(() => {
-    const resolvedSrc = src || getFallbackDataUri(typeKey);
+    const resolvedSrc = src ? (src.startsWith('http') || src.startsWith('data:') ? src : getAssetUrl(src)) : getFallbackDataUri(typeKey);
     setImgSrc(resolvedSrc);
     setHasError(false);
   }, [src, typeKey]);
